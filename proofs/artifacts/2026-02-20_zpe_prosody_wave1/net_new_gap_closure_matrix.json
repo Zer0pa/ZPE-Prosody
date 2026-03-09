@@ -1,0 +1,28 @@
+{
+  "gaps": [
+    {
+      "description": "Extractor stack enabled (torchcrepe/parselmouth/penn)",
+      "evidence": "max_resource_lock.json",
+      "gap_id": "D2-G1",
+      "status": "OPEN"
+    },
+    {
+      "description": "XTTS bridge + MOS protocol executed",
+      "evidence": "mos_crosscheck_report.json",
+      "gap_id": "D2-G2",
+      "status": "OPEN"
+    },
+    {
+      "description": "RAVDESS retrieval validity closed",
+      "evidence": "prosody_retrieval_eval.json",
+      "gap_id": "D2-G3",
+      "status": "CLOSED"
+    },
+    {
+      "description": "OOD retrieval stress path (EMOVOME/EmoVoice)",
+      "evidence": "max_resource_lock.json",
+      "gap_id": "E3-OOD",
+      "status": "CLOSED"
+    }
+  ]
+}

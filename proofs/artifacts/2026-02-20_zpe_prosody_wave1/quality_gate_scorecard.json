@@ -1,0 +1,37 @@
+{
+  "all_claims_pass": false,
+  "claim_status": {
+    "PRO-C001": "PASS",
+    "PRO-C002": "PASS",
+    "PRO-C003": "PASS",
+    "PRO-C004": "PASS",
+    "PRO-C005": "PAUSED_EXTERNAL",
+    "PRO-C006": "FAIL"
+  },
+  "dimension_scores": {
+    "anti_toy_depth": 4,
+    "code_quality_cohesion": 4,
+    "deterministic_reproducibility": 5,
+    "engineering_completeness": 5,
+    "exceed_brief_innovation": 5,
+    "interoperability_readiness": 4,
+    "performance_efficiency": 5,
+    "problem_solving_autonomy": 5,
+    "robustness_transparency": 5,
+    "scientific_claim_hygiene": 5
+  },
+  "mandatory_dimensions_ok": true,
+  "minimum_required": 45,
+  "non_negotiable": {
+    "appendix_e_gates_pass": true,
+    "appendix_f_gates_pass": true,
+    "claim_evidence_paths_present": true,
+    "determinism_5_of_5": true,
+    "end_to_end_execution_completed": true,
+    "lane_boundary_respected": true,
+    "uncaught_crash_rate_zero": true
+  },
+  "non_negotiable_ok": true,
+  "overall_gate_result": "FAIL",
+  "total_score": 47
+}

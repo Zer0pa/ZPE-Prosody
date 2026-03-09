@@ -1,0 +1,49 @@
+{
+  "base_image": "runpod/pytorch:2.4.0-py3.11-cuda12.1",
+  "deferred_resources": [
+    "UTMOSv2",
+    "SpeechMOS",
+    "torchcrepe",
+    "Parselmouth",
+    "XTTS_v2",
+    "CosyVoice2_commercial_safe",
+    "CosyVoice2_containerized_path",
+    "ParlerTTS_commercial_safe",
+    "PiperTTS_commercial_safe"
+  ],
+  "exact_command_chain": [
+    "python3.11 -m venv .runtime/maxwave/venv",
+    ".runtime/maxwave/venv/bin/pip install --upgrade pip setuptools wheel",
+    ".runtime/maxwave/venv/bin/pip install -r runpod_requirements_lock.txt",
+    ".runtime/maxwave/venv/bin/python scripts/gate_m_resource_ingestion.py --out artifacts/2026-02-20_zpe_prosody_wave1 --seed 20260220",
+    ".runtime/maxwave/venv/bin/python scripts/gate_m_claim_adjudication.py --out artifacts/2026-02-20_zpe_prosody_wave1 --seed 20260220",
+    ".runtime/maxwave/venv/bin/python scripts/gate_e_eval_and_pack.py --out artifacts/2026-02-20_zpe_prosody_wave1 --seed 20260220"
+  ],
+  "expected_artifact_manifest": [
+    "mos_crosscheck_report.json",
+    "prosody_transfer_eval.json",
+    "prosody_retrieval_eval.json",
+    "max_claim_adjudication.json",
+    "quality_gate_scorecard.json",
+    "handoff_manifest.json"
+  ],
+  "gpu_profile": "RunPod NVIDIA A100/B200 (>=40GB VRAM)",
+  "lockfile": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt",
+  "lockfile_artifact": "runpod_requirements_lock.txt",
+  "packages": [
+    "torch",
+    "torchaudio",
+    "torchcrepe",
+    "praat-parselmouth",
+    "TTS",
+    "speechmos",
+    "onnxruntime",
+    "datasets",
+    "soundfile",
+    "parler-tts",
+    "piper-tts"
+  ],
+  "python_version": "3.11",
+  "required": true,
+  "workspace_sync_root": "/workspace/ZPE Prosody"
+}

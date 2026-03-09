@@ -1,0 +1,116 @@
+{
+  "dataset": "ravdess_like_to_cmu_arctic_like",
+  "mean_mos": 4.718988416653973,
+  "mos_evidence_executed": false,
+  "mos_tool_used": "SpeechMOS",
+  "p10_mos": 4.693772238200479,
+  "pass_metric": true,
+  "reason": "XTTS is CPML/non-permissive and no executable commercial-safe transfer substitute was proven in-lane.",
+  "resource_equivalence_proven": false,
+  "sample_rows": [
+    {
+      "idx": 0,
+      "mos_proxy": 4.703214179400858,
+      "target_frames": 221
+    },
+    {
+      "idx": 1,
+      "mos_proxy": 4.7164033217460695,
+      "target_frames": 277
+    },
+    {
+      "idx": 2,
+      "mos_proxy": 4.688573404814733,
+      "target_frames": 273
+    },
+    {
+      "idx": 3,
+      "mos_proxy": 4.700023538015688,
+      "target_frames": 328
+    },
+    {
+      "idx": 4,
+      "mos_proxy": 4.709275042914899,
+      "target_frames": 307
+    },
+    {
+      "idx": 5,
+      "mos_proxy": 4.708761338283128,
+      "target_frames": 242
+    },
+    {
+      "idx": 6,
+      "mos_proxy": 4.6924414378684025,
+      "target_frames": 368
+    },
+    {
+      "idx": 7,
+      "mos_proxy": 4.697311394219887,
+      "target_frames": 265
+    },
+    {
+      "idx": 8,
+      "mos_proxy": 4.70388818850053,
+      "target_frames": 414
+    },
+    {
+      "idx": 9,
+      "mos_proxy": 4.70959133327448,
+      "target_frames": 301
+    },
+    {
+      "idx": 10,
+      "mos_proxy": 4.708023534590172,
+      "target_frames": 275
+    },
+    {
+      "idx": 11,
+      "mos_proxy": 4.684424358028284,
+      "target_frames": 268
+    },
+    {
+      "idx": 12,
+      "mos_proxy": 4.687315843746602,
+      "target_frames": 390
+    },
+    {
+      "idx": 13,
+      "mos_proxy": 4.696556175008492,
+      "target_frames": 346
+    },
+    {
+      "idx": 14,
+      "mos_proxy": 4.700717904083563,
+      "target_frames": 270
+    },
+    {
+      "idx": 15,
+      "mos_proxy": 4.699731126824278,
+      "target_frames": 394
+    },
+    {
+      "idx": 16,
+      "mos_proxy": 4.691629586527516,
+      "target_frames": 237
+    },
+    {
+      "idx": 17,
+      "mos_proxy": 4.692439097156473,
+      "target_frames": 353
+    },
+    {
+      "idx": 18,
+      "mos_proxy": 4.725711311251583,
+      "target_frames": 392
+    },
+    {
+      "idx": 19,
+      "mos_proxy": 4.746538200202419,
+      "target_frames": 402
+    }
+  ],
+  "samples": 64,
+  "status": "PAUSED_EXTERNAL",
+  "threshold": 4.0,
+  "xtts_transfer_executed": false
+}

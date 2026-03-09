@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "claim_impact_note": "High if unavailable: transfer MOS claim remains unclosed.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import utmosv2; print('utmosv2_ok')\""
+      ],
+      "error_signature": "Traceback (most recent call last):",
+      "fallback": "speechmos_if_available_else_proxy_mos",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "UTMOSv2"
+    },
+    {
+      "claim_impact_note": "High if unavailable: no independent MOS cross-check.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install speechmos onnxruntime",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"from speechmos import dnsmos; print('speechmos_dnsmos_ok')\""
+      ],
+      "error_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+      "fallback": "utmosv2_if_available_else_proxy_mos",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "SpeechMOS"
+    },
+    {
+      "claim_impact_note": "Medium-to-high: extractor fidelity comparability drops if missing.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install --index-url https://download.pytorch.org/whl/cpu torch torchaudio",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install torchcrepe",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import torch, torchcrepe; print(torch.__version__)\""
+      ],
+      "error_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+      "fallback": "fallback_zero_crossing_f0",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "torchcrepe"
+    },
+    {
+      "claim_impact_note": "Medium: missing Praat-standard extraction weakens equivalence.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install praat-parselmouth",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import parselmouth; print(parselmouth.__version__)\""
+      ],
+      "error_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+      "fallback": "fallback_rms_energy_duration",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "Parselmouth"
+    },
+    {
+      "claim_impact_note": "High: no true transfer synthesis means PRO-C005 cannot be fully closed.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install TTS",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'transformers==4.41.2'",
+        "COQUI_TOS_AGREED=1 TTS_HOME='/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/tts_cache' '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib; from TTS.api import TTS; manifest=pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/ravdess/manifest.json'); items=json.loads(manifest.read_text()).get('items', []); speaker=next(pathlib.Path(i['path']) for i in items if pathlib.Path(i['path']).exists()); tts=TTS(model_name='tts_models/multilingual/multi-dataset/xtts_v2', progress_bar=False, gpu=False); tts.tts_to_file(text='Prosody transfer validation sentence.', speaker_wav=str(speaker), language='en', file_path=r'artifacts/2026-02-20_zpe_prosody_wave1/xtts_probe.wav'); print('xtts_ok')\""
+      ],
+      "error_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+      "fallback": "objective_transfer_proxy_without_tts",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "XTTS_v2"
+    },
+    {
+      "claim_impact_note": "High: commercial-safe transfer closure blocked if CosyVoice2 path is unavailable.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -r '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/requirements.txt'",
+        "PYTHONPATH='/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice:$PYTHONPATH' '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"from cosyvoice.cli.cosyvoice import CosyVoice; print('cosyvoice_ok')\""
+      ],
+      "error_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+      "fallback": "runpod_gpu_transfer_with_permissive_tts",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "CosyVoice2_commercial_safe"
+    },
+    {
+      "claim_impact_note": "Medium-to-high: containerized fallback unavailable in-lane if docker build/runtime fails.",
+      "command_evidence": [
+        "docker build -t cosyvoice_runtime_probe '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/runtime/python'"
+      ],
+      "error_signature": "DEPRECATED: The legacy builder is deprecated and will be removed in a future release.",
+      "fallback": "runpod_gpu_transfer_with_permissive_tts",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "CosyVoice2_containerized_path"
+    },
+    {
+      "claim_impact_note": "Medium-to-high: no direct speaker-clone transfer; usable only as commercialization-safe synthesis substitute.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install parler-tts accelerate",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' - <<'PY'\nimport soundfile as sf\nfrom parler_tts import ParlerTTSForConditionalGeneration\nfrom transformers import AutoTokenizer\n\nmodel_name = \"parler-tts/parler-tts-mini-v1\"\nmodel = ParlerTTSForConditionalGeneration.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\ndescription = \"A calm speaker with clear articulation and neutral delivery.\"\nprompt = \"Prosody transfer validation sentence.\"\ninput_ids = tokenizer(description, return_tensors=\"pt\").input_ids\nprompt_ids = tokenizer(prompt, return_tensors=\"pt\").input_ids\naudio = model.generate(input_ids=input_ids, prompt_input_ids=prompt_ids)\narr = audio.cpu().numpy().squeeze()\nsf.write(r\"artifacts/2026-02-20_zpe_prosody_wave1/parler_probe.wav\", arr, int(model.config.sampling_rate))\nprint(\"parler_ok\")\nPY",
+        "test -f 'artifacts/2026-02-20_zpe_prosody_wave1/parler_probe.wav'"
+      ],
+      "error_signature": "returncode_1",
+      "fallback": "runpod_gpu_transfer_with_parler_tts",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "ParlerTTS_commercial_safe"
+    },
+    {
+      "claim_impact_note": "Medium-to-high: lacks direct XTTS-style voice transfer conditioning.",
+      "command_evidence": [
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install piper-tts",
+        "printf 'Prosody transfer validation sentence.' | '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper' --model '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' --config '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' --output_file 'artifacts/2026-02-20_zpe_prosody_wave1/piper_probe.wav'",
+        "test -f 'artifacts/2026-02-20_zpe_prosody_wave1/piper_probe.wav'"
+      ],
+      "error_signature": "returncode_1",
+      "fallback": "runpod_gpu_transfer_with_piper_or_other_permissive_tts",
+      "impracticality_code": "IMP-COMPUTE",
+      "resource_name": "PiperTTS_commercial_safe"
+    },
+    {
+      "claim_impact_note": "High: EmoV-DB license and data availability must both satisfy commercialization constraints.",
+      "command_evidence": [
+        "if [ -f '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' ]; then unzip -o -q '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' -d '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'; else echo 'skip_unzip_no_zip'; fi",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib; root=pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'); root.mkdir(parents=True, exist_ok=True); files=sorted(list(root.rglob('*.wav')) + list(root.rglob('*.flac'))); items=[{'path':str(p),'label':p.parent.name.lower(),'sr':0} for p in files[:240]]; pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/manifest.json').write_text(json.dumps({'items':items}, indent=2)); print(len(items))\"",
+        "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib, sys; p=pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/manifest.json'); items=json.loads(p.read_text()).get('items', []) if p.exists() else []; print(len(items)); sys.exit(0 if len(items) >= 16 else 3)\""
+      ],
+      "error_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+      "fallback": "retain_emovoice_ood_with_license_gap_note",
+      "impracticality_code": "IMP-STORAGE",
+      "resource_name": "EMOV_DB_commercial_safe"
+    }
+  ]
+}

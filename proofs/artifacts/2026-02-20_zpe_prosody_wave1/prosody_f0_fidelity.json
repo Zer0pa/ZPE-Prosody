@@ -1,0 +1,8 @@
+{
+  "dataset": "cmu_arctic_like",
+  "mean_f0_rmse_pct": 0.892497941761006,
+  "p95_f0_rmse_pct": 1.0120202346036344,
+  "pass": true,
+  "samples": 80,
+  "threshold": 5.0
+}

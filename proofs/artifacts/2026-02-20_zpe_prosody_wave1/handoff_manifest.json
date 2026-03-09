@@ -1,0 +1,223 @@
+{
+  "artifact_root": "artifacts/2026-02-20_zpe_prosody_wave1",
+  "files": [
+    {
+      "bytes": 6891,
+      "file": "handoff_manifest.json",
+      "sha256": "536e545ec59228446d14e3c653a91cbdc24b0f605f6893661d4a24b3488cf77a"
+    },
+    {
+      "bytes": 636,
+      "file": "before_after_metrics.json",
+      "sha256": "0e5621d6ef2f6910aae3fdd70008a646940b1f4a3afa9f4014c6460eb63658f6"
+    },
+    {
+      "bytes": 516,
+      "file": "falsification_results.md",
+      "sha256": "2c931a6607b868780be71f7156bfaf0d8a4677918a20bf9bbe05b656da85acc8"
+    },
+    {
+      "bytes": 885,
+      "file": "claim_status_delta.md",
+      "sha256": "1443fef98e9dc068be676531dfe2ddbd69c2d2e3368a459ddf7fa544134199f5"
+    },
+    {
+      "bytes": 114903,
+      "file": "command_log.txt",
+      "sha256": "6af95bb7cad563d21be6b8b0a3fa604a20255dd31134aa328d8e3dcd4190fd29"
+    },
+    {
+      "bytes": 5985,
+      "file": "prosody_compression_benchmark.json",
+      "sha256": "e3fc88e96d34e58b8869cc33de0df531308e665d7c4c2115774dfc5a5fbce5e6"
+    },
+    {
+      "bytes": 169,
+      "file": "prosody_f0_fidelity.json",
+      "sha256": "9a040c8c9d5b19e192e5af8431e75632ad4597521a3197de25d7f91217e25289"
+    },
+    {
+      "bytes": 178,
+      "file": "prosody_energy_fidelity.json",
+      "sha256": "637a1104add5107aa614240fdcb5e7173462525938b4040642a536bbf0f78589"
+    },
+    {
+      "bytes": 167,
+      "file": "prosody_latency_benchmark.json",
+      "sha256": "a2bb5ea5b6a072a259cfbdb7163eb1ed7685bafb0f4db2dd30b0e5573d6f093e"
+    },
+    {
+      "bytes": 2377,
+      "file": "prosody_transfer_eval.json",
+      "sha256": "b0a24ad126597a6993923a7b48bb36391d91b3ca27bf8fc599b3940324b739d1"
+    },
+    {
+      "bytes": 333,
+      "file": "prosody_retrieval_eval.json",
+      "sha256": "4dd6883f8c38186c7f53e02f1316e5e9dbc5ef6d5e76cea4cc24a2426c8d8612"
+    },
+    {
+      "bytes": 472,
+      "file": "determinism_replay_results.json",
+      "sha256": "b9412adbf0d8a267831869a0696988fdaad3ba286cbbaaecaf895c243cffe17a"
+    },
+    {
+      "bytes": 120,
+      "file": "regression_results.txt",
+      "sha256": "086747575165191e4b22c426498f83afeb8889b17548b0b6950b38f4e2ab90ae"
+    },
+    {
+      "bytes": 1010,
+      "file": "quality_gate_scorecard.json",
+      "sha256": "c1332edc16125bce56ce108ef89a7b8d4c85e6b819786694c118720cbd10866e"
+    },
+    {
+      "bytes": 817,
+      "file": "innovation_delta_report.md",
+      "sha256": "229f3505043c2c0a19711ba08e1e86ddf2abdd1420e1709b6436d23230728af4"
+    },
+    {
+      "bytes": 895,
+      "file": "integration_readiness_contract.json",
+      "sha256": "5fbc8c4ef4feb3ce72faf6f586175336c5a8de5a254396440d110d1822b9ca74"
+    },
+    {
+      "bytes": 1208,
+      "file": "residual_risk_register.md",
+      "sha256": "475f9abb19a02761b895d4d75821aceda94ebd461c76d67bde29d63d770b7028"
+    },
+    {
+      "bytes": 1541,
+      "file": "concept_open_questions_resolution.md",
+      "sha256": "3ef1444cc8ea567ef1923d0a5a7150501f041d15b89eb2454c3ec30fda17b306"
+    },
+    {
+      "bytes": 3857,
+      "file": "concept_resource_traceability.json",
+      "sha256": "47429ad4609d1057425c2653de8034d46bb68464ec6373acd2ef75c65c7e5249"
+    },
+    {
+      "bytes": 47191,
+      "file": "max_resource_lock.json",
+      "sha256": "d2a48e5bcbe07891ebf79f8ef0bd74c62f4f9b4e90cf3a8db4375690065b7bec"
+    },
+    {
+      "bytes": 17408,
+      "file": "max_resource_validation_log.md",
+      "sha256": "077c90dd852c62ca35e51ce5a43c2533d7d12efcef0254e0d3188c4b0ff6fe4b"
+    },
+    {
+      "bytes": 470,
+      "file": "max_claim_resource_map.json",
+      "sha256": "80072bfa29c319446309cdb00c7f48cbc249fc891caee56d1c0188b7be65e7f3"
+    },
+    {
+      "bytes": 10033,
+      "file": "impracticality_decisions.json",
+      "sha256": "3822826d694125294ecef80325c2c28990cabc0650e2bb15430de79311b6ed3b"
+    },
+    {
+      "bytes": 133,
+      "file": "mos_crosscheck_report.json",
+      "sha256": "5f145b0147ec0af23e6848189c04db6405c939ff13f768762e37c792f793d1de"
+    },
+    {
+      "bytes": 717,
+      "file": "net_new_gap_closure_matrix.json",
+      "sha256": "1e93086cc06692848b92fe434a8fec15143e5285c094da03da2e06ce68641ec3"
+    },
+    {
+      "bytes": 2507,
+      "file": "max_claim_adjudication.json",
+      "sha256": "a0790173418a51c538544820aa66638ceb624f5243adc5de1b85c8ec91ef9a54"
+    },
+    {
+      "bytes": 3168,
+      "file": "internet_evidence_log.md",
+      "sha256": "9e7de570850b76a7835fd226fb13d4493b326cbd585f05d9ea3274183bca63b1"
+    },
+    {
+      "bytes": 926,
+      "file": "commercialization_risk_register.md",
+      "sha256": "513e03491e1c11aa86d6756566f93b6785d11e84ae282658532ff2208d4c4119"
+    },
+    {
+      "bytes": 1725,
+      "file": "runpod_readiness_manifest.json",
+      "sha256": "f303e585711c00080095c7348acc6fbeec2774a50fa5c28504521f9120707aa2"
+    },
+    {
+      "bytes": 846,
+      "file": "runpod_exec_plan.md",
+      "sha256": "8503effd8eb8faa2576dfefd3eab1a7d2107834a453b57cd43a500c74ff5530a"
+    },
+    {
+      "bytes": 244,
+      "file": "runpod_dataset_stage_manifest.json",
+      "sha256": "00e9f01cd42141a573f8bd197303fdc8b4beb3ba823b5e3b68dd552a528165d6"
+    },
+    {
+      "bytes": 0,
+      "file": "runpod_requirements_lock.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "gate_results": {
+    "appendix_e": {
+      "E-G1": "PASS",
+      "E-G2": "PASS",
+      "E-G3": "PASS",
+      "E-G4": "PASS",
+      "E-G5": "PASS"
+    },
+    "appendix_f": {
+      "F-G1": "PASS",
+      "F-G2": "PASS"
+    },
+    "gate_a": "PASS",
+    "gate_b": "PASS",
+    "gate_c": "PASS",
+    "gate_d": "PASS",
+    "gate_e": "PASS",
+    "gate_m1": "PASS",
+    "gate_m2": "PASS",
+    "gate_m3": "FAIL",
+    "gate_m4": "PASS"
+  },
+  "go_no_go": "NO-GO",
+  "missing_files": [],
+  "required_files": [
+    "handoff_manifest.json",
+    "before_after_metrics.json",
+    "falsification_results.md",
+    "claim_status_delta.md",
+    "command_log.txt",
+    "prosody_compression_benchmark.json",
+    "prosody_f0_fidelity.json",
+    "prosody_energy_fidelity.json",
+    "prosody_latency_benchmark.json",
+    "prosody_transfer_eval.json",
+    "prosody_retrieval_eval.json",
+    "determinism_replay_results.json",
+    "regression_results.txt",
+    "quality_gate_scorecard.json",
+    "innovation_delta_report.md",
+    "integration_readiness_contract.json",
+    "residual_risk_register.md",
+    "concept_open_questions_resolution.md",
+    "concept_resource_traceability.json",
+    "max_resource_lock.json",
+    "max_resource_validation_log.md",
+    "max_claim_resource_map.json",
+    "impracticality_decisions.json",
+    "mos_crosscheck_report.json",
+    "net_new_gap_closure_matrix.json",
+    "max_claim_adjudication.json",
+    "internet_evidence_log.md",
+    "commercialization_risk_register.md",
+    "runpod_readiness_manifest.json",
+    "runpod_exec_plan.md",
+    "runpod_dataset_stage_manifest.json",
+    "runpod_requirements_lock.txt"
+  ]
+}

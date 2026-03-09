@@ -1,0 +1,7 @@
+{
+  "executed": false,
+  "files": [],
+  "mean_mos": 0.0,
+  "reason": "speechmos_unavailable_or_xtts_missing",
+  "tool": "SpeechMOS"
+}

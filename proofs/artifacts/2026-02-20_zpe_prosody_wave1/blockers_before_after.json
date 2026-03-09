@@ -1,0 +1,62 @@
+{
+  "generated_at_utc": "2026-02-21T16:06:30Z",
+  "before": [
+    {
+      "id": "B-PRO-C005",
+      "severity": "P0",
+      "status": "PAUSED_EXTERNAL"
+    },
+    {
+      "id": "B-PRO-C006",
+      "severity": "P0",
+      "status": "FAIL"
+    },
+    {
+      "id": "B-GATE-M3",
+      "severity": "P1",
+      "status": "FAIL"
+    }
+  ],
+  "after": [
+    {
+      "id": "B-PRO-C005",
+      "severity": "P0",
+      "status": "PAUSED_EXTERNAL",
+      "reason_code": "PAUSED_EXTERNAL",
+      "evidence": "artifacts/2026-02-20_zpe_prosody_wave1/max_claim_adjudication.json"
+    },
+    {
+      "id": "B-PRO-C006",
+      "severity": "P0",
+      "status": "FAIL",
+      "reason_code": "FAIL_METRIC",
+      "evidence": "artifacts/2026-02-20_zpe_prosody_wave1/prosody_retrieval_eval.json"
+    },
+    {
+      "id": "B-GATE-M3",
+      "severity": "P1",
+      "status": "FAIL",
+      "reason_code": "QUALITY_GATE_FAIL",
+      "evidence": "artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json"
+    }
+  ],
+  "before_count": 3,
+  "after_count": 3,
+  "before_unresolved_count": 1,
+  "after_unresolved_count": 1,
+  "closed_blockers": [],
+  "new_blockers": [],
+  "unchanged_blockers": [
+    "B-GATE-M3",
+    "B-PRO-C005",
+    "B-PRO-C006"
+  ],
+  "closure_cycle_summary": {
+    "local_fix_attempted": true,
+    "containerized_path_attempted": true,
+    "commercial_safe_substitute_attempted": true,
+    "gpu_runpod_path_prepared": true,
+    "blocker_count_delta": 0,
+    "unresolved_blocker_delta": 0
+  }
+}

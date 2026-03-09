@@ -1,0 +1,19 @@
+# Recovered runpod lock from command-ledger package set (2026-02-22 cleanup recovery)
+# Source: artifacts/2026-02-20_zpe_prosody_wave1/command_log.txt and runpod_readiness_manifest.json
+numpy<2
+numba==0.59.1
+llvmlite==0.42.0
+librosa==0.10.2.post1
+transformers==4.41.2
+onnxruntime>=1.17,<1.23
+soundfile
+speechmos
+datasets
+torch
+torchaudio
+torchcrepe
+praat-parselmouth
+TTS
+parler-tts
+accelerate
+piper-tts

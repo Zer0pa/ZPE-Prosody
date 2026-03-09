@@ -1,0 +1,28 @@
+{
+  "api_framework": "equivalent_inprocess_service",
+  "codec_packet": "ZPRS/v1",
+  "command_log": "artifacts/2026-02-20_zpe_prosody_wave1/command_log.txt",
+  "determinism_replay": {
+    "hash_consistent_count": 5,
+    "hash_consistent_required": 5,
+    "hashes": [
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab"
+    ],
+    "pass": true,
+    "runs": 5
+  },
+  "endpoints": [
+    "/encode",
+    "/decode",
+    "/search",
+    "/transfer"
+  ],
+  "openapi_available": false,
+  "regression_returncode": 0,
+  "schema_version": "2026-02-20.wave1",
+  "service_name": "zpe-prosody"
+}

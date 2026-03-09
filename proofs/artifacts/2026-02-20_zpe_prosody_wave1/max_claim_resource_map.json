@@ -1,0 +1,29 @@
+{
+  "PRO-C001": [
+    "torchcrepe"
+  ],
+  "PRO-C002": [
+    "torchcrepe"
+  ],
+  "PRO-C003": [
+    "Parselmouth"
+  ],
+  "PRO-C004": [
+    "torchcrepe",
+    "Parselmouth"
+  ],
+  "PRO-C005": [
+    "UTMOSv2",
+    "SpeechMOS",
+    "XTTS_v2",
+    "CosyVoice2_commercial_safe",
+    "CosyVoice2_containerized_path",
+    "ParlerTTS_commercial_safe",
+    "PiperTTS_commercial_safe"
+  ],
+  "PRO-C006": [
+    "RAVDESS",
+    "EMOV_DB_commercial_safe",
+    "emovome_or_emovoice"
+  ]
+}

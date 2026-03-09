@@ -1,0 +1,32 @@
+{
+  "compression_ratio": {
+    "after": 16.59520121137405,
+    "before": 1.0,
+    "delta": 15.59520121137405
+  },
+  "encode_latency_ms": {
+    "after": 2.593274442967543,
+    "before": 0.7809135502611753,
+    "delta": -1.812360892706368
+  },
+  "energy_rmse_pct": {
+    "after": 2.0780441280013995,
+    "before": null,
+    "delta": null
+  },
+  "f0_rmse_pct": {
+    "after": 0.892497941761006,
+    "before": null,
+    "delta": null
+  },
+  "retrieval_p_at_5": {
+    "after": 0.3066666666666667,
+    "before": null,
+    "delta": null
+  },
+  "transfer_mos_proxy": {
+    "after": 4.718988416653973,
+    "before": null,
+    "delta": null
+  }
+}

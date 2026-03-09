@@ -1,0 +1,8 @@
+{
+  "dataset": "librispeech_like",
+  "mean_encode_ms": 2.593274442967543,
+  "p95_encode_ms": 4.143750004004687,
+  "pass": true,
+  "samples": 140,
+  "threshold": 50.0
+}

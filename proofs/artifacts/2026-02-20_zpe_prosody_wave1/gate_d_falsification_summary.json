@@ -1,0 +1,46 @@
+{
+  "boundary_mean_f0_rmse_pct": 0.8624494586055483,
+  "confusion_floor_precheck": {
+    "retrieval_confusion_floor": 0.72,
+    "status": "executed_in_gate_e_with_full_eval",
+    "transfer_floor_mos": 3.7
+  },
+  "determinism": {
+    "hash_consistent_count": 5,
+    "hash_consistent_required": 5,
+    "hashes": [
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab",
+      "4e9a39169cea3cdcf862447f44fbfc3667f6aa05620296052c18b324252667ab"
+    ],
+    "pass": true,
+    "runs": 5
+  },
+  "extractor_drift_mean_energy_pct": 0.4051940358857931,
+  "extractor_drift_mean_f0_pct": 12.780836418061586,
+  "malformed_cases": [
+    {
+      "case": 0,
+      "error": "Packet too short",
+      "handled": true
+    },
+    {
+      "case": 1,
+      "error": "Packet truncated",
+      "handled": true
+    },
+    {
+      "case": 2,
+      "error": "Bad magic",
+      "handled": true
+    },
+    {
+      "case": 3,
+      "error": "Metadata decode failed: 'utf-8' codec can't decode byte 0xdd in position 1: invalid continuation byte",
+      "handled": true
+    }
+  ],
+  "uncaught_crash_rate": 0.0
+}

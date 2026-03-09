@@ -1,0 +1,8 @@
+{
+  "dataset": "cmu_arctic_like",
+  "mean_energy_rmse_pct": 2.0780441280013995,
+  "p95_energy_rmse_pct": 2.1791059491232714,
+  "pass": true,
+  "samples": 80,
+  "threshold": 3.0
+}

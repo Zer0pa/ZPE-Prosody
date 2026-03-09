@@ -1,0 +1,12 @@
+{
+  "confusion_subset_p_at_5": 0.9444444444444444,
+  "dataset": "ravdess_real",
+  "ood_p_at_5": 0.17073170731707318,
+  "p_at_5": 0.3066666666666667,
+  "pass_metric": false,
+  "reason": "RAVDESS/OOD retrieval metrics below thresholds.",
+  "resource_equivalence_proven": true,
+  "samples": 120,
+  "status": "FAIL",
+  "threshold": 0.8
+}

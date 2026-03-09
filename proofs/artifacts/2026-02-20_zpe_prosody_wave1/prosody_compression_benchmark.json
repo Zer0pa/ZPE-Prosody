@@ -1,0 +1,294 @@
+{
+  "channel_size_rows": [
+    {
+      "duration": 37,
+      "energy": 137,
+      "f0": 134,
+      "id": "libri_0000",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 38,
+      "energy": 160,
+      "f0": 146,
+      "id": "libri_0001",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 36,
+      "energy": 150,
+      "f0": 142,
+      "id": "libri_0002",
+      "voiced_mask": 25
+    },
+    {
+      "duration": 40,
+      "energy": 144,
+      "f0": 141,
+      "id": "libri_0003",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 150,
+      "f0": 155,
+      "id": "libri_0004",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 157,
+      "f0": 144,
+      "id": "libri_0005",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 171,
+      "f0": 164,
+      "id": "libri_0006",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 167,
+      "f0": 162,
+      "id": "libri_0007",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 39,
+      "energy": 127,
+      "f0": 125,
+      "id": "libri_0008",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 127,
+      "f0": 129,
+      "id": "libri_0009",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 38,
+      "energy": 150,
+      "f0": 154,
+      "id": "libri_0010",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 38,
+      "energy": 128,
+      "f0": 108,
+      "id": "libri_0011",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 36,
+      "energy": 161,
+      "f0": 155,
+      "id": "libri_0012",
+      "voiced_mask": 24
+    },
+    {
+      "duration": 40,
+      "energy": 135,
+      "f0": 129,
+      "id": "libri_0013",
+      "voiced_mask": 25
+    },
+    {
+      "duration": 39,
+      "energy": 143,
+      "f0": 134,
+      "id": "libri_0014",
+      "voiced_mask": 25
+    },
+    {
+      "duration": 36,
+      "energy": 148,
+      "f0": 131,
+      "id": "libri_0015",
+      "voiced_mask": 23
+    },
+    {
+      "duration": 33,
+      "energy": 150,
+      "f0": 137,
+      "id": "libri_0016",
+      "voiced_mask": 23
+    },
+    {
+      "duration": 37,
+      "energy": 157,
+      "f0": 144,
+      "id": "libri_0017",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 146,
+      "f0": 140,
+      "id": "libri_0018",
+      "voiced_mask": 26
+    },
+    {
+      "duration": 40,
+      "energy": 118,
+      "f0": 121,
+      "id": "libri_0019",
+      "voiced_mask": 26
+    }
+  ],
+  "dataset": "librispeech_like",
+  "mean_compression_ratio": 16.59520121137405,
+  "p50_compression_ratio": 16.59122401847575,
+  "p95_compression_ratio": 19.961904761904762,
+  "pass": true,
+  "raw_baseline_definition": "float32 arrays for f0, energy, duration, voiced_mask",
+  "sample_rows": [
+    {
+      "compression_ratio": 14.927613941018766,
+      "encoded_bytes": 373,
+      "frames": 348,
+      "id": "libri_0000",
+      "raw_bytes": 5568
+    },
+    {
+      "compression_ratio": 16.508557457212714,
+      "encoded_bytes": 409,
+      "frames": 422,
+      "id": "libri_0001",
+      "raw_bytes": 6752
+    },
+    {
+      "compression_ratio": 16.408163265306122,
+      "encoded_bytes": 392,
+      "frames": 402,
+      "id": "libri_0002",
+      "raw_bytes": 6432
+    },
+    {
+      "compression_ratio": 15.097435897435897,
+      "encoded_bytes": 390,
+      "frames": 368,
+      "id": "libri_0003",
+      "raw_bytes": 5888
+    },
+    {
+      "compression_ratio": 17.6,
+      "encoded_bytes": 410,
+      "frames": 451,
+      "id": "libri_0004",
+      "raw_bytes": 7216
+    },
+    {
+      "compression_ratio": 16.39408866995074,
+      "encoded_bytes": 406,
+      "frames": 416,
+      "id": "libri_0005",
+      "raw_bytes": 6656
+    },
+    {
+      "compression_ratio": 18.327272727272728,
+      "encoded_bytes": 440,
+      "frames": 504,
+      "id": "libri_0006",
+      "raw_bytes": 8064
+    },
+    {
+      "compression_ratio": 17.91705069124424,
+      "encoded_bytes": 434,
+      "frames": 486,
+      "id": "libri_0007",
+      "raw_bytes": 7776
+    },
+    {
+      "compression_ratio": 14.876404494382022,
+      "encoded_bytes": 356,
+      "frames": 331,
+      "id": "libri_0008",
+      "raw_bytes": 5296
+    },
+    {
+      "compression_ratio": 12.76454293628809,
+      "encoded_bytes": 361,
+      "frames": 288,
+      "id": "libri_0009",
+      "raw_bytes": 4608
+    },
+    {
+      "compression_ratio": 17.17936117936118,
+      "encoded_bytes": 407,
+      "frames": 437,
+      "id": "libri_0010",
+      "raw_bytes": 6992
+    },
+    {
+      "compression_ratio": 14.536873156342184,
+      "encoded_bytes": 339,
+      "frames": 308,
+      "id": "libri_0011",
+      "raw_bytes": 4928
+    },
+    {
+      "compression_ratio": 19.31566265060241,
+      "encoded_bytes": 415,
+      "frames": 501,
+      "id": "libri_0012",
+      "raw_bytes": 8016
+    },
+    {
+      "compression_ratio": 14.304347826086957,
+      "encoded_bytes": 368,
+      "frames": 329,
+      "id": "libri_0013",
+      "raw_bytes": 5264
+    },
+    {
+      "compression_ratio": 17.05263157894737,
+      "encoded_bytes": 380,
+      "frames": 405,
+      "id": "libri_0014",
+      "raw_bytes": 6480
+    },
+    {
+      "compression_ratio": 16.339522546419097,
+      "encoded_bytes": 377,
+      "frames": 385,
+      "id": "libri_0015",
+      "raw_bytes": 6160
+    },
+    {
+      "compression_ratio": 15.62303664921466,
+      "encoded_bytes": 382,
+      "frames": 373,
+      "id": "libri_0016",
+      "raw_bytes": 5968
+    },
+    {
+      "compression_ratio": 15.96029776674938,
+      "encoded_bytes": 403,
+      "frames": 402,
+      "id": "libri_0017",
+      "raw_bytes": 6432
+    },
+    {
+      "compression_ratio": 16.327365728900254,
+      "encoded_bytes": 391,
+      "frames": 399,
+      "id": "libri_0018",
+      "raw_bytes": 6384
+    },
+    {
+      "compression_ratio": 12.976744186046512,
+      "encoded_bytes": 344,
+      "frames": 279,
+      "id": "libri_0019",
+      "raw_bytes": 4464
+    }
+  ],
+  "samples": 140,
+  "threshold": 15.0
+}

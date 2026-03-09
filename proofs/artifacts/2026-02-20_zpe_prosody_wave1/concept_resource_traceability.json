@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "Medium: fallback is deterministic but not deep-learning equivalent; affects external validity.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/resource_lock.json",
+      "planned_usage": "Primary F0 extractor baseline",
+      "resource_name": "torchcrepe_primary_f0",
+      "source_reference": "https://github.com/maxrmorrison/torchcrepe",
+      "substitution": "fallback_zero_crossing_rms_extractor"
+    },
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "Medium: algorithmic approximation may miss Praat-specific behaviors.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/resource_lock.json",
+      "planned_usage": "Energy and duration extraction baseline",
+      "resource_name": "parselmouth_energy_duration",
+      "source_reference": "https://github.com/YannickJadoul/Parselmouth",
+      "substitution": "fallback_rms_segment_duration_extractor"
+    },
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "High: no comparator run means upgrade claim remains inconclusive.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/resource_lock.json",
+      "planned_usage": "Modern comparator for pitch extraction",
+      "resource_name": "penn_comparator",
+      "source_reference": "https://github.com/interactiveaudiolab/penn",
+      "substitution": "none (comparator retained as open item)"
+    },
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "Medium: contour distribution calibrated but provenance not identical.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json",
+      "planned_usage": "Compression/latency fidelity evaluation",
+      "resource_name": "librispeech_dataset",
+      "source_reference": "https://www.openslr.org/12",
+      "substitution": "deterministic_librispeech_like_fixture_set"
+    },
+    {
+      "availability": "AVAILABLE",
+      "comparability_impact": "Medium: emotional archetypes are synthetic proxies.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/prosody_retrieval_eval.json",
+      "planned_usage": "Emotion retrieval evaluation",
+      "resource_name": "ravdess_dataset",
+      "source_reference": "https://zenodo.org/record/1188976",
+      "substitution": "deterministic_ravdess_like_fixture_set"
+    },
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "Medium: phonetic coverage approximated statistically.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/prosody_f0_fidelity.json",
+      "planned_usage": "F0 and energy fidelity evaluation",
+      "resource_name": "cmu_arctic_dataset",
+      "source_reference": "http://www.festvox.org/cmu_arctic",
+      "substitution": "deterministic_cmu_arctic_like_fixture_set"
+    },
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "High: no real TTS listening panel; MOS equivalence unproven.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/prosody_transfer_eval.json",
+      "planned_usage": "Prosody transfer synthesis checks",
+      "resource_name": "coqui_xtts_bridge",
+      "source_reference": "https://github.com/coqui-ai/TTS",
+      "substitution": "objective_transfer_proxy_with_contour_mos"
+    },
+    {
+      "availability": "UNAVAILABLE",
+      "comparability_impact": "Low: endpoint semantics validated without runtime web server.",
+      "evidence_artifact": "artifacts/2026-02-20_zpe_prosody_wave1/integration_readiness_contract.json",
+      "planned_usage": "Integration API serving path",
+      "resource_name": "fastapi_uvicorn_serving",
+      "source_reference": "https://fastapi.tiangolo.com",
+      "substitution": "equivalent_inprocess_service_contract"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "appendix_e_gates": {
+    "E-G1": true,
+    "E-G2": true,
+    "E-G3": true,
+    "E-G4": true,
+    "E-G5": true
+  },
+  "appendix_f_gates": {
+    "F-G1": true,
+    "F-G2": true
+  },
+  "env_bootstrap": {
+    "env_file_exists": true,
+    "fallback_parser_used": false,
+    "loaded_keys": [
+      "HF_HUB_ENABLE_HF_TRANSFER",
+      "HF_TOKEN",
+      "HUGGINGFACE_HUB_TOKEN"
+    ],
+    "source_attempted": true,
+    "source_error_signature": "",
+    "source_success": true
+  },
+  "m1_pro_c005": {
+    "commercial_safe_alternative_status": "FAILED",
+    "commercial_safe_container_status": "FAILED",
+    "commercial_safe_replacement_paths": {
+      "CosyVoice2_commercial_safe": false,
+      "CosyVoice2_containerized_path": false,
+      "ParlerTTS_commercial_safe": false,
+      "PiperTTS_commercial_safe": false
+    },
+    "evidence": "mos_crosscheck_report.json",
+    "mos_attempt": {
+      "failure_signature": "mos_not_attempted",
+      "returncode": 1
+    },
+    "mos_evidence": {
+      "executed": false,
+      "files": [],
+      "mean_mos": 0.0,
+      "reason": "speechmos_unavailable_or_xtts_missing",
+      "tool": "SpeechMOS"
+    },
+    "reason": "XTTS is CPML/non-permissive and no executable commercial-safe transfer substitute was proven in-lane.",
+    "status": "PAUSED_EXTERNAL",
+    "xtts_nc_restricted": true,
+    "xtts_transfer": {
+      "attempt": {
+        "failure_signature": "xtts_not_attempted",
+        "returncode": 1
+      },
+      "executed": false,
+      "generated_files": 0,
+      "transfer_dir": ""
+    }
+  },
+  "m2_pro_c006": {
+    "emovdb_license_present": true,
+    "emovdb_nc_restricted": true,
+    "emovdb_resource_status": "FAILED",
+    "emovoice_license_present": false,
+    "evidence": "prosody_retrieval_eval.json",
+    "ood_eval": {
+      "dataset": "emovome_or_emovoice_real",
+      "executed": true,
+      "p_at_5": 0.17073170731707318,
+      "pass_metric": false,
+      "samples": 82,
+      "source_name": "emovome_or_emovoice",
+      "source_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice",
+      "threshold": 0.65
+    },
+    "ravdess_eval": {
+      "dataset": "ravdess_real",
+      "executed": true,
+      "p_at_5": 0.3066666666666667,
+      "pass_metric": false,
+      "samples": 120,
+      "threshold": 0.8
+    },
+    "ravdess_nc_restricted": false,
+    "reason": "RAVDESS/OOD retrieval metrics below thresholds.",
+    "status": "FAIL"
+  },
+  "m3_quality_gate": "DEFER_TO_FINAL_PACKAGING",
+  "m4_fallback_controlled": true
+}

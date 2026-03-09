@@ -1,0 +1,32 @@
+{
+  "sector": "ZPE Prosody",
+  "repo_stage": "private_staging",
+  "package_name": "zpe-prosody",
+  "package_version": "0.1.0.dev0",
+  "runtime_coupling_to_imc": "none",
+  "release_linkage": "contract_only",
+  "packet_format": "ZPRS/v1",
+  "api_endpoints": [
+    "/encode",
+    "/decode",
+    "/search",
+    "/transfer"
+  ],
+  "accepted_bundle_root": "proofs/artifacts/2026-02-20_zpe_prosody_wave1",
+  "accepted_claim_status": {
+    "PRO-C001": "PASS",
+    "PRO-C002": "PASS",
+    "PRO-C003": "PASS",
+    "PRO-C004": "PASS",
+    "PRO-C005": "PAUSED_EXTERNAL",
+    "PRO-C006": "FAIL"
+  },
+  "breaking_change_policy": {
+    "requires_review": [
+      "packet_format_change",
+      "api_surface_change",
+      "claim_status_promotion",
+      "proof_path_relayout"
+    ]
+  }
+}

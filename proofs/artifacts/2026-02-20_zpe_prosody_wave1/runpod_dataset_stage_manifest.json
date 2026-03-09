@@ -1,0 +1,5 @@
+{
+  "ood_dataset": "stage EmoVoice/EMOVOME corpus to /workspace/data/ood",
+  "ravdess": "stage to /workspace/data/ravdess with manifest + checksums",
+  "xtts_outputs": "stage generated transfer wav files to /workspace/artifacts/xtts_transfer"
+}

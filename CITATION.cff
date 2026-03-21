@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: >-
+  If you use ZPE Prosody artifacts or results, cite this repository record.
+type: software
+title: "ZPE Prosody: Zero-Point Encoding Prosody Lane (Private Staging)"
+authors:
+  - given-names: Zer0pa
+    family-names: Architect-Prime
+  - name: Zer0pa Labs
+repository-code: https://github.com/Zer0pa/ZPE-Prosody
+url: https://github.com/Zer0pa/ZPE-Prosody
+license: LicenseRef-Zer0pa-SAL-6.0
+abstract: >-
+  ZPE Prosody is a private staging repository for the ZPE Prosody Wave-1
+  lane, focused on prosody compression, retrieval, and transfer using
+  ZPE directional-encoding primitives. This repo is not a public release
+  surface.
+keywords:
+  - prosody encoding
+  - speech compression
+  - zero-point encoding
+  - evidence discipline
+  - falsification-first

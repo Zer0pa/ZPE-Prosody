@@ -151,7 +151,7 @@ Canonical registry:
       <td>ACTIVE_SUPPORTING</td>
     </tr>
     <tr>
-      <td><code>SUPPORT.md</code></td>
+      <td><code>docs/SUPPORT.md</code></td>
       <td>Support routing and response expectations</td>
       <td>ACTIVE_SUPPORTING</td>
     </tr>

@@ -5,7 +5,42 @@
 Navigation index for the ZPE Prosody private staging documentation surface.
 
 This directory is a live documentation surface for private staging. It is not a
-public release, and the current lane verdict remains `FAIL`.
+public release, and the current lane verdict remains `FAIL`. Treat all guidance
+here as staging-only unless a document explicitly says otherwise.
+
+---
+
+<p>
+  <img src="../.github/assets/readme/section-bars/where-to-start.svg" alt="WHERE TO START" width="100%">
+</p>
+Use this page as the map. Then choose the shortest path below based on intent.
+
+<table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th align="left">I need</th>
+      <th align="left">Go to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fast repo verification path</td>
+      <td><code>../AUDITOR_PLAYBOOK.md</code></td>
+    </tr>
+    <tr>
+      <td>Current verdict and proof anchors</td>
+      <td><code>../proofs/FINAL_STATUS.md</code> and <code>../proofs/PROOF_INDEX.md</code></td>
+    </tr>
+    <tr>
+      <td>Support and escalation routing</td>
+      <td><code>docs/SUPPORT.md</code></td>
+    </tr>
+    <tr>
+      <td>Boundary limits for public claims</td>
+      <td><code>../PUBLIC_AUDIT_LIMITS.md</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -159,3 +194,9 @@ are evidence lineage, not current setup instructions.
     </tr>
   </tbody>
 </table>
+
+---
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

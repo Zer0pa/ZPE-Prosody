@@ -5,12 +5,12 @@
 <p>
   <img src=".github/assets/readme/section-bars/unreleased.svg" alt="UNRELEASED" width="100%">
 </p>
-This repo is not at public-release stage.
+This repo is not at public-release stage. Prosody truth only for the private staging surface.
 
 <p>
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="CURRENT RELEASE POSTURE" width="100%">
 </p>
-Current release posture (Prosody truth only):
+Current release posture (Prosody truth only) for cold readers:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -121,3 +121,7 @@ Minimum release gate before any visibility change:
 </table>
 
 Until then, stay private.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

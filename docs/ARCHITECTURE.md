@@ -5,12 +5,12 @@
 <p>
   <img src="../.github/assets/readme/section-bars/architecture-and-theory.svg" alt="ARCHITECTURE AND THEORY" width="100%">
 </p>
-Prosody-only architecture overview for the private staging repo. This is not a public release surface.
+Prosody-only architecture overview for the private staging repo. Use this to map the package layout and boundaries. This is not a public release surface.
 
 <p>
   <img src="../.github/assets/readme/section-bars/interface-contracts.svg" alt="INTERFACE CONTRACTS" width="100%">
 </p>
-Core package location: <code>src/zpe_prosody/</code>
+Core package location: <code>src/zpe_prosody/</code>. The table below describes the in-repo responsibilities only.
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -49,7 +49,7 @@ Core package location: <code>src/zpe_prosody/</code>
 <p>
   <img src="../.github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="TECHNICAL RELEASE SURFACE" width="100%">
 </p>
-Only Prosody truth:
+Only Prosody truth for the release surface:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -114,7 +114,7 @@ Only Prosody truth:
 <p>
   <img src="../.github/assets/readme/section-bars/scope-discipline.svg" alt="SCOPE DISCIPLINE" width="100%">
 </p>
-Repo boundary discipline:
+Repo boundary discipline for this staging surface:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -141,3 +141,7 @@ Repo boundary discipline:
     </tr>
   </tbody>
 </table>
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

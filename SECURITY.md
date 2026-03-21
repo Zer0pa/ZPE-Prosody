@@ -9,6 +9,8 @@ This document covers vulnerability reporting for the ZPE Prosody
 private staging repo. It covers the `zpe_prosody` package, repo
 workflows, and the proof corpus within this repo only. It does not
 cover downstream lanes or any public release surface.
+If you are uncertain whether a finding is security-relevant, report it
+privately and we will triage.
 
 Current repo stage: private staging only. Security fixes must preserve
 that boundary. Security claims require evidence paths; if evidence is
@@ -121,3 +123,7 @@ The following are explicitly out of scope for this security policy:
 
 `LICENSE` is the legal source of truth for licensing terms. This
 security policy is an operational summary and is not legal advice.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

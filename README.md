@@ -29,13 +29,13 @@
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-`ZPE Prosody` is a private staging repository for the ZPE Prosody Wave-1 lane. It is not a public release surface.
+`ZPE Prosody` is the private staging repository for the ZPE Prosody Wave-1 lane. It is the authority surface for lane status and accepted claims, and it is not a public release surface.
 
 <a id="canonical-authority"></a>
 <p>
   <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
 </p>
-Canonical authority block (only Prosody truth):
+Canonical authority block (sole lane truth):
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -63,10 +63,6 @@ Canonical authority block (only Prosody truth):
     <tr>
       <td>Public release readiness</td>
       <td>No</td>
-    </tr>
-    <tr>
-      <td>DT closures</td>
-      <td>No DT closures</td>
     </tr>
     <tr>
       <td>Acquisition surface</td>
@@ -110,7 +106,7 @@ Technical release truth:
 <p>
   <img src=".github/assets/readme/section-bars/where-to-go.svg" alt="WHERE TO GO" width="100%">
 </p>
-Supporting docs and authority anchors:
+Supporting docs and authority anchors (start here for verification):
 - `docs/CANONICAL_DOC_REGISTRY.md`
 - `proofs/PROOF_INDEX.md`
 - `proofs/FINAL_STATUS.md`
@@ -125,7 +121,10 @@ Supporting docs and authority anchors:
 </p>
 What is not claimed:
 - No public release readiness.
-- No DT closures.
 - No commercial-safe transfer closure.
-- No retrieval closure on a commercial-safe emotional corpus.
+- Retrieval closure on the accepted path is below threshold.
 - No Phase 4.5 performance augmentation or Phase 5 blind-clone verification yet.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Masthead Tail" width="100%">
+</p>

@@ -4,7 +4,8 @@
 
 ZPE Prosody is a private staging repository for the Prosody Wave-1 lane.
 Contributions are evidence-first and scoped to Prosody truth only.
-Read this before opening a PR.
+If you do not have explicit access, stop here. Read this before opening
+a PR.
 
 ---
 
@@ -21,6 +22,7 @@ ZPE Prosody operates under a falsification-first culture. This means:
 - Keep changes narrow. One technical concern per PR is the default.
 - Authority anchors live in `README.md`, `proofs/PROOF_INDEX.md`, and
   `proofs/FINAL_STATUS.md`. Do not contradict those without new evidence.
+  If you are unsure which claim is authoritative, treat it as unresolved.
 
 ---
 
@@ -77,7 +79,8 @@ unless clearly documented and approved.
   <img src=".github/assets/readme/section-bars/what-we-accept.svg" alt="WHAT WE ACCEPT" width="100%">
 </p>
 **Bug fixes** — with a reproduction case and evidence that the fix
-resolves it without regressing anything else.
+resolves it without regressing anything else. Evidence should live under
+`proofs/artifacts/` and be referenced in the PR.
 
 **Adversarial or negative findings** — well-documented failures are
 valid contributions.
@@ -139,3 +142,7 @@ evidence paths; issues without evidence will be triaged as incomplete.
 </p>
 This is a private staging repo. Direct questions to
 `architects@zer0pa.ai` or your internal maintainer contact.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

@@ -5,8 +5,11 @@
 All notable release-surface changes to ZPE Prosody are documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-This changelog tracks the private staging repo surface only. No public
+This changelog tracks the private staging repo surface only. It is not
+a public release log and it does not cover other ZPE lanes. No public
 release tag has been issued.
+When a change affects evidence, proofs, or lane verdicts, include the
+relevant artifact or proof path in the entry.
 
 ---
 
@@ -26,3 +29,7 @@ release tag has been issued.
 
 <!-- versions -->
 [Unreleased]: private staging
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

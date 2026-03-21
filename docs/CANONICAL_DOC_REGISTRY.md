@@ -23,13 +23,13 @@
 <p>
   <img src="../.github/assets/readme/section-bars/purpose.svg" alt="PURPOSE" width="100%">
 </p>
-This registry enumerates the canonical authority surfaces and supporting documents for ZPE Prosody private staging. It does not assert public release readiness.
+This registry is the routing map for ZPE Prosody private staging. It names the authoritative sources for lane truth and the supporting documents required for verification. It does not assert public release readiness.
 
 <a id="canonical-authority"></a>
 <p>
   <img src="../.github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
 </p>
-Only Prosody truth:
+Only Prosody truth (authoritative signals):
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -57,10 +57,6 @@ Only Prosody truth:
     <tr>
       <td>Public release readiness</td>
       <td>No</td>
-    </tr>
-    <tr>
-      <td>DT closures</td>
-      <td>No DT closures</td>
     </tr>
   </tbody>
 </table>
@@ -196,10 +192,14 @@ Canonical registry:
 <p>
   <img src="../.github/assets/readme/section-bars/where-to-go.svg" alt="WHERE TO GO" width="100%">
 </p>
-Supporting doc route:
+Supporting doc route (verification-first order):
 - `../README.md`
 - `README.md`
 - `ARCHITECTURE.md`
 - `LEGAL_BOUNDARIES.md`
 - `../proofs/PROOF_INDEX.md`
 - `../proofs/FINAL_STATUS.md`
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Masthead Tail" width="100%">
+</p>

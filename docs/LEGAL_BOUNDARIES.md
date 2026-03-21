@@ -5,12 +5,12 @@
 <p>
   <img src="../.github/assets/readme/section-bars/license-and-ip.svg" alt="LICENSE AND IP" width="100%">
 </p>
-<code>LICENSE</code> at the repository root is the legal source of truth.
+<code>LICENSE</code> at the repository root is the legal source of truth. This page summarizes legal boundaries for a cold reader.
 
 <p>
   <img src="../.github/assets/readme/section-bars/scope.svg" alt="REPO SCOPE" width="100%">
 </p>
-Repo scope (Prosody truth only):
+Repo scope (Prosody truth only) for the private staging boundary:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -37,7 +37,7 @@ Repo scope (Prosody truth only):
 <p>
   <img src="../.github/assets/readme/section-bars/evidence-and-claims.svg" alt="CURRENT CLAIM BOUNDARIES" width="100%">
 </p>
-Current claim boundaries:
+Current claim boundaries in the accepted evidence bundle:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -61,3 +61,7 @@ Current claim boundaries:
   <img src="../.github/assets/readme/section-bars/proof-corpus.svg" alt="HISTORICAL PROOF NOTES" width="100%">
 </p>
 The accepted proof bundle contains original machine-local paths and command traces. Those remain valid as historical evidence lineage. They are not the live portability contract for this repo boundary.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

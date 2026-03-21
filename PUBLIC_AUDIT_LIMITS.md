@@ -5,12 +5,12 @@
 <p>
   <img src=".github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
 </p>
-This repo is a private staging surface. It is not a public audit release.
+This repo is a private staging surface. It is not a public audit release. Use this page to understand what is explicitly out of scope.
 
 <p>
   <img src=".github/assets/readme/section-bars/evidence.svg" alt="EVIDENCE" width="100%">
 </p>
-Current limits (Prosody truth only):
+Current limits (Prosody truth only) as of the accepted bundle:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -45,7 +45,7 @@ Current limits (Prosody truth only):
 <p>
   <img src=".github/assets/readme/section-bars/scope-discipline.svg" alt="READING RULES" width="100%">
 </p>
-Reading rules:
+Reading rules for cold readers:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -72,3 +72,7 @@ Reading rules:
     </tr>
   </tbody>
 </table>
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

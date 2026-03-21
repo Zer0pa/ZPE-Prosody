@@ -5,12 +5,12 @@
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-Shortest honest verification path for the ZPE Prosody private staging repo. Prosody truth only.
+Shortest honest verification path for the ZPE Prosody private staging repo. Prosody truth only. This playbook is for auditors validating the repo boundary, not a public release claim.
 
 <p>
   <img src=".github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
 </p>
-What you can verify here:
+What you can verify here today:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -54,7 +54,7 @@ make test
 <p>
   <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
 </p>
-Expected current truth:
+Expected current truth for the accepted bundle:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -148,3 +148,7 @@ What this playbook does not establish:
     </tr>
   </tbody>
 </table>
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

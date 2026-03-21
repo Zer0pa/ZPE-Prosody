@@ -10,6 +10,41 @@ current staging truth only and does not indicate public release readiness.
 <p>
   <img src="../.github/assets/readme/section-bars/questions.svg" alt="QUESTIONS" width="100%">
 </p>
+If you are trying to verify the repo or audit claims, start with
+<code>../AUDITOR_PLAYBOOK.md</code> instead of this FAQ.
+
+<table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th align="left">Need</th>
+      <th align="left">Best starting point</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lane verdict and proof anchors</td>
+      <td><code>../proofs/FINAL_STATUS.md</code> and <code>../proofs/PROOF_INDEX.md</code></td>
+    </tr>
+    <tr>
+      <td>Support routing</td>
+      <td><code>docs/SUPPORT.md</code></td>
+    </tr>
+    <tr>
+      <td>Public audit limits</td>
+      <td><code>../PUBLIC_AUDIT_LIMITS.md</code></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+<p>
+  <img src="../.github/assets/readme/section-bars/boundary.svg" alt="BOUNDARY" width="100%">
+</p>
+This FAQ is a staging-only reference. It does not authorize public claims,
+public release statements, or changes to the accepted verdict.
+
+---
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -115,3 +150,9 @@ may contain machine-local paths; those are evidence lineage, not setup guidance.
     </tr>
   </tbody>
 </table>
+
+---
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

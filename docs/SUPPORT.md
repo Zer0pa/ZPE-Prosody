@@ -10,6 +10,33 @@ assumes a private staging boundary and an accepted lane verdict of <code>FAIL</c
 <p>
   <img src="../.github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
 </p>
+Use this page only for staging support and escalation. For proof verification,
+start with <code>../AUDITOR_PLAYBOOK.md</code>.
+
+<table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th align="left">Need</th>
+      <th align="left">Go to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Proof anchors and claim status</td>
+      <td><code>../proofs/FINAL_STATUS.md</code> and <code>../proofs/PROOF_INDEX.md</code></td>
+    </tr>
+    <tr>
+      <td>Audit limits for public claims</td>
+      <td><code>../PUBLIC_AUDIT_LIMITS.md</code></td>
+    </tr>
+    <tr>
+      <td>Repo architecture context</td>
+      <td><code>docs/ARCHITECTURE.md</code></td>
+    </tr>
+  </tbody>
+</table>
+
+---
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -136,3 +163,9 @@ current lane gate work and evidence audit queue.
 </p>
 Escalate to <code>architects@zer0pa.ai</code> when a private staging issue
 needs an architectural or legal decision.
+
+---
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
+</p>

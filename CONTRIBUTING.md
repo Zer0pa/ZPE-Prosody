@@ -142,7 +142,3 @@ evidence paths; issues without evidence will be triaged as incomplete.
 </p>
 This is a private staging repo. Direct questions to
 `architects@zer0pa.ai` or your internal maintainer contact.
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

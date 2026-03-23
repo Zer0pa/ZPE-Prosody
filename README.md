@@ -1,15 +1,12 @@
-<p>
+<p align="center">
   <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE Prosody Masthead Alt 1" width="100%">
-</p>
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Masthead Alt 2" width="100%">
 </p>
 
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
+    <td align="center">
+      <a href="#quickstart"><img src=".github/assets/readme/nav/quickstart-and-license.svg" alt="Quickstart" width="180"></a>
+    </td>
     <td align="center">
       <a href="#what-this-is"><img src=".github/assets/readme/nav/what-this-is.svg" alt="What This Is" width="180"></a>
     </td>
@@ -17,19 +14,45 @@
       <a href="#canonical-authority"><img src=".github/assets/readme/nav/current-authority.svg" alt="Current Authority" width="180"></a>
     </td>
     <td align="center">
-      <a href="#quickstart"><img src=".github/assets/readme/nav/quickstart-and-license.svg" alt="Quickstart" width="180"></a>
-    </td>
-    <td align="center">
       <a href="#supporting-docs"><img src=".github/assets/readme/nav/go-next.svg" alt="Go Next" width="180"></a>
     </td>
   </tr>
 </table>
+
+<a id="quickstart"></a>
+<p>
+  <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
+</p>
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+make repo-sanity
+make package-sanity
+make test
+```
+Optional install surfaces:
+- `python -m pip install ".[api]"` for the FastAPI/Uvicorn wrapper
+- `python -m pip install ".[benchmarks]"` for the NumPy-backed benchmark helpers
+
+Technical release truth:
+- The base wheel ships only the `src/zpe_prosody` package.
+- `scripts/` remains a repo-local operational harness, not an installed CLI surface.
+- `make package-sanity` builds sdist and wheel, then verifies isolated base, `api`, and `benchmarks` installs from the built wheel.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3.4.gif" alt="ZPE Prosody Upper Insert" width="100%">
+</p>
 
 <a id="what-this-is"></a>
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 `ZPE Prosody` is the private staging repository for the ZPE Prosody Wave-1 lane. It is the authority surface for lane status and accepted claims, and it is not a public release surface.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
+</p>
 
 <a id="canonical-authority"></a>
 <p>
@@ -72,6 +95,10 @@ Canonical authority block (sole lane truth):
 </table>
 
 <p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE Prosody Mid Masthead" width="100%">
+</p>
+
+<p>
   <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
 </p>
 - `src/zpe_prosody/`: lane package
@@ -81,26 +108,9 @@ Canonical authority block (sole lane truth):
 - `proofs/`: proof index, final status, runbooks, adjudicated bundle
 - `docs/`: architecture, legal boundaries, release-contract notes
 
-<a id="quickstart"></a>
 <p>
-  <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Lower Masthead" width="100%">
 </p>
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e ".[dev]"
-make repo-sanity
-make package-sanity
-make test
-```
-Optional install surfaces:
-- `python -m pip install ".[api]"` for the FastAPI/Uvicorn wrapper
-- `python -m pip install ".[benchmarks]"` for the NumPy-backed benchmark helpers
-
-Technical release truth:
-- The base wheel ships only the `src/zpe_prosody` package.
-- `scripts/` remains a repo-local operational harness, not an installed CLI surface.
-- `make package-sanity` builds sdist and wheel, then verifies isolated base, `api`, and `benchmarks` installs from the built wheel.
 
 <a id="supporting-docs"></a>
 <p>
@@ -126,5 +136,5 @@ What is not claimed:
 - No Phase 4.5 performance augmentation or Phase 5 blind-clone verification yet.
 
 <p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Masthead Tail" width="100%">
+  <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">
 </p>

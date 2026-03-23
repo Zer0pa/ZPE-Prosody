@@ -29,7 +29,3 @@ relevant artifact or proof path in the entry.
 
 <!-- versions -->
 [Unreleased]: private staging
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

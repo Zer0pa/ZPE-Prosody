@@ -148,7 +148,3 @@ What this playbook does not establish:
     </tr>
   </tbody>
 </table>
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

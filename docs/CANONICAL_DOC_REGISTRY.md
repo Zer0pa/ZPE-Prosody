@@ -199,7 +199,3 @@ Supporting doc route (verification-first order):
 - `LEGAL_BOUNDARIES.md`
 - `../proofs/PROOF_INDEX.md`
 - `../proofs/FINAL_STATUS.md`
-
-<p>
-  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Masthead Tail" width="100%">
-</p>

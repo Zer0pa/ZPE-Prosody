@@ -141,7 +141,3 @@ Repo boundary discipline for this staging surface:
     </tr>
   </tbody>
 </table>
-
-<p>
-  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

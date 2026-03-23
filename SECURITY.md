@@ -123,7 +123,3 @@ The following are explicitly out of scope for this security policy:
 
 `LICENSE` is the legal source of truth for licensing terms. This
 security policy is an operational summary and is not legal advice.
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

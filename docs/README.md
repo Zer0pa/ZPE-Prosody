@@ -11,7 +11,7 @@ here as staging-only unless a document explicitly says otherwise.
 ---
 
 <p>
-  <img src="../.github/assets/readme/section-bars/where-to-start.svg" alt="WHERE TO START" width="100%">
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
 </p>
 Use this page as the map. Then choose the shortest path below based on intent.
 
@@ -194,9 +194,3 @@ are evidence lineage, not current setup instructions.
     </tr>
   </tbody>
 </table>
-
----
-
-<p>
-  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

@@ -163,9 +163,3 @@ current lane gate work and evidence audit queue.
 </p>
 Escalate to <code>architects@zer0pa.ai</code> when a private staging issue
 needs an architectural or legal decision.
-
----
-
-<p>
-  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

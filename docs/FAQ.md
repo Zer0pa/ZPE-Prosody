@@ -39,7 +39,7 @@ If you are trying to verify the repo or audit claims, start with
 ---
 
 <p>
-  <img src="../.github/assets/readme/section-bars/boundary.svg" alt="BOUNDARY" width="100%">
+  <img src="../.github/assets/readme/section-bars/scope.svg" alt="SCOPE" width="100%">
 </p>
 This FAQ is a staging-only reference. It does not authorize public claims,
 public release statements, or changes to the accepted verdict.
@@ -150,9 +150,3 @@ may contain machine-local paths; those are evidence lineage, not setup guidance.
     </tr>
   </tbody>
 </table>
-
----
-
-<p>
-  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

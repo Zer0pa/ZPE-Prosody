@@ -61,7 +61,3 @@ Current claim boundaries in the accepted evidence bundle:
   <img src="../.github/assets/readme/section-bars/proof-corpus.svg" alt="HISTORICAL PROOF NOTES" width="100%">
 </p>
 The accepted proof bundle contains original machine-local paths and command traces. Those remain valid as historical evidence lineage. They are not the live portability contract for this repo boundary.
-
-<p>
-  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>

@@ -2,6 +2,63 @@
   <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
 </p>
 
+---
+
+<a id="commercial-front-door"></a>
+<h2 align="center">What This Is</h2>
+
+> ZPE-Prosody is a deterministic speech-prosody encoding lane, currently in private-stage proof status.
+
+**This repo is a staged validation surface with a lane verdict of FAIL.** It is not a public release surface and not a current commercial front door. It demonstrates that the ZPE encoding architecture can be applied to speech-prosody signals, with specific pass/fail claim tracking per gate.
+
+<h3>Commercial Wedge</h3>
+
+This is for speech-technology and voice-analytics teams who may eventually need deterministic, reproducible encoding of prosodic features for voice pipelines. The business value would be auditability and reproducibility in speech analysis — but this lane has not yet cleared all gates.
+
+<h3>Technical Wedge</h3>
+
+The technical approach is deterministic 8-primitive encoding applied to speech-prosody signals. Current evidence: PRO-C001 through PRO-C004 PASS, PRO-C005 PAUSED_EXTERNAL, PRO-C006 FAIL. The lane verdict is FAIL — retrieval closure on the accepted path is below threshold.
+
+<h3>Current Readiness</h3>
+
+**STAGED_PROOF_SURFACE** — Private staging repository. Lane verdict FAIL. Not a public release surface.
+
+<h3>What Is Proved</h3>
+
+- PRO-C001 PASS — core codec round-trip fidelity
+- PRO-C002 PASS — deterministic encoding reproducibility
+- PRO-C003 PASS — prosodic feature extraction fidelity
+- PRO-C004 PASS — unit test and integration coverage
+- Authority bundle under `proofs/artifacts/2026-02-20_zpe_prosody_wave1/`
+
+<h3>What Is Not Being Claimed</h3>
+
+- PRO-C005 PAUSED_EXTERNAL — blocked on external dependency
+- PRO-C006 FAIL — retrieval closure below threshold
+- No public release readiness
+- No commercial-safe transfer closure
+- No Phase 4.5 performance augmentation or Phase 5 blind-clone verification
+
+<h3>Ideal First Buyer</h3>
+
+Speech-technology or voice-analytics infrastructure team needing deterministic prosodic signal encoding (future — not current).
+
+<h3>Deployment Model</h3>
+
+Python package (`pip install -e ".[dev]"`), private staged. FastAPI wrapper available via `.[api]` extra. Not currently distributed as a public package.
+
+<h3>Authority / Proof Anchors</h3>
+
+- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/` — authority bundle
+- `proofs/PROOF_INDEX.md` and `proofs/FINAL_STATUS.md` — claim tracking
+- PRO-C001 through PRO-C006 claim map with verdicts
+
+<h3>Role In The Zer0pa Family</h3>
+
+ZPE-Prosody validates that the ZPE encoding architecture can target speech-prosody signal domains, even though this lane has not fully cleared. It sits in the staged/validation tier alongside Neuro, Mocap, and Bio, demonstrating family breadth while the primary commercial wedges (IoT, XR, Robotics, Geo) lead market entry. The platform layer is ZPE-IMC.
+
+---
+
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center">

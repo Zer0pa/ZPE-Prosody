@@ -1,0 +1,292 @@
+{
+  "channel_size_rows": [
+    {
+      "duration": 182,
+      "energy": 467,
+      "f0": 296,
+      "id": "1089-134686-0000",
+      "voiced_mask": 104
+    },
+    {
+      "duration": 87,
+      "energy": 181,
+      "f0": 119,
+      "id": "1089-134686-0001",
+      "voiced_mask": 53
+    },
+    {
+      "duration": 123,
+      "energy": 305,
+      "f0": 228,
+      "id": "1089-134686-0002",
+      "voiced_mask": 72
+    },
+    {
+      "duration": 61,
+      "energy": 141,
+      "f0": 138,
+      "id": "1089-134686-0003",
+      "voiced_mask": 40
+    },
+    {
+      "duration": 97,
+      "energy": 233,
+      "f0": 196,
+      "id": "1089-134686-0004",
+      "voiced_mask": 61
+    },
+    {
+      "duration": 134,
+      "energy": 399,
+      "f0": 277,
+      "id": "1089-134686-0005",
+      "voiced_mask": 77
+    },
+    {
+      "duration": 166,
+      "energy": 434,
+      "f0": 318,
+      "id": "1089-134686-0006",
+      "voiced_mask": 99
+    },
+    {
+      "duration": 84,
+      "energy": 212,
+      "f0": 155,
+      "id": "1089-134686-0007",
+      "voiced_mask": 52
+    },
+    {
+      "duration": 144,
+      "energy": 312,
+      "f0": 255,
+      "id": "1089-134686-0008",
+      "voiced_mask": 88
+    },
+    {
+      "duration": 164,
+      "energy": 449,
+      "f0": 306,
+      "id": "1089-134686-0009",
+      "voiced_mask": 98
+    },
+    {
+      "duration": 98,
+      "energy": 210,
+      "f0": 180,
+      "id": "1089-134686-0010",
+      "voiced_mask": 58
+    },
+    {
+      "duration": 226,
+      "energy": 534,
+      "f0": 413,
+      "id": "1089-134686-0011",
+      "voiced_mask": 130
+    },
+    {
+      "duration": 189,
+      "energy": 483,
+      "f0": 382,
+      "id": "1089-134686-0012",
+      "voiced_mask": 113
+    },
+    {
+      "duration": 154,
+      "energy": 361,
+      "f0": 285,
+      "id": "1089-134686-0013",
+      "voiced_mask": 86
+    },
+    {
+      "duration": 65,
+      "energy": 141,
+      "f0": 105,
+      "id": "1089-134686-0014",
+      "voiced_mask": 42
+    },
+    {
+      "duration": 105,
+      "energy": 281,
+      "f0": 163,
+      "id": "1089-134686-0015",
+      "voiced_mask": 63
+    },
+    {
+      "duration": 93,
+      "energy": 193,
+      "f0": 139,
+      "id": "1089-134686-0016",
+      "voiced_mask": 58
+    },
+    {
+      "duration": 169,
+      "energy": 391,
+      "f0": 269,
+      "id": "1089-134686-0017",
+      "voiced_mask": 98
+    },
+    {
+      "duration": 267,
+      "energy": 682,
+      "f0": 493,
+      "id": "1089-134686-0018",
+      "voiced_mask": 149
+    },
+    {
+      "duration": 220,
+      "energy": 588,
+      "f0": 414,
+      "id": "1089-134686-0019",
+      "voiced_mask": 126
+    }
+  ],
+  "dataset": "librispeech_test_clean",
+  "mean_compression_ratio": 13.011820767218712,
+  "p50_compression_ratio": 12.963503649635037,
+  "p95_compression_ratio": 16.639405204460967,
+  "raw_baseline_definition": "float32 arrays for f0, energy, duration, voiced_mask",
+  "sample_rows": [
+    {
+      "compression_ratio": 14.466898954703833,
+      "encoded_bytes": 1148,
+      "frames": 1038,
+      "id": "1089-134686-0000",
+      "raw_bytes": 16608
+    },
+    {
+      "compression_ratio": 9.558441558441558,
+      "encoded_bytes": 539,
+      "frames": 322,
+      "id": "1089-134686-0001",
+      "raw_bytes": 5152
+    },
+    {
+      "compression_ratio": 12.711003627569529,
+      "encoded_bytes": 827,
+      "frames": 657,
+      "id": "1089-134686-0002",
+      "raw_bytes": 10512
+    },
+    {
+      "compression_ratio": 8.751565762004175,
+      "encoded_bytes": 479,
+      "frames": 262,
+      "id": "1089-134686-0003",
+      "raw_bytes": 4192
+    },
+    {
+      "compression_ratio": 12.034985422740524,
+      "encoded_bytes": 686,
+      "frames": 516,
+      "id": "1089-134686-0004",
+      "raw_bytes": 8256
+    },
+    {
+      "compression_ratio": 15.545638945233266,
+      "encoded_bytes": 986,
+      "frames": 958,
+      "id": "1089-134686-0005",
+      "raw_bytes": 15328
+    },
+    {
+      "compression_ratio": 15.053763440860216,
+      "encoded_bytes": 1116,
+      "frames": 1050,
+      "id": "1089-134686-0006",
+      "raw_bytes": 16800
+    },
+    {
+      "compression_ratio": 11.215946843853821,
+      "encoded_bytes": 602,
+      "frames": 422,
+      "id": "1089-134686-0007",
+      "raw_bytes": 6752
+    },
+    {
+      "compression_ratio": 11.884187082405345,
+      "encoded_bytes": 898,
+      "frames": 667,
+      "id": "1089-134686-0008",
+      "raw_bytes": 10672
+    },
+    {
+      "compression_ratio": 15.082437275985663,
+      "encoded_bytes": 1116,
+      "frames": 1052,
+      "id": "1089-134686-0009",
+      "raw_bytes": 16832
+    },
+    {
+      "compression_ratio": 10.790697674418604,
+      "encoded_bytes": 645,
+      "frames": 435,
+      "id": "1089-134686-0010",
+      "raw_bytes": 6960
+    },
+    {
+      "compression_ratio": 14.139800285306706,
+      "encoded_bytes": 1402,
+      "frames": 1239,
+      "id": "1089-134686-0011",
+      "raw_bytes": 19824
+    },
+    {
+      "compression_ratio": 14.635071090047393,
+      "encoded_bytes": 1266,
+      "frames": 1158,
+      "id": "1089-134686-0012",
+      "raw_bytes": 18528
+    },
+    {
+      "compression_ratio": 12.76751269035533,
+      "encoded_bytes": 985,
+      "frames": 786,
+      "id": "1089-134686-0013",
+      "raw_bytes": 12576
+    },
+    {
+      "compression_ratio": 7.68141592920354,
+      "encoded_bytes": 452,
+      "frames": 217,
+      "id": "1089-134686-0014",
+      "raw_bytes": 3472
+    },
+    {
+      "compression_ratio": 12.962025316455696,
+      "encoded_bytes": 711,
+      "frames": 576,
+      "id": "1089-134686-0015",
+      "raw_bytes": 9216
+    },
+    {
+      "compression_ratio": 9.56701030927835,
+      "encoded_bytes": 582,
+      "frames": 348,
+      "id": "1089-134686-0016",
+      "raw_bytes": 5568
+    },
+    {
+      "compression_ratio": 13.738791423001949,
+      "encoded_bytes": 1026,
+      "frames": 881,
+      "id": "1089-134686-0017",
+      "raw_bytes": 14096
+    },
+    {
+      "compression_ratio": 14.82603550295858,
+      "encoded_bytes": 1690,
+      "frames": 1566,
+      "id": "1089-134686-0018",
+      "raw_bytes": 25056
+    },
+    {
+      "compression_ratio": 15.303386316516931,
+      "encoded_bytes": 1447,
+      "frames": 1384,
+      "id": "1089-134686-0019",
+      "raw_bytes": 22144
+    }
+  ],
+  "samples": 100
+}

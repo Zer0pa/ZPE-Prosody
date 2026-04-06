@@ -164,3 +164,20 @@ What is not claimed:
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">
 </p>
+
+<p>
+  <img src=".github/assets/readme/section-bars/family-alignment.svg" alt="ZPE ECOSYSTEM" width="100%">
+</p>
+This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
+
+See also:
+- [ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC)
+- `zpe-iot`
+- `zpe-xr`
+- `zpe-robotics`
+- `zpe-geo`
+- `zpe-finance`
+- `zpe-ink`
+- `zpe-neuro`
+- `zpe-mocap`
+- `zpe-bio`

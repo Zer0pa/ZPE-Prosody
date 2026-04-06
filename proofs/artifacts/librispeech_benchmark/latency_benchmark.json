@@ -1,0 +1,6 @@
+{
+  "dataset": "librispeech_test_clean",
+  "mean_encode_ms": 2.6680725599931066,
+  "p95_encode_ms": 5.177249999974265,
+  "samples": 100
+}

@@ -19,6 +19,9 @@ on:
       - "Makefile"
       - ".github/workflows/prosody-ci.yml"
 
+permissions:
+  contents: read
+
 jobs:
   sanity:
     runs-on: ubuntu-latest
@@ -28,6 +31,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pyproject.toml
       - name: install
         run: |
           python -m pip install --upgrade pip

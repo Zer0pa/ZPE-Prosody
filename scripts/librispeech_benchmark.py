@@ -64,11 +64,20 @@ def write_json(path: Path, payload: dict) -> None:
 def append_log(path: Path, message: str) -> None:
     timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     entry = f"[{timestamp}] {message}\n"
-    prior = path.read_text(encoding="utf-8") if path.exists() else ""
-    path.write_text(
-        prior + entry,
-        encoding="utf-8",
-    )
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(entry)
+
+
+def safe_extract_tar(archive: tarfile.TarFile, target_root: Path) -> None:
+    root = target_root.resolve()
+    members = archive.getmembers()
+    for member in members:
+        if member.issym() or member.islnk():
+            raise ValueError(f"Refusing to extract link member: {member.name}")
+        member_path = (target_root / member.name).resolve()
+        if member_path != root and root not in member_path.parents:
+            raise ValueError(f"Refusing to extract outside target root: {member.name}")
+    archive.extractall(target_root, members=members)
 
 
 def download_dataset(cache_root: Path, log_path: Path) -> Path:
@@ -82,7 +91,7 @@ def download_dataset(cache_root: Path, log_path: Path) -> Path:
     if not extract_root.exists():
         append_log(log_path, f"extract start path={tar_path}")
         with tarfile.open(tar_path, "r:gz") as archive:
-            archive.extractall(cache_root)
+            safe_extract_tar(archive, cache_root)
         append_log(log_path, f"extract complete root={extract_root}")
     return extract_root
 

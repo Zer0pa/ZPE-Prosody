@@ -2,6 +2,18 @@
   <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
 </p>
 
+<p align="center">
+  <strong>13.012x compression on real speech.</strong><br>
+  4/6 gates pass.<br>
+  Deterministic prosody codec.<br>
+  Pitch, rhythm, stress.<br>
+  Prosody control layer.<br>
+  Compress once. Re-target voices.<br>
+  Transfer wedge: dubbing, agents, character voice.<br>
+  Retrieval closure in progress.<br>
+  Free below $100M annual revenue.
+</p>
+
 ---
 
 <a id="commercial-front-door"></a>
@@ -37,7 +49,7 @@ Part of the [Zer0pa](https://github.com/zer0-point-energy) family. Platform laye
       <a href="#what-this-is"><img src=".github/assets/readme/nav/what-this-is.svg" alt="What This Is" width="180"></a>
     </td>
     <td align="center">
-      <a href="#canonical-authority"><img src=".github/assets/readme/nav/current-authority.svg" alt="Current Authority" width="180"></a>
+      <a href="#status"><img src=".github/assets/readme/nav/current-authority.svg" alt="Current Authority" width="180"></a>
     </td>
     <td align="center">
       <a href="#supporting-docs"><img src=".github/assets/readme/nav/go-next.svg" alt="Go Next" width="180"></a>
@@ -74,51 +86,16 @@ Technical release truth:
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-`ZPE Prosody` is the private staging repository for the ZPE Prosody Wave-1 lane. It is the authority surface for lane status and accepted claims, and it is not a public release surface.
+- Contour codec layer.
+- Pitch, energy, duration, voiced mask.
+- Deterministic round trip.
+- Reusable across synthesis stacks.
+- Public wedge: TTS control, dubbing, conversational voice.
+- Status below the fold.
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
 </p>
-
-<a id="canonical-authority"></a>
-<p>
-  <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
-</p>
-Canonical authority block (sole lane truth):
-<table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
-  <thead>
-    <tr>
-      <th align="left">Authority signal</th>
-      <th align="left">Accepted truth</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Repo stage</td>
-      <td>Private staging only</td>
-    </tr>
-    <tr>
-      <td>Lane verdict</td>
-      <td><code>FAIL</code></td>
-    </tr>
-    <tr>
-      <td>Accepted claim snapshot</td>
-      <td><code>PRO-C001 PASS</code>, <code>PRO-C002 PASS</code>, <code>PRO-C003 PASS</code>, <code>PRO-C004 PASS</code>, <code>PRO-C005 PAUSED_EXTERNAL</code>, <code>PRO-C006 FAIL</code></td>
-    </tr>
-    <tr>
-      <td>Authority bundle path</td>
-      <td><code>proofs/artifacts/2026-02-20_zpe_prosody_wave1/</code></td>
-    </tr>
-    <tr>
-      <td>Public release readiness</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Acquisition surface</td>
-      <td>Private GitHub repo only (access by owner invitation)</td>
-    </tr>
-  </tbody>
-</table>
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE Prosody Mid Masthead" width="100%">
@@ -160,6 +137,47 @@ What is not claimed:
 - No commercial-safe transfer closure.
 - Retrieval closure on the accepted path is below threshold.
 - No Phase 4.5 performance augmentation or Phase 5 blind-clone verification yet.
+
+<a id="status"></a>
+<a id="canonical-authority"></a>
+<p>
+  <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
+</p>
+Status and authority snapshot:
+<table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th align="left">Authority signal</th>
+      <th align="left">Accepted truth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Repo stage</td>
+      <td>Private staging only</td>
+    </tr>
+    <tr>
+      <td>Lane verdict</td>
+      <td><code>FAIL</code></td>
+    </tr>
+    <tr>
+      <td>Accepted claim snapshot</td>
+      <td><code>PRO-C001 PASS</code>, <code>PRO-C002 PASS</code>, <code>PRO-C003 PASS</code>, <code>PRO-C004 PASS</code>, <code>PRO-C005 PAUSED_EXTERNAL</code>, <code>PRO-C006 FAIL</code></td>
+    </tr>
+    <tr>
+      <td>Authority bundle path</td>
+      <td><code>proofs/artifacts/2026-02-20_zpe_prosody_wave1/</code></td>
+    </tr>
+    <tr>
+      <td>Public release readiness</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Acquisition surface</td>
+      <td>Private GitHub repo only (access by owner invitation)</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">

@@ -18,6 +18,9 @@ relevant artifact or proof path in the entry.
 </p>
 ### Unreleased
 
+- Reframed README positioning around experimental research use, blocking issues,
+  and feature-compression scope.
+- Added package classifiers and project URLs to `pyproject.toml`.
 - 2026-03-09: Private staging import created.
 - Repo boundary normalized under `ZPE-Prosody/`.
 - IMC-modeled front-door, audit, proof, and trust surfaces added for

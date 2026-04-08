@@ -48,7 +48,7 @@ Technical release truth:
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-`ZPE Prosody` is the private staging repository for the ZPE Prosody Wave-1 lane. It is the authority surface for lane status and accepted claims, and it is not a public release surface.
+`ZPE Prosody` is an experimental research codec for extracted prosody features. It compresses pitch, energy, duration, and voiced-mask contours after feature extraction. It is not production-ready, and the current lane verdict remains tied to the accepted wave-1 proof bundle.
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
@@ -95,6 +95,14 @@ Canonical authority block (sole lane truth):
 </table>
 
 <p>
+  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="BLOCKING ISSUES" width="100%">
+</p>
+Blocking issues:
+- `PRO-C005`: blocked on a commercial-safe transfer stack replacing XTTS with executed in-lane evidence.
+- `PRO-C006`: blocked on retrieval closure; accepted real-corpus and OOD retrieval metrics remain below threshold.
+- Fix path: redesign retrieval, prove a commercial-safe transfer substitute, then rerun the adjudicated gate path end to end.
+
+<p>
   <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE Prosody Mid Masthead" width="100%">
 </p>
 
@@ -107,6 +115,14 @@ Canonical authority block (sole lane truth):
 - `data/fixtures/`: deterministic fixtures
 - `proofs/`: proof index, final status, runbooks, adjudicated bundle
 - `docs/`: architecture, legal boundaries, release-contract notes
+
+<p>
+  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="ECOSYSTEM CONTEXT" width="100%">
+</p>
+Ecosystem context:
+- Feature extraction: `librosa`, Praat, and OpenSMILE remain the primary front-end tools.
+- This repo targets compression of extracted prosody features, not raw waveform transcription or general speech analysis.
+- Use this lane when the problem is deterministic storage, transfer, and retrieval over contour bundles.
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Lower Masthead" width="100%">

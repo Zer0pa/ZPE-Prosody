@@ -18,6 +18,10 @@ relevant artifact or proof path in the entry.
 </p>
 ### Unreleased
 
+- Added clean-install verification, runnable examples, and librosa-backed
+  roundtrip coverage for the engineering phase.
+- Added gate-diagnosis surfaces for the blocked `PRO-C005` and `PRO-C006`
+  paths.
 - Reframed README positioning around experimental research use, blocking issues,
   and feature-compression scope.
 - Added package classifiers and project URLs to `pyproject.toml`.

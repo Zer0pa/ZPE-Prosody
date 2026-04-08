@@ -8,14 +8,15 @@ version = "0.1.0.dev0"
 description = "Deterministic contour codec, retrieval, and transfer evaluation surfaces for ZPE Prosody."
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "LicenseRef-Zer0pa-SAL-6.0"}
+license = "LicenseRef-Zer0pa-SAL-6.0"
 authors = [{name = "Zer0pa"}]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Science/Research",
-  "License :: Other/Proprietary License",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Information Analysis",
   "Topic :: Multimedia :: Sound/Audio :: Analysis",
 ]
 dependencies = []
@@ -31,9 +32,19 @@ api = [
   "fastapi>=0.109",
   "uvicorn>=0.27",
 ]
+benchmarks = [
+  "numpy<2",
+]
 dev = [
   "build>=1.2",
+  "pytest>=8",
   "ruff>=0.6",
+]
+docs = [
+  "mkdocs>=1.6",
+]
+test = [
+  "pytest>=8",
 ]
 
 [tool.setuptools]

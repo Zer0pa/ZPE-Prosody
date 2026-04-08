@@ -133,6 +133,7 @@ Ecosystem context:
   <img src=".github/assets/readme/section-bars/where-to-go.svg" alt="WHERE TO GO" width="100%">
 </p>
 Supporting docs and authority anchors (start here for verification):
+- `GATE_STATUS.md`
 - `docs/CANONICAL_DOC_REGISTRY.md`
 - `proofs/PROOF_INDEX.md`
 - `proofs/FINAL_STATUS.md`

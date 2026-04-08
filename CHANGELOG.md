@@ -18,6 +18,8 @@ relevant artifact or proof path in the entry.
 </p>
 ### Unreleased
 
+- Phase 3 data enrichment remains blocked while the lane verdict is `FAIL`;
+  `BENCHMARKS.md` stays deferred until `PRO-C005` and `PRO-C006` clear.
 - Added clean-install verification, runnable examples, and librosa-backed
   roundtrip coverage for the engineering phase.
 - Added gate-diagnosis surfaces for the blocked `PRO-C005` and `PRO-C006`

@@ -14,32 +14,6 @@
   Free below $100M annual revenue.
 </p>
 
----
-
-<a id="commercial-front-door"></a>
-
-## What This Is
-
-ZPE-Prosody applies the ZPE deterministic 8-primitive encoding architecture to speech-prosody signals — pitch, rhythm, stress patterns. This is the voice-analytics lane of the Zer0pa family, and **the current lane verdict is FAIL**.
-
-Gate-by-gate: **PRO-C001 PASS** (codec round-trip fidelity), **PRO-C002 PASS** (deterministic reproducibility), **PRO-C003 PASS** (prosodic feature extraction), **PRO-C004 PASS** (test coverage). **PRO-C005 PAUSED_EXTERNAL** (blocked on external dependency). **PRO-C006 FAIL** — retrieval closure on the accepted path is below threshold. Authority bundle: `proofs/artifacts/2026-02-20_zpe_prosody_wave1/`.
-
-The architecture applies. Four of six gates pass. But the lane has not cleared — retrieval closure failed and an external dependency blocks a fifth gate. This repo exists to demonstrate that the ZPE encoding approach extends to speech domains, and to preserve auditable claim tracking for future work.
-
-**Readiness: private-stage, lane verdict FAIL.** Not a public release surface. No commercial-safe transfer closure. No Phase 4.5 performance augmentation or Phase 5 blind-clone verification.
-
-**Not claimed:** public release readiness, retrieval closure, external-dependency resolution, commercial transfer closure.
-
-| Proof anchor | Location |
-|---|---|
-| Wave1 authority bundle | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/` |
-| Claim tracking | `proofs/PROOF_INDEX.md`, `proofs/FINAL_STATUS.md` |
-| Gate verdicts | PRO-C001–C006 map |
-
-Part of the [Zer0pa](https://github.com/zer0-point-energy) family. Platform layer: [ZPE-IMC](https://github.com/zer0-point-energy/ZPE-IMC).
-
----
-
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center">

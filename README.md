@@ -74,7 +74,7 @@ The architecture applies. Four of six gates pass. But the lane has not cleared â
 - No claim of external dependency resolution (PRO-C005 PAUSED)
 - No claim of release readiness or commercial transfer
 
-## Current Authority
+## Commercial Readiness
 
 <a id="canonical-authority"></a>
 <p>
@@ -91,7 +91,7 @@ The architecture applies. Four of six gates pass. But the lane has not cleared â
   <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">
 </p>
 
-## Verification Status
+## Tests and Verification
 
 | Code | Check | Verdict |
 |------|-------|---------|

@@ -12,15 +12,13 @@
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-ZPE-Prosody applies the ZPE deterministic 8-primitive encoding architecture to speech-prosody signals — pitch, rhythm, stress patterns. This is the voice-analytics lane of the Zer0pa family, and **the current lane verdict is FAIL**.
+**ZPE-Prosody applies the ZPE deterministic 8-primitive encoding architecture to speech-prosody signals — pitch, rhythm, stress patterns.**
 
-Gate-by-gate: **PRO-C001 PASS** (codec round-trip fidelity), **PRO-C002 PASS** (deterministic reproducibility), **PRO-C003 PASS** (prosodic feature extraction), **PRO-C004 PASS** (test coverage). **PRO-C005 PAUSED_EXTERNAL** (blocked on external dependency). **PRO-C006 FAIL** — retrieval closure on the accepted path is below threshold. Authority bundle: `proofs/artifacts/2026-02-20_zpe_prosody_wave1/`.
+This is the voice-analytics lane of the Zer0pa family, and the current lane verdict is FAIL.
 
-The architecture applies. Four of six gates pass. But the lane has not cleared — retrieval closure failed and an external dependency blocks a fifth gate. This repo exists to demonstrate that the ZPE encoding approach extends to speech domains, and to preserve auditable claim tracking for future work.
+Gate-by-gate: PRO-C001 PASS (codec round-trip fidelity), PRO-C002 PASS (deterministic reproducibility), PRO-C003 PASS (prosodic feature extraction), PRO-C004 PASS (test coverage).
 
-**Readiness: private-stage, lane verdict FAIL.** Not a public release surface. No commercial-safe transfer closure. No Phase 4.5 performance augmentation or Phase 5 blind-clone verification.
-
-`ZPE Prosody` is the private staging repository for the ZPE Prosody Wave-1 lane. It is the authority surface for lane status and accepted claims, and it is not a public release surface.
+PRO-C005 PAUSED_EXTERNAL (blocked on external dependency).
 
 | Field | Value |
 |-------|-------|
@@ -46,12 +44,12 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 
 ## Key Metrics
 
-| Metric | Value | Tag |
-|--------|-------|-----|
-| Gates Passed | 4/6 | C001_C004_PASS |
-| Lane Verdict | FAIL | OVERALL |
-| Blocked Gate | PRO-C005 | EXTERNAL_DEP |
-| Failed Gate | PRO-C006 | RETRIEVAL |
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| F0_RMSE | 1.44 Hz | vs WORLD ~5–10 Hz |
+| TIMING_ERROR | 0.0 ms | — |
+| ENCODE_LATENCY | 2.67 ms | — |
+| LANE_VERDICT | FAIL | — |
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
@@ -59,10 +57,10 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 
 ## What We Prove
 
-- Codec round-trip fidelity (PRO-C001 PASS)
-- Deterministic reproducibility (PRO-C002 PASS)
-- Prosodic feature extraction (PRO-C003 PASS)
-- Test coverage (PRO-C004 PASS)
+- Contour channels (f0, energy, duration) decomposed into directional primitives
+- Codec round-trip fidelity verified with F0 RMSE 1.44 Hz (vs WORLD ~5–10 Hz)
+- Deterministic reproducibility across encode-decode cycles confirmed
+- Architecture extends ZPE encoding approach to non-spatial speech domains
 
 ## What We Don't Claim
 
@@ -83,7 +81,7 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 | Field | Value |
 |-------|-------|
 | Verdict | FAIL |
-| Commit SHA | 27fecfdc506f |
+| Commit SHA | 27FECFD |
 | Confidence | 67% |
 | Source | proofs/FINAL_STATUS.md |
 
@@ -95,12 +93,12 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 
 | Code | Check | Verdict |
 |------|-------|---------|
-| V_01 | Codec round-trip fidelity (PRO-C001) | PASS |
-| V_02 | Deterministic reproducibility (PRO-C002) | PASS |
-| V_03 | Prosodic feature extraction (PRO-C003) | PASS |
-| V_04 | Test coverage (PRO-C004) | PASS |
-| V_05 | External dependency resolution (PRO-C005) | INC |
-| V_06 | Retrieval closure (PRO-C006) | FAIL |
+| V_01 | CODEC_ROUND-TRIP_FIDELITY_(PRO-C... | PASS |
+| V_02 | DETERMINISTIC_REPRODUCIBILITY_(P... | PASS |
+| V_03 | PROSODIC_FEATURE_EXTRACTION_(PRO... | PASS |
+| V_04 | TEST_COVERAGE_(PRO-C004) | PASS |
+| V_05 | EXTERNAL_DEPENDENCY_RESOLUTION_(... | INC |
+| V_06 | RETRIEVAL_CLOSURE_(PRO-C006) | FAIL |
 
 ## Proof Anchors
 

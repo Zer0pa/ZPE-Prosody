@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zpe-prosody"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Deterministic contour codec, retrieval, and transfer evaluation surfaces for ZPE Prosody."
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "LicenseRef-Zer0pa-SAL-6.0"}
+license = "LicenseRef-Zer0pa-SAL-6.2"
 authors = [{name = "Zer0pa"}]
 dependencies = []
 

@@ -46,12 +46,14 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 
 ## Key Metrics
 
-| Metric | Value | Tag |
-|--------|-------|-----|
-| Gates Passed | 4/6 | C001_C004_PASS |
-| Lane Verdict | FAIL | OVERALL |
-| Blocked Gate | PRO-C005 | EXTERNAL_DEP |
-| Failed Gate | PRO-C006 | RETRIEVAL |
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 16.5952× | — |
+| F0_RMSE | 0.892498% | vs WORLD ~5–10 Hz |
+| ENERGY_RMSE | 2.078044% | — |
+| RETRIEVAL | p@5 = 0.3067 | 4/6 gates, blocked |
+
+> Source: [before_after_metrics.json](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json>) | [c006_retrieval_failure_analysis.md](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/c006_retrieval_failure_analysis.md>)
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">

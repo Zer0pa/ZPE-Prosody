@@ -211,6 +211,8 @@ See also:
 - `zpe-mocap`
 - `zpe-bio`
 
+**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-prosody/view/new/panels) (public)
+
 ## Who This Is For
 
 | | |

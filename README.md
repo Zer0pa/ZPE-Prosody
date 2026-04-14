@@ -15,6 +15,14 @@
 <p>
   <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
 </p>
+
+```bash
+# Install from PyPI
+pip install zpe-prosody
+```
+
+Or install from source (development):
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -224,5 +232,5 @@ See also:
 |---|---|
 | **Ideal first buyer** | Speech-technology or voice-analytics infrastructure team needing deterministic prosodic signal encoding (future — lane not yet cleared) |
 | **Pain** | Prosody feature pipelines are non-deterministic across library versions and platforms — audit replay fails silently |
-| **Deployment** | Python package (`pip install -e '.[dev]'`), private staged. FastAPI wrapper via `.[api]` extra |
+| **Deployment** | Python package (`pip install zpe-prosody`), available on PyPI. FastAPI wrapper via `.[api]` extra |
 | **Family position** | Validates ZPE encoding applicability to speech-prosody signal domains. Lane verdict FAIL. Staged/validation tier alongside Neuro, Mocap, and Bio |

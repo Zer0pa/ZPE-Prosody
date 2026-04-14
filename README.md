@@ -99,7 +99,7 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 | COMPRESSION | 16.60× | 13.01× on LibriSpeech test-clean |
 | F0_RMSE | 0.89% | vs WORLD ~5–10 Hz |
 | ENERGY_RMSE | 2.08% | — |
-| RETRIEVAL | p@5 0.31 | 4/6 gates, blocked |
+| GATES | 4/6 | closure; retrieval blocked |
 
 > Source: [before_after_metrics.json](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json>) | [c006_retrieval_failure_analysis.md](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/c006_retrieval_failure_analysis.md>)
 

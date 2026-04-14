@@ -7,6 +7,36 @@
 <a id="commercial-front-door"></a>
 
 <a id="what-this-is"></a>
+
+
+## Quick Start
+
+<a id="quickstart"></a>
+<p>
+  <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
+</p>
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+make repo-sanity
+make package-sanity
+make test
+```
+Optional install surfaces:
+- `python -m pip install ".[api]"` for the FastAPI/Uvicorn wrapper
+- `python -m pip install ".[benchmarks]"` for the NumPy-backed benchmark helpers
+
+Technical release truth:
+- The base wheel ships only the `src/zpe_prosody` package.
+- `scripts/` remains a repo-local operational harness, not an installed CLI surface.
+- `make package-sanity` builds sdist and wheel, then verifies isolated base, `api`, and `benchmarks` installs from the built wheel.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3.4.gif" alt="ZPE Prosody Upper Insert" width="100%">
+</p>
+
+
 ## What This Is
 
 <p>
@@ -44,37 +74,6 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
   </tr>
 </table>
 
-## Key Metrics
-
-| Metric | Value | Baseline |
-|--------|-------|----------|
-| COMPRESSION | 16.5952× | — |
-| F0_RMSE | 0.892498% | vs WORLD ~5–10 Hz |
-| ENERGY_RMSE | 2.078044% | — |
-| RETRIEVAL | p@5 = 0.3067 | 4/6 gates, blocked |
-
-> Source: [before_after_metrics.json](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json>) | [c006_retrieval_failure_analysis.md](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/c006_retrieval_failure_analysis.md>)
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
-</p>
-
-## What We Prove
-
-- Codec round-trip fidelity (PRO-C001 PASS)
-- Deterministic reproducibility (PRO-C002 PASS)
-- Prosodic feature extraction (PRO-C003 PASS)
-- Test coverage (PRO-C004 PASS)
-
-## What We Don't Claim
-
-<p>
-  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
-</p>
-- No claim of lane pass (verdict is FAIL)
-- No claim of retrieval closure above threshold (PRO-C006 FAIL)
-- No claim of external dependency resolution (PRO-C005 PAUSED)
-- No claim of release readiness or commercial transfer
 
 ## Commercial Readiness
 
@@ -93,6 +92,43 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
   <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">
 </p>
 
+
+## Key Metrics
+
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 16.5952× (wave-1 corpus) | 13.01× on LibriSpeech test-clean |
+| F0_RMSE | 0.892498% | vs WORLD ~5–10 Hz |
+| ENERGY_RMSE | 2.078044% | — |
+| RETRIEVAL | p@5 = 0.3067 | 4/6 gates, blocked |
+
+> Source: [before_after_metrics.json](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json>) | [c006_retrieval_failure_analysis.md](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/c006_retrieval_failure_analysis.md>)
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
+</p>
+
+
+## What We Prove
+
+- Codec round-trip fidelity (PRO-C001 PASS)
+- Deterministic reproducibility (PRO-C002 PASS)
+- Prosodic feature extraction (PRO-C003 PASS)
+- Test coverage (PRO-C004 PASS)
+
+
+## What We Don't Claim
+
+<p>
+  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
+</p>
+- No claim of lane pass (verdict is FAIL)
+- No claim of retrieval closure above threshold (PRO-C006 FAIL)
+- No claim of external dependency resolution (PRO-C005 PAUSED)
+- Parity between wave-1 corpus compression (16.59×) and real LibriSpeech (13.01×) — gap is expected from corpus difficulty difference
+- No claim of release readiness or commercial transfer
+
+
 ## Tests and Verification
 
 | Code | Check | Verdict |
@@ -103,6 +139,7 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 | V_04 | Test coverage (PRO-C004) | PASS |
 | V_05 | External dependency resolution (PRO-C005) | INC |
 | V_06 | Retrieval closure (PRO-C006) | FAIL |
+
 
 ## Proof Anchors
 
@@ -130,6 +167,7 @@ Supporting docs and authority anchors (start here for verification):
 - `docs/ARCHITECTURE.md`
 - `docs/LEGAL_BOUNDARIES.md`
 
+
 ## Repo Shape
 
 <p>
@@ -152,32 +190,6 @@ Supporting docs and authority anchors (start here for verification):
   <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Lower Masthead" width="100%">
 </p>
 
-## Quick Start
-
-<a id="quickstart"></a>
-<p>
-  <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
-</p>
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e ".[dev]"
-make repo-sanity
-make package-sanity
-make test
-```
-Optional install surfaces:
-- `python -m pip install ".[api]"` for the FastAPI/Uvicorn wrapper
-- `python -m pip install ".[benchmarks]"` for the NumPy-backed benchmark helpers
-
-Technical release truth:
-- The base wheel ships only the `src/zpe_prosody` package.
-- `scripts/` remains a repo-local operational harness, not an installed CLI surface.
-- `make package-sanity` builds sdist and wheel, then verifies isolated base, `api`, and `benchmarks` installs from the built wheel.
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3.4.gif" alt="ZPE Prosody Upper Insert" width="100%">
-</p>
 
 ## Ecosystem
 

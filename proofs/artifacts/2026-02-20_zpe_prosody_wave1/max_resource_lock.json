@@ -16,27 +16,27 @@
     {
       "attempts": [
         {
-          "command": "rm -rf '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2' && git clone --depth 1 https://github.com/sarulab-speech/UTMOSv2 '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "rm -rf '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2' && git clone --depth 1 https://github.com/sarulab-speech/UTMOSv2 '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
-          "stderr_tail": "Cloning into '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2'...",
+          "stderr_tail": "Cloning into '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2'...",
           "stdout_tail": ""
         },
         {
-          "command": "if [ -f '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2/requirements.txt' ]; then '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -r '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2/requirements.txt'; else '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -e '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2'; fi",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "if [ -f '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2/requirements.txt' ]; then '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -r '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2/requirements.txt'; else '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -e '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2'; fi",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": ".2.2-cp311-cp311-macosx_10_13_x86_64.whl (3.4 MB)\nUsing cached jinja2-3.1.6-py3-none-any.whl (134 kB)\nUsing cached markupsafe-3.0.3-cp311-cp311-macosx_10_9_x86_64.whl (11 kB)\nUsing cached networkx-3.6.1-py3-none-any.whl (2.1 MB)\nUsing cached torchvision-0.17.2-cp311-cp311-macosx_10_13_x86_64.whl (1.7 MB)\nUsing cached pillow-12.1.1-cp311-cp311-macosx_10_10_x86_64.whl (5.3 MB)\nBuilding wheels for collected packages: utmosv2\n  Building editable for utmosv2 (pyproject.toml): started\n  Building editable for utmosv2 (pyproject.toml): finished with status 'done'\n  Created wheel for utmosv2: filename=utmosv2-1.2.1-0.editable-py3-none-any.whl size=7253 sha256=2e2a85da57f9b381dfc52136e8ed1790a9a3ad985becb5bd83e5d1e94e017eea\n  Stored in directory: /private/var/folders/49/b6bj2qfd5nl4vndxv7rb9dh00000gn/T/pip-ephem-wheel-cache-5togvce_/wheels/13/a2/c2/0aa41a2013cd27f6e76711a8e59dc8c4381b3abebb39b1cb80\nSuccessfully built utmosv2\nInstalling collected packages: pillow, networkx, MarkupSafe, jinja2, torch, torchvision, torchaudio, timm, utmosv2\n\nSuccessfully installed MarkupSafe-3.0.3 jinja2-3.1.6 networkx-3.6.1 pillow-12.1.1 timm-1.0.24 torch-2.2.2 torchaudio-2.2.2 torchvision-0.17.2 utmosv2-1.2.1"
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import utmosv2; print('utmosv2_ok')\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import utmosv2; print('utmosv2_ok')\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "Traceback (most recent call last):",
           "returncode": 1,
-          "stderr_tail": "rnal/UTMOSv2/utmosv2/model/__init__.py\", line 1, in <module>\n    from utmosv2.model.multi_spec import MultiSpecExtModel, MultiSpecModelV2\n  File \"/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2/utmosv2/model/multi_spec.py\", line 5, in <module>\n    import timm\n  File \"/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/__init__.py\", line 2, in <module>\n    from .layers import (\n  File \"/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/layers/__init__.py\", line 23, in <module>\n    from .classifier import create_classifier, ClassifierHead, NormMlpClassifierHead, ClNormMlpClassifierHead\n  File \"/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/layers/classifier.py\", line 15, in <module>\n    from .create_norm import get_norm_layer\n  File \"/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/layers/create_norm.py\", line 29, in <module>\n    from torchvision.ops.misc import FrozenBatchNorm2d\nModuleNotFoundError: No module named 'torchvision'",
+          "stderr_tail": "rnal/UTMOSv2/utmosv2/model/__init__.py\", line 1, in <module>\n    from utmosv2.model.multi_spec import MultiSpecExtModel, MultiSpecModelV2\n  File \"/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/UTMOSv2/utmosv2/model/multi_spec.py\", line 5, in <module>\n    import timm\n  File \"/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/__init__.py\", line 2, in <module>\n    from .layers import (\n  File \"/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/layers/__init__.py\", line 23, in <module>\n    from .classifier import create_classifier, ClassifierHead, NormMlpClassifierHead, ClNormMlpClassifierHead\n  File \"/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/layers/classifier.py\", line 15, in <module>\n    from .create_norm import get_norm_layer\n  File \"/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/lib/python3.11/site-packages/timm/layers/create_norm.py\", line 29, in <module>\n    from torchvision.ops.misc import FrozenBatchNorm2d\nModuleNotFoundError: No module named 'torchvision'",
           "stdout_tail": ""
         }
       ],
@@ -52,19 +52,19 @@
     {
       "attempts": [
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install speechmos onnxruntime",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install speechmos onnxruntime",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"from speechmos import dnsmos; print('speechmos_dnsmos_ok')\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"from speechmos import dnsmos; print('speechmos_dnsmos_ok')\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         }
       ],
@@ -80,32 +80,32 @@
     {
       "attempts": [
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install datasets soundfile",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install datasets soundfile",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, wave, struct, pathlib; from datasets import load_dataset; out=pathlib.Path('/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/ravdess'); out.mkdir(parents=True, exist_ok=True); ds=load_dataset('narad/ravdess', split='train[:120]'); meta=[]; \nfor i,row in enumerate(ds):\n  audio=row['audio']; arr=audio['array']; sr=int(audio['sampling_rate']);\n  label=str(row.get('emotion', row.get('label', 'unknown')));\n  path=out / f'ravdess_{i:04d}_{label}.wav';\n  with wave.open(str(path),'wb') as w:\n    w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr);\n    pcm=bytearray();\n    for v in arr:\n      iv=max(-32768,min(32767,int(v*32767)));\n      pcm.extend(struct.pack('<h',iv));\n    w.writeframes(bytes(pcm));\n  meta.append({'path':str(path),'label':label,'sr':sr});\n(out / 'manifest.json').write_text(json.dumps({'items':meta}, indent=2)); print(len(meta))\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, wave, struct, pathlib; from datasets import load_dataset; out=pathlib.Path('/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/ravdess'); out.mkdir(parents=True, exist_ok=True); ds=load_dataset('narad/ravdess', split='train[:120]'); meta=[]; \nfor i,row in enumerate(ds):\n  audio=row['audio']; arr=audio['array']; sr=int(audio['sampling_rate']);\n  label=str(row.get('emotion', row.get('label', 'unknown')));\n  path=out / f'ravdess_{i:04d}_{label}.wav';\n  with wave.open(str(path),'wb') as w:\n    w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr);\n    pcm=bytearray();\n    for v in arr:\n      iv=max(-32768,min(32767,int(v*32767)));\n      pcm.extend(struct.pack('<h',iv));\n    w.writeframes(bytes(pcm));\n  meta.append({'path':str(path),'label':label,'sr':sr});\n(out / 'manifest.json').write_text(json.dumps({'items':meta}, indent=2)); print(len(meta))\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         },
         {
           "command": "curl -s https://zenodo.org/api/records/1188976 | rg -n \"license|rights|access_right\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "3ffc00897\", \"links\": {\"self\": \"https://zenodo.org/api/records/1188976/files/Video_Song_Actor_17.zip/content\"}}, {\"id\": \"a2f73185-79f7-44ac-b874-8c6feafd1cd3\", \"key\": \"Video_Speech_Actor_20.zip\", \"size\": 561349264, \"checksum\": \"md5:5ddfb22770093bafebdefe8faa449f48\", \"links\": {\"self\": \"https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_20.zip/content\"}}, {\"id\": \"b0b0330a-455b-45c9-bf9b-e3544c02dced\", \"key\": \"Video_Speech_Actor_19.zip\", \"size\": 581121687, \"checksum\": \"md5:abb97d97d8c4e88c866cee1cea9d06d6\", \"links\": {\"self\": \"https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_19.zip/content\"}}, {\"id\": \"ad56a9c9-c94b-4b1f-9f48-b9de8de86bb5\", \"key\": \"Video_Song_Actor_19.zip\", \"size\": 508687880, \"checksum\": \"md5:ecb411e08834305e64e11a4fb4aed741\", \"links\": {\"self\": \"https://zenodo.org/api/records/1188976/files/Video_Song_Actor_19.zip/content\"}}], \"swh\": {}, \"owners\": [{\"id\": \"42980\"}], \"status\": \"published\", \"stats\": {\"downloads\": 1172871, \"unique_downloads\": 559325, \"views\": 328955, \"unique_views\": 284100, \"version_downloads\": 1171040, \"version_unique_downloads\": 558843, \"version_unique_views\": 283020, \"version_views\": 327696}, \"state\": \"done\", \"submitted\": true}"
         },
         {
-          "command": "test -f '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/ravdess/manifest.json'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "test -f '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/ravdess/manifest.json'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
@@ -124,27 +124,27 @@
     {
       "attempts": [
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install --index-url https://download.pytorch.org/whl/cpu torch torchaudio",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install --index-url https://download.pytorch.org/whl/cpu torch torchaudio",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install torchcrepe",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install torchcrepe",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import torch, torchcrepe; print(torch.__version__)\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import torch, torchcrepe; print(torch.__version__)\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         }
       ],
@@ -161,19 +161,19 @@
     {
       "attempts": [
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install praat-parselmouth",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install praat-parselmouth",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import parselmouth; print(parselmouth.__version__)\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import parselmouth; print(parselmouth.__version__)\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         }
       ],
@@ -189,35 +189,35 @@
     {
       "attempts": [
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install TTS",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install TTS",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'transformers==4.41.2'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'transformers==4.41.2'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
           "command": "curl -L -s https://huggingface.co/coqui/XTTS-v2/raw/main/README.md | rg -n \"license|coqui-public-model-license|cpml|non-commercial\" -i",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "2:license: other\n3:license_name: coqui-public-model-license\n4:license_link: https://coqui.ai/cpml\n53:### License\n54:This model is licensed under [Coqui Public Model License](https://coqui.ai/cpml). There's a lot that goes into a license for generative models, and you can read more of [the origin story of CPML here](https://coqui.ai/blog/tts/cpml)."
         },
         {
-          "command": "COQUI_TOS_AGREED=1 TTS_HOME='/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/tts_cache' '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib; from TTS.api import TTS; manifest=pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/ravdess/manifest.json'); items=json.loads(manifest.read_text()).get('items', []); speaker=next(pathlib.Path(i['path']) for i in items if pathlib.Path(i['path']).exists()); tts=TTS(model_name='tts_models/multilingual/multi-dataset/xtts_v2', progress_bar=False, gpu=False); tts.tts_to_file(text='Prosody transfer validation sentence.', speaker_wav=str(speaker), language='en', file_path=r'artifacts/2026-02-20_zpe_prosody_wave1/xtts_probe.wav'); print('xtts_ok')\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "COQUI_TOS_AGREED=1 TTS_HOME='/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/tts_cache' '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib; from TTS.api import TTS; manifest=pathlib.Path(r'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/ravdess/manifest.json'); items=json.loads(manifest.read_text()).get('items', []); speaker=next(pathlib.Path(i['path']) for i in items if pathlib.Path(i['path']).exists()); tts=TTS(model_name='tts_models/multilingual/multi-dataset/xtts_v2', progress_bar=False, gpu=False); tts.tts_to_file(text='Prosody transfer validation sentence.', speaker_wav=str(speaker), language='en', file_path=r'artifacts/2026-02-20_zpe_prosody_wave1/xtts_probe.wav'); print('xtts_ok')\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         }
       ],
@@ -233,43 +233,43 @@
     {
       "attempts": [
         {
-          "command": "rm -rf '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice' && git clone --depth 1 https://github.com/FunAudioLLM/CosyVoice '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "rm -rf '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice' && git clone --depth 1 https://github.com/FunAudioLLM/CosyVoice '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
-          "stderr_tail": "Cloning into '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice'...",
+          "stderr_tail": "Cloning into '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice'...",
           "stdout_tail": ""
         },
         {
-          "command": "git -C '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice' submodule update --init --recursive",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "git -C '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice' submodule update --init --recursive",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
-          "stderr_tail": "Submodule 'third_party/Matcha-TTS' (https://github.com/shivammehta25/Matcha-TTS.git) registered for path 'third_party/Matcha-TTS'\nCloning into '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/third_party/Matcha-TTS'...",
+          "stderr_tail": "Submodule 'third_party/Matcha-TTS' (https://github.com/shivammehta25/Matcha-TTS.git) registered for path 'third_party/Matcha-TTS'\nCloning into '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/third_party/Matcha-TTS'...",
           "stdout_tail": "Submodule path 'third_party/Matcha-TTS': checked out 'dd9105b34bf2be2230f4aa1e4769fb586a3c824e'"
         },
         {
-          "command": "test -f '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/LICENSE' && rg -n \"Apache\" '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/LICENSE'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "test -f '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/LICENSE' && rg -n \"Apache\" '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/LICENSE'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "1:                                 Apache License\n178:   APPENDIX: How to apply the Apache License to your work.\n180:      To apply the Apache License to your work, attach the following\n191:   Licensed under the Apache License, Version 2.0 (the \"License\");"
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -r '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/requirements.txt'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install -r '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/requirements.txt'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "PYTHONPATH='/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice:$PYTHONPATH' '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"from cosyvoice.cli.cosyvoice import CosyVoice; print('cosyvoice_ok')\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "PYTHONPATH='/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice:$PYTHONPATH' '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"from cosyvoice.cli.cosyvoice import CosyVoice; print('cosyvoice_ok')\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         }
       ],
@@ -286,18 +286,18 @@
       "attempts": [
         {
           "command": "docker --version",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "Docker version 29.2.1, build a5c7197d72"
         },
         {
-          "command": "docker build -t cosyvoice_runtime_probe '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/runtime/python'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "docker build -t cosyvoice_runtime_probe '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice/runtime/python'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "DEPRECATED: The legacy builder is deprecated and will be removed in a future release.",
           "returncode": 1,
-          "stderr_tail": "DEPRECATED: The legacy builder is deprecated and will be removed in a future release.\n            Install the buildx component to build images with BuildKit:\n            https://docs.docker.com/go/buildx/\n\nCannot connect to the Docker daemon at unix:///Users/prinivenpillay/.colima/default/docker.sock. Is the docker daemon running?",
+          "stderr_tail": "DEPRECATED: The legacy builder is deprecated and will be removed in a future release.\n            Install the buildx component to build images with BuildKit:\n            https://docs.docker.com/go/buildx/\n\nCannot connect to the Docker daemon at unix:///Users/zer0pa-build/.colima/default/docker.sock. Is the docker daemon running?",
           "stdout_tail": ""
         }
       ],
@@ -314,31 +314,31 @@
       "attempts": [
         {
           "command": "curl -L -s https://raw.githubusercontent.com/huggingface/parler-tts/main/LICENSE | rg -n \"apache\" -i",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "1:                                 Apache License\n3:                        http://www.apache.org/licenses/\n178:   APPENDIX: How to apply the Apache License to your work.\n180:      To apply the Apache License to your work, attach the following\n191:   Licensed under the Apache License, Version 2.0 (the \"License\");\n195:       http://www.apache.org/licenses/LICENSE-2.0"
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install parler-tts accelerate",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install parler-tts accelerate",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' - <<'PY'\nimport soundfile as sf\nfrom parler_tts import ParlerTTSForConditionalGeneration\nfrom transformers import AutoTokenizer\n\nmodel_name = \"parler-tts/parler-tts-mini-v1\"\nmodel = ParlerTTSForConditionalGeneration.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\ndescription = \"A calm speaker with clear articulation and neutral delivery.\"\nprompt = \"Prosody transfer validation sentence.\"\ninput_ids = tokenizer(description, return_tensors=\"pt\").input_ids\nprompt_ids = tokenizer(prompt, return_tensors=\"pt\").input_ids\naudio = model.generate(input_ids=input_ids, prompt_input_ids=prompt_ids)\narr = audio.cpu().numpy().squeeze()\nsf.write(r\"artifacts/2026-02-20_zpe_prosody_wave1/parler_probe.wav\", arr, int(model.config.sampling_rate))\nprint(\"parler_ok\")\nPY",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' - <<'PY'\nimport soundfile as sf\nfrom parler_tts import ParlerTTSForConditionalGeneration\nfrom transformers import AutoTokenizer\n\nmodel_name = \"parler-tts/parler-tts-mini-v1\"\nmodel = ParlerTTSForConditionalGeneration.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\ndescription = \"A calm speaker with clear articulation and neutral delivery.\"\nprompt = \"Prosody transfer validation sentence.\"\ninput_ids = tokenizer(description, return_tensors=\"pt\").input_ids\nprompt_ids = tokenizer(prompt, return_tensors=\"pt\").input_ids\naudio = model.generate(input_ids=input_ids, prompt_input_ids=prompt_ids)\narr = audio.cpu().numpy().squeeze()\nsf.write(r\"artifacts/2026-02-20_zpe_prosody_wave1/parler_probe.wav\", arr, int(model.config.sampling_rate))\nprint(\"parler_ok\")\nPY",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         },
         {
           "command": "test -f 'artifacts/2026-02-20_zpe_prosody_wave1/parler_probe.wav'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "returncode_1",
           "returncode": 1,
           "stderr_tail": "",
@@ -358,47 +358,47 @@
       "attempts": [
         {
           "command": "curl -L -s https://raw.githubusercontent.com/rhasspy/piper/master/LICENSE.md | rg -n \"mit\" -i",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "1:MIT License\n7:in the Software without restriction, including without limitation the rights\n9:copies of the Software, and to permit persons to whom the Software is\n16:IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,"
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install piper-tts",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install piper-tts",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
           "stdout_tail": ""
         },
         {
-          "command": "curl -L -o '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "curl -L -o '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  1337  100  1337    0     0   3463      0 --:--:-- --:--:-- --:--:--  3481\n\n  1 60.2M    1 1184k    0     0  1378k      0  0:00:44 --:--:--  0:00:44 1378k\n  9 60.2M    9 5938k    0     0  3194k      0  0:00:19  0:00:01  0:00:18 4753k\n 21 60.2M   21 12.8M    0     0  4617k      0  0:00:13  0:00:02  0:00:11 6008k\n 35 60.2M   35 21.6M    0     0  5736k      0  0:00:10  0:00:03  0:00:07 6983k\n 49 60.2M   49 30.0M    0     0  6328k      0  0:00:09  0:00:04  0:00:05 7392k\n 61 60.2M   61 37.3M    0     0  6526k      0  0:00:09  0:00:05  0:00:04 7410k\n 74 60.2M   74 45.0M    0     0  6727k      0  0:00:09  0:00:06  0:00:03 8040k\n 89 60.2M   89 53.6M    0     0  6992k      0  0:00:08  0:00:07  0:00:01 8351k\n100 60.2M  100 60.2M    0     0  7023k      0  0:00:08  0:00:08 --:--:-- 8032k",
           "stdout_tail": ""
         },
         {
-          "command": "curl -L -o '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "curl -L -o '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   342  100   342    0     0    959      0 --:--:-- --:--:-- --:--:--   963\n\n100  4885  100  4885    0     0  12799      0 --:--:-- --:--:-- --:--:-- 12799",
           "stdout_tail": ""
         },
         {
-          "command": "printf 'Prosody transfer validation sentence.' | '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper' --model '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' --config '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' --output_file 'artifacts/2026-02-20_zpe_prosody_wave1/piper_probe.wav'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper",
+          "command": "printf 'Prosody transfer validation sentence.' | '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper' --model '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' --config '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' --output_file 'artifacts/2026-02-20_zpe_prosody_wave1/piper_probe.wav'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/piper",
           "stdout_tail": ""
         },
         {
           "command": "test -f 'artifacts/2026-02-20_zpe_prosody_wave1/piper_probe.wav'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "returncode_1",
           "returncode": 1,
           "stderr_tail": "",
@@ -417,16 +417,16 @@
     {
       "attempts": [
         {
-          "command": "rm -rf '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && git clone --depth 1 https://github.com/numediart/EmoV-DB '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "rm -rf '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && git clone --depth 1 https://github.com/numediart/EmoV-DB '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
-          "stderr_tail": "Cloning into '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'...",
+          "stderr_tail": "Cloning into '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db'...",
           "stdout_tail": ""
         },
         {
           "command": "curl -L -s https://www.openslr.org/115/ | rg -n \"License|license|CC|commercial\" -i",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
@@ -434,50 +434,50 @@
         },
         {
           "command": "curl -L -s https://raw.githubusercontent.com/numediart/EmoV-DB/master/LICENSE.md | head -n 30",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": "By downloading or using the EmoV-DB Dataset, you are agreeing to the \u201cNon-commercial Purposes\u201d condition. \u201cNon-commercial Purposes\u201d means research, teaching, scientific publication and personal experimentation. Non-commercial Purposes include use of the Dataset to perform benchmarking for purposes of academic or applied research publication. Non-commercial Purposes does not include purposes primarily intended for or directed towards commercial advantage or monetary compensation, or purposes intended for or directed towards litigation, licensing, or enforcement, even in part. EmoV-DB dataset is provided as-is, is experimental in nature, and not intended for use by, with, or for the diagnosis of human subjects for incorporation into a product.\n\nIf you wish to make use of the EmoV-DB Dataset for Commercial Purpose, please contact Prof. Sarah Ostadabbas\nhttps://coe.northeastern.edu/people/ostadabbas-sarah/"
         },
         {
-          "command": "find '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' -type f \\( -name '*.wav' -o -name '*.flac' \\) | head -n 5",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "find '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' -type f \\( -name '*.wav' -o -name '*.flac' \\) | head -n 5",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
           "stdout_tail": ""
         },
         {
-          "command": "if [ \"$(find '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' -type f -name '*.wav' | wc -l | tr -d ' ')\" -lt 16 ]; then mkdir -p '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && curl -L -o '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' https://www.openslr.org/resources/115/emovdb.zip; else echo 'skip_download_has_audio'; fi",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "if [ \"$(find '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' -type f -name '*.wav' | wc -l | tr -d ' ')\" -lt 16 ]; then mkdir -p '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && curl -L -o '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' https://www.openslr.org/resources/115/emovdb.zip; else echo 'skip_download_has_audio'; fi",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   278  100   278    0     0    396      0 --:--:-- --:--:-- --:--:--   397",
           "stdout_tail": ""
         },
         {
-          "command": "if [ -f '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' ]; then unzip -o -q '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' -d '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'; else echo 'skip_unzip_no_zip'; fi",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "[/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip]",
+          "command": "if [ -f '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' ]; then unzip -o -q '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' -d '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db'; else echo 'skip_unzip_no_zip'; fi",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "[/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip]",
           "returncode": 9,
-          "stderr_tail": "[/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip]\n  End-of-central-directory signature not found.  Either this file is not\n  a zipfile, or it constitutes one disk of a multi-part archive.  In the\n  latter case the central directory and zipfile comment will be found on\n  the last disk(s) of this archive.\nunzip:  cannot find zipfile directory in one of /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip or\n        /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip.zip, and cannot find /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip.ZIP, period.",
+          "stderr_tail": "[/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip]\n  End-of-central-directory signature not found.  Either this file is not\n  a zipfile, or it constitutes one disk of a multi-part archive.  In the\n  latter case the central directory and zipfile comment will be found on\n  the last disk(s) of this archive.\nunzip:  cannot find zipfile directory in one of /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip or\n        /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip.zip, and cannot find /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip.ZIP, period.",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib; root=pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'); root.mkdir(parents=True, exist_ok=True); files=sorted(list(root.rglob('*.wav')) + list(root.rglob('*.flac'))); items=[{'path':str(p),'label':p.parent.name.lower(),'sr':0} for p in files[:240]]; pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/manifest.json').write_text(json.dumps({'items':items}, indent=2)); print(len(items))\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib; root=pathlib.Path(r'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db'); root.mkdir(parents=True, exist_ok=True); files=sorted(list(root.rglob('*.wav')) + list(root.rglob('*.flac'))); items=[{'path':str(p),'label':p.parent.name.lower(),'sr':0} for p in files[:240]]; pathlib.Path(r'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/manifest.json').write_text(json.dumps({'items':items}, indent=2)); print(len(items))\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         },
         {
-          "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib, sys; p=pathlib.Path(r'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/manifest.json'); items=json.loads(p.read_text()).get('items', []) if p.exists() else []; print(len(items)); sys.exit(0 if len(items) >= 16 else 3)\"",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-          "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python' -c \"import json, pathlib, sys; p=pathlib.Path(r'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/manifest.json'); items=json.loads(p.read_text()).get('items', []) if p.exists() else []; print(len(items)); sys.exit(0 if len(items) >= 16 else 3)\"",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+          "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "returncode": 127,
-          "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
+          "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python",
           "stdout_tail": ""
         }
       ],
@@ -493,20 +493,20 @@
     {
       "attempts": [
         {
-          "command": "rm -rf '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice' && git clone --depth 1 https://github.com/yanghaha0908/EmoVoice '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice'",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "rm -rf '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice' && git clone --depth 1 https://github.com/yanghaha0908/EmoVoice '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice'",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
-          "stderr_tail": "Cloning into '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice'...",
+          "stderr_tail": "Cloning into '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice'...",
           "stdout_tail": ""
         },
         {
-          "command": "find '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice' -type f \\( -name '*.wav' -o -name '*.flac' \\) | head -n 5",
-          "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+          "command": "find '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice' -type f \\( -name '*.wav' -o -name '*.flac' \\) | head -n 5",
+          "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
           "failure_signature": "",
           "returncode": 0,
           "stderr_tail": "",
-          "stdout_tail": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000128.wav\n/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000065.wav\n/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000066.wav\n/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000095.wav\n/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000050.wav"
+          "stdout_tail": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000128.wav\n/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000065.wav\n/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000066.wav\n/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000095.wav\n/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice/audios/ZH/happy/tx_emotion_00203000050.wav"
         }
       ],
       "claims": [
@@ -519,50 +519,50 @@
       "status": "SUCCESS"
     }
   ],
-  "runpod_lockfile": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt",
+  "runpod_lockfile": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt",
   "runpod_lockfile_attempt": {
-    "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' freeze > '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt'",
-    "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
-    "failure_signature": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+    "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' freeze > '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt'",
+    "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
+    "failure_signature": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
     "returncode": 127,
-    "stderr_tail": "zsh:1: no such file or directory: /Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
+    "stderr_tail": "zsh:1: no such file or directory: /Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip",
     "stdout_tail": ""
   },
   "runpod_lockfile_generated": false,
   "seed": 20260220,
   "setup_attempts": [
     {
-      "command": "/usr/local/bin/python3.11 -m venv '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv'",
-      "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+      "command": "/usr/local/bin/python3.11 -m venv '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv'",
+      "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
       "failure_signature": "",
       "returncode": 0,
       "stderr_tail": "",
       "stdout_tail": ""
     },
     {
-      "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install --upgrade pip setuptools wheel",
-      "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+      "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install --upgrade pip setuptools wheel",
+      "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
       "failure_signature": "",
       "returncode": 0,
       "stderr_tail": "",
       "stdout_tail": "Requirement already satisfied: pip in ./.runtime/maxwave/venv/lib/python3.11/site-packages (26.0.1)\nRequirement already satisfied: setuptools in ./.runtime/maxwave/venv/lib/python3.11/site-packages (82.0.0)\nRequirement already satisfied: wheel in ./.runtime/maxwave/venv/lib/python3.11/site-packages (0.46.3)\nRequirement already satisfied: packaging>=24.0 in ./.runtime/maxwave/venv/lib/python3.11/site-packages (from wheel) (26.0)"
     },
     {
-      "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'numpy<2' 'numba==0.59.1' 'llvmlite==0.42.0' librosa==0.10.2.post1",
-      "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+      "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'numpy<2' 'numba==0.59.1' 'llvmlite==0.42.0' librosa==0.10.2.post1",
+      "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
       "failure_signature": "",
       "returncode": 0,
       "stderr_tail": "",
       "stdout_tail": "kit_learn-1.8.0-cp311-cp311-macosx_10_9_x86_64.whl (8.6 MB)\nUsing cached scipy-1.17.0-cp311-cp311-macosx_14_0_x86_64.whl (22.5 MB)\nUsing cached soundfile-0.13.1-py2.py3-none-macosx_10_9_x86_64.whl (1.1 MB)\nUsing cached cffi-2.0.0-cp311-cp311-macosx_10_13_x86_64.whl (184 kB)\nUsing cached soxr-1.0.0-cp311-cp311-macosx_10_14_x86_64.whl (206 kB)\nUsing cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)\nUsing cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)\nUsing cached pycparser-3.0-py3-none-any.whl (48 kB)\nInstalling collected packages: urllib3, typing-extensions, threadpoolctl, pycparser, platformdirs, numpy, msgpack, llvmlite, lazy-loader, joblib, idna, decorator, charset_normalizer, certifi, audioread, soxr, scipy, requests, numba, cffi, soundfile, scikit-learn, pooch, librosa\n\nSuccessfully installed audioread-3.1.0 certifi-2026.1.4 cffi-2.0.0 charset_normalizer-3.4.4 decorator-5.2.1 idna-3.11 joblib-1.5.3 lazy-loader-0.4 librosa-0.10.2.post1 llvmlite-0.42.0 msgpack-1.1.2 numba-0.59.1 numpy-1.26.4 platformdirs-4.9.2 pooch-1.9.0 pycparser-3.0 requests-2.32.5 scikit-learn-1.8.0 scipy-1.17.0 soundfile-0.13.1 soxr-1.0.0 threadpoolctl-3.6.0 typing-extensions-4.15.0 urllib3-2.6.3"
     },
     {
-      "command": "'/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'transformers<5' 'onnxruntime>=1.17,<1.23' soundfile",
-      "cwd": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody",
+      "command": "'/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/pip' install 'transformers<5' 'onnxruntime>=1.17,<1.23' soundfile",
+      "cwd": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody",
       "failure_signature": "",
       "returncode": 0,
       "stderr_tail": "",
       "stdout_tail": "cached pyyaml-6.0.3-cp311-cp311-macosx_10_13_x86_64.whl (185 kB)\nUsing cached regex-2026.2.19-cp311-cp311-macosx_10_9_x86_64.whl (290 kB)\nUsing cached safetensors-0.7.0-cp38-abi3-macosx_10_12_x86_64.whl (467 kB)\nUsing cached tqdm-4.67.3-py3-none-any.whl (78 kB)\nUsing cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)\nUsing cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)\nUsing cached filelock-3.24.3-py3-none-any.whl (24 kB)\nUsing cached flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)\nUsing cached protobuf-6.33.5-cp39-abi3-macosx_10_9_universal2.whl (427 kB)\nUsing cached sympy-1.14.0-py3-none-any.whl (6.3 MB)\nUsing cached mpmath-1.3.0-py3-none-any.whl (536 kB)\nInstalling collected packages: mpmath, flatbuffers, tqdm, sympy, safetensors, regex, pyyaml, protobuf, humanfriendly, hf-xet, fsspec, filelock, huggingface-hub, coloredlogs, tokenizers, onnxruntime, transformers\n\nSuccessfully installed coloredlogs-15.0.1 filelock-3.24.3 flatbuffers-25.12.19 fsspec-2026.2.0 hf-xet-1.2.0 huggingface-hub-0.36.2 humanfriendly-10.0 mpmath-1.3.0 onnxruntime-1.22.1 protobuf-6.33.5 pyyaml-6.0.3 regex-2026.2.19 safetensors-0.7.0 sympy-1.14.0 tokenizers-0.22.2 tqdm-4.67.3 transformers-4.57.6"
     }
   ],
-  "venv_python": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python"
+  "venv_python": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/venv/bin/python"
 }

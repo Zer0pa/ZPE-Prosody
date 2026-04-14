@@ -101,7 +101,9 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 | ENERGY_RMSE | 2.08% | — |
 | GATES | 4/6 | closure; retrieval blocked |
 
-> Source: [before_after_metrics.json](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json>) | [c006_retrieval_failure_analysis.md](</Users/Zer0pa/ZPE/ZPE Prosody/ZPE-Prosody/proofs/artifacts/c006_retrieval_failure_analysis.md>)
+> Note: Retrieval gate (P@5) scored 0.31 vs 0.80 threshold — removed from headline metrics in commit 136d79f; 4/6 reflects remaining non-retrieval gates.
+>
+> Source: [before_after_metrics.json](proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json) | [c006_retrieval_failure_analysis.md](proofs/artifacts/c006_retrieval_failure_analysis.md)
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
@@ -128,6 +130,9 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 - No claim of external dependency resolution (PRO-C005 PAUSED)
 - Parity between wave-1 corpus compression (16.59×) and real LibriSpeech (13.01×) — gap is expected from corpus difficulty difference
 - No claim of release readiness or commercial transfer
+- 8-primitive directional encoding — codec uses delta + zigzag + varint + RLE + zlib pipeline; no directional primitives exist in source
+- Retrieval quality — P@5 gate failed (0.31 vs 0.80 threshold)
+- Human-validated MOS — MOS metric is an arithmetic proxy (see `src/zpe_prosody/transfer.py::mos_proxy`), not a human listening test
 
 
 ## Tests and Verification

@@ -240,9 +240,13 @@ def _unpack_voiced_mask(blob: bytes) -> List[int]:
     except zlib.error as exc:
         raise ZProsDecodeError(f"Mask decompression failed: {exc}") from exc
 
-    if len(raw) < 6:
+    if len(raw) < 4:
         raise ZProsDecodeError("Mask payload too short")
     expected_len = struct.unpack("<I", raw[0:4])[0]
+    if expected_len == 0:
+        return []
+    if len(raw) < 6:
+        raise ZProsDecodeError("Mask payload too short")
     offset = 5
     run_count, offset = _decode_varint(raw, offset)
     runs: List[Tuple[int, int]] = []

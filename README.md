@@ -42,15 +42,12 @@ Technical release truth:
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-ZPE-Prosody applies the ZPE deterministic 8-primitive encoding architecture to speech-prosody signals — pitch, rhythm, stress patterns. This is the voice-analytics lane of the Zer0pa family, and **the current lane verdict is FAIL**.
 
-Gate-by-gate: **PRO-C001 PASS** (codec round-trip fidelity), **PRO-C002 PASS** (deterministic reproducibility), **PRO-C003 PASS** (prosodic feature extraction), **PRO-C004 PASS** (test coverage). **PRO-C005 PAUSED_EXTERNAL** (blocked on external dependency). **PRO-C006 FAIL** — retrieval closure on the accepted path is below threshold. Authority bundle: `proofs/artifacts/2026-02-20_zpe_prosody_wave1/`.
+Deterministic prosody encoding — F0 contours and rhythm patterns that produce identical outputs across runs, platforms, and library versions. **Lane verdict: FAIL.**
 
-The architecture applies. Four of six gates pass. But the lane has not cleared — retrieval closure failed and an external dependency blocks a fifth gate. This repo exists to demonstrate that the ZPE encoding approach extends to speech domains, and to preserve auditable claim tracking for future work.
+ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams who need auditability and reproducibility in their speech analysis pipelines. The architecture applies. Four of six gates pass. But the lane has not cleared — retrieval closure failed and an external dependency blocks a fifth gate.
 
-**Readiness: private-stage, lane verdict FAIL.** Not a public release surface. No commercial-safe transfer closure. No Phase 4.5 performance augmentation or Phase 5 blind-clone verification.
-
-`ZPE Prosody` is the private staging repository for the ZPE Prosody Wave-1 lane. It is the authority surface for lane status and accepted claims, and it is not a public release surface.
+**Readiness: private-stage, lane verdict FAIL.** Not a public release surface. No commercial-safe transfer closure.
 
 | Field | Value |
 |-------|-------|
@@ -88,6 +85,8 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 | Confidence | 67% |
 | Source | proofs/FINAL_STATUS.md |
 
+> **Evaluators:** Lane verdict FAIL — PRO-C006 retrieval closure below threshold. Proof artifacts preserved for reference. Contact hello@zer0pa.com.
+
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">
 </p>
@@ -110,6 +109,8 @@ The architecture applies. Four of six gates pass. But the lane has not cleared �
 
 
 ## What We Prove
+
+> Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
 
 - Codec round-trip fidelity (PRO-C001 PASS)
 - Deterministic reproducibility (PRO-C002 PASS)
@@ -209,3 +210,12 @@ See also:
 - `zpe-neuro`
 - `zpe-mocap`
 - `zpe-bio`
+
+## Who This Is For
+
+| | |
+|---|---|
+| **Ideal first buyer** | Speech-technology or voice-analytics infrastructure team needing deterministic prosodic signal encoding (future — lane not yet cleared) |
+| **Pain** | Prosody feature pipelines are non-deterministic across library versions and platforms — audit replay fails silently |
+| **Deployment** | Python package (`pip install -e '.[dev]'`), private staged. FastAPI wrapper via `.[api]` extra |
+| **Family position** | Validates ZPE encoding applicability to speech-prosody signal domains. Lane verdict FAIL. Staged/validation tier alongside Neuro, Mocap, and Bio |

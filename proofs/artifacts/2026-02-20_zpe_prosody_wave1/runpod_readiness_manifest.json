@@ -28,7 +28,7 @@
     "handoff_manifest.json"
   ],
   "gpu_profile": "RunPod NVIDIA A100/B200 (>=40GB VRAM)",
-  "lockfile": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt",
+  "lockfile": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/requirements_runpod_lock.txt",
   "lockfile_artifact": "runpod_requirements_lock.txt",
   "packages": [
     "torch",

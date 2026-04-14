@@ -69,7 +69,7 @@
       "pass_metric": false,
       "samples": 82,
       "source_name": "emovome_or_emovoice",
-      "source_root": "/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice",
+      "source_root": "/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/EmoVoice",
       "threshold": 0.65
     },
     "ravdess_eval": {

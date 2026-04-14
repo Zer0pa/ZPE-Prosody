@@ -26,7 +26,7 @@
 ### CosyVoice2_commercial_safe
 - Status: FAILED
 - Impracticality: IMP-COMPUTE
-- Command: `rm -rf '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice' && git clone --depth 1 https://github.com/FunAudioLLM/CosyVoice '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice'`
+- Command: `rm -rf '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice' && git clone --depth 1 https://github.com/FunAudioLLM/CosyVoice '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/CosyVoice'`
   - Return code: 0
 
 ### CosyVoice2_containerized_path
@@ -44,19 +44,19 @@
 - Impracticality: IMP-COMPUTE
 - Command: `curl -L -s https://raw.githubusercontent.com/rhasspy/piper/master/LICENSE.md | rg -n "mit" -i`
   - Return code: 0
-- Command: `curl -L -o '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx`
+- Command: `curl -L -o '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx`
   - Return code: 0
-- Command: `curl -L -o '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json`
+- Command: `curl -L -o '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/.runtime/maxwave/piper_models/en_US-lessac-medium.onnx.json' https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json`
   - Return code: 0
 
 ### EMOV_DB_commercial_safe
 - Status: FAILED
 - Impracticality: IMP-STORAGE
-- Command: `rm -rf '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && git clone --depth 1 https://github.com/numediart/EmoV-DB '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db'`
+- Command: `rm -rf '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && git clone --depth 1 https://github.com/numediart/EmoV-DB '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db'`
   - Return code: 0
 - Command: `curl -L -s https://www.openslr.org/115/ | rg -n "License|license|CC|commercial" -i`
   - Return code: 0
 - Command: `curl -L -s https://raw.githubusercontent.com/numediart/EmoV-DB/master/LICENSE.md | head -n 30`
   - Return code: 0
-- Command: `if [ "$(find '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' -type f -name '*.wav' | wc -l | tr -d ' ')" -lt 16 ]; then mkdir -p '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && curl -L -o '/Users/prinivenpillay/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' https://www.openslr.org/resources/115/emovdb.zip; else echo 'skip_download_has_audio'; fi`
+- Command: `if [ "$(find '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' -type f -name '*.wav' | wc -l | tr -d ' ')" -lt 16 ]; then mkdir -p '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db' && curl -L -o '/Users/zer0pa-build/ZPE Multimodality/ZPE Prosody/data/external/emov_db/emovdb.zip' https://www.openslr.org/resources/115/emovdb.zip; else echo 'skip_download_has_audio'; fi`
   - Return code: 0

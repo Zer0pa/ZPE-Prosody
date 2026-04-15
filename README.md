@@ -104,7 +104,7 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 
 | Metric | Value | Baseline |
 |--------|-------|----------|
-| COMPRESSION | 16.60× | 13.01× on LibriSpeech test-clean |
+| DETERMINISM | PASS | PRO-C002 bit-identical replay |
 | F0_RMSE | 0.89% | vs WORLD ~5–10 Hz |
 | ENERGY_RMSE | 2.08% | — |
 | GATES | 4/6 | closure; retrieval blocked |

@@ -4,24 +4,105 @@
 
 ---
 
-<a id="commercial-front-door"></a>
+## What This Is
 
-<a id="what-this-is"></a>
+Deterministic prosody encoding for F0 contours and rhythm patterns where replay must stay stable across runs, platforms, and library versions. The lane remains `FAIL`: compression and fidelity are real, but retrieval closure missed badly enough that the commercial wedge is still blocked.
 
+ZPE-Prosody is aimed at speech-technology and voice-analytics infrastructure teams that care about reproducible prosodic features, not generic audio compression. The current authority packet proves a narrow, auditable codec surface. It does not prove release readiness, commercialization-safe transfer, or retrieval performance strong enough to carry the lane.
+
+| Field | Value |
+|-------|-------|
+| Architecture | PROSODIC_CONTOUR |
+| Encoding | F0_DELTA_V1 |
+
+## Key Metrics
+
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 16.60× | — |
+| F0_RMSE | 0.89% | — |
+| ENERGY_RMSE | 2.08% | — |
+| RETRIEVAL_P@5 | 0.31 | 0.80 gate |
+
+Source: [before_after_metrics.json](proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json), [prosody_compression_benchmark.json](proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json), [prosody_f0_fidelity.json](proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_f0_fidelity.json), [prosody_energy_fidelity.json](proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_energy_fidelity.json), [c006_retrieval_failure_analysis.md](proofs/artifacts/c006_retrieval_failure_analysis.md)
+
+## Competitive Benchmarks
+
+No promoted competitive benchmark is live on the current authority surface. The honest reading is narrower: this repo has a real prosody codec packet with real failure evidence on retrieval, so it should not be read as a speech-codec winner table.
+
+| Comparator Surface | Current Reading | Notes |
+|--------------------|-----------------|-------|
+| Head-to-head public benchmark | Not promoted | Retrieval closure failed, so no commercial-safe comparator claim survives the current packet |
+
+## What We Prove
+
+- Mean compression ratio of `16.60×` on the tracked Wave-1 corpus.
+- F0 fidelity at `0.89%` mean RMSE and energy fidelity at `2.08%` mean RMSE on the tracked evaluation slice.
+- Bit-stable deterministic replay on the committed Wave-1 determinism path.
+- The retrieval route was actually executed and actually failed; the lane block is performance, not missing environment setup.
+
+## What We Don't Claim
+
+- No claim of lane pass.
+- No claim of retrieval closure above threshold.
+- No claim of commercialization-safe transfer or public release readiness.
+- No claim of human MOS validation or speech-codec comparator leadership.
+- No claim that the paused external dependency path is closed.
+
+## Commercial Readiness
+
+| Field | Value |
+|-------|-------|
+| Verdict | FAIL |
+| Commit SHA | 3115c5dfb737 |
+| Primary Blocker | PRO-C006 retrieval closure |
+| Source | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json`, `proofs/artifacts/c006_retrieval_failure_analysis.md` |
+
+The current lane is useful as a bounded proof packet for deterministic prosody encoding, but not as a released commercial wedge. The blocker is explicit and material: the retrieval method missed badly enough that redesign or descope is the honest next path.
+
+## Tests and Verification
+
+| Code | Check | Verdict |
+|------|-------|---------|
+| V_01 | Compression benchmark | PASS |
+| V_02 | F0 fidelity | PASS |
+| V_03 | Energy fidelity | PASS |
+| V_04 | Determinism replay | PASS |
+| V_05 | Retrieval evaluation | FAIL |
+
+## Proof Anchors
+
+| Path | State |
+|------|-------|
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_f0_fidelity.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_energy_fidelity.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` | VERIFIED |
+| `proofs/artifacts/c006_retrieval_failure_analysis.md` | VERIFIED |
+
+## Repo Shape
+
+| Field | Value |
+|-------|-------|
+| Proof Anchors | 6 |
+| Modality Lanes | 1 |
+| Authority Source | `proofs/artifacts/c006_retrieval_failure_analysis.md` |
+
+- `src/zpe_prosody/`: installable codec package.
+- `tests/`: repo-local regression checks.
+- `scripts/`: operator scripts and packaging helpers.
+- `proofs/`: Wave-1 evidence and adjudication artifacts.
+- `docs/`: architecture and legal-boundary notes.
 
 ## Quick Start
-
-<a id="quickstart"></a>
-<p>
-  <img src=".github/assets/readme/section-bars/quick-start.svg" alt="QUICK START" width="100%">
-</p>
 
 ```bash
 # Install from PyPI
 pip install zpe-prosody
 ```
 
-Or install from source (development):
+Or install from source for the repo-local verification path:
 
 ```bash
 python -m venv .venv
@@ -31,206 +112,10 @@ make repo-sanity
 make package-sanity
 make test
 ```
-Optional install surfaces:
-- `python -m pip install ".[api]"` for the FastAPI/Uvicorn wrapper
-- `python -m pip install ".[benchmarks]"` for the NumPy-backed benchmark helpers
 
-Technical release truth:
-- The base wheel ships only the `src/zpe_prosody` package.
-- `scripts/` remains a repo-local operational harness, not an installed CLI surface.
-- `make package-sanity` builds sdist and wheel, then verifies isolated base, `api`, and `benchmarks` installs from the built wheel.
+Optional extras:
 
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3.4.gif" alt="ZPE Prosody Upper Insert" width="100%">
-</p>
+- `python -m pip install ".[api]"` for the FastAPI/Uvicorn wrapper.
+- `python -m pip install ".[benchmarks]"` for the NumPy-backed benchmark helpers.
 
-
-## What This Is
-
-<p>
-  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
-</p>
-
-Deterministic prosody encoding — F0 contours and rhythm patterns that produce identical outputs across runs, platforms, and library versions. **Lane verdict: FAIL.**
-
-ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams who need auditability and reproducibility in their speech analysis pipelines. The architecture applies. Four of six gates pass. But the lane has not cleared — retrieval closure failed and an external dependency blocks a fifth gate.
-
-**Readiness: private-stage, lane verdict FAIL.** Not a public release surface. No commercial-safe transfer closure.
-
-| Field | Value |
-|-------|-------|
-| Architecture | PROSODIC_CONTOUR |
-| Encoding | F0_DELTA_V1 |
-
-<table width="100%" cellpadding="0" cellspacing="0">
-  <tr>
-    <td align="center">
-      <a href="#quickstart"><img src=".github/assets/readme/nav/quickstart-and-license.svg" alt="Quickstart" width="180"></a>
-    </td>
-    <td align="center">
-      <a href="#what-this-is"><img src=".github/assets/readme/nav/what-this-is.svg" alt="What This Is" width="180"></a>
-    </td>
-    <td align="center">
-      <a href="#canonical-authority"><img src=".github/assets/readme/nav/current-authority.svg" alt="Current Authority" width="180"></a>
-    </td>
-    <td align="center">
-      <a href="#supporting-docs"><img src=".github/assets/readme/nav/go-next.svg" alt="Go Next" width="180"></a>
-    </td>
-  </tr>
-</table>
-
-
-## Commercial Readiness
-
-<a id="canonical-authority"></a>
-<p>
-  <img src=".github/assets/readme/section-bars/lane-status-snapshot.svg" alt="LANE STATUS SNAPSHOT" width="100%">
-</p>
-| Field | Value |
-|-------|-------|
-| Verdict | FAIL |
-| Commit SHA | 27fecfdc506f |
-| Confidence | 67% |
-| Source | proofs/FINAL_STATUS.md (removed) |
-
-> **Evaluators:** Lane verdict FAIL — PRO-C006 retrieval closure below threshold. Proof artifacts preserved for reference. Contact hello@zer0pa.com.
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3.6.gif" alt="ZPE Prosody Authority Insert" width="100%">
-</p>
-
-
-## Key Metrics
-
-| Metric | Value | Baseline |
-|--------|-------|----------|
-| DETERMINISM | PASS | PRO-C002 bit-identical replay |
-| F0_RMSE | 0.89% | vs WORLD ~5–10 Hz |
-| ENERGY_RMSE | 2.08% | — |
-| GATES | 4/6 | closure; retrieval blocked |
-
-> Note: Retrieval gate (P@5) scored 0.31 vs 0.80 threshold — removed from headline metrics in commit 136d79f; 4/6 reflects remaining non-retrieval gates.
->
-> Source: [before_after_metrics.json](proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json) | [c006_retrieval_failure_analysis.md](proofs/artifacts/c006_retrieval_failure_analysis.md)
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3.5.gif" alt="ZPE Prosody Lower Insert" width="100%">
-</p>
-
-
-## What We Prove
-
-> Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
-
-- Codec round-trip fidelity (PRO-C001 PASS)
-- Deterministic reproducibility (PRO-C002 PASS)
-- Prosodic feature extraction (PRO-C003 PASS)
-- Test coverage (PRO-C004 PASS)
-
-
-## What We Don't Claim
-
-<p>
-  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
-</p>
-- No claim of lane pass (verdict is FAIL)
-- No claim of retrieval closure above threshold (PRO-C006 FAIL)
-- No claim of external dependency resolution (PRO-C005 PAUSED)
-- Parity between wave-1 corpus compression (16.59×) and real LibriSpeech (13.01×) — gap is expected from corpus difficulty difference
-- No claim of release readiness or commercial transfer
-- 8-primitive directional encoding — codec uses delta + zigzag + varint + RLE + zlib pipeline; no directional primitives exist in source
-- Retrieval quality — P@5 gate failed (0.31 vs 0.80 threshold)
-- Human-validated MOS — MOS metric is an arithmetic proxy (see `src/zpe_prosody/transfer.py::mos_proxy`), not a human listening test
-
-
-## Tests and Verification
-
-| Code | Check | Verdict |
-|------|-------|---------|
-| V_01 | Codec round-trip fidelity (PRO-C001) | PASS |
-| V_02 | Deterministic reproducibility (PRO-C002) | PASS |
-| V_03 | Prosodic feature extraction (PRO-C003) | PASS |
-| V_04 | Test coverage (PRO-C004) | PASS |
-| V_05 | External dependency resolution (PRO-C005) | INC |
-| V_06 | Retrieval closure (PRO-C006) | FAIL |
-
-
-## Proof Anchors
-
-| Path | State |
-|------|-------|
-| proofs/FINAL_STATUS.md | REMOVED |
-| proofs/PROOF_INDEX.md | VERIFIED |
-| proofs/artifacts/2026-02-20_zpe_prosody_wave1/ | VERIFIED |
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE Prosody Mid Masthead" width="100%">
-</p>
-
-<a id="supporting-docs"></a>
-<p>
-  <img src=".github/assets/readme/section-bars/where-to-go.svg" alt="WHERE TO GO" width="100%">
-</p>
-Supporting docs and authority anchors (start here for verification):
-- `docs/CANONICAL_DOC_REGISTRY.md`
-- `proofs/PROOF_INDEX.md`
-- `proofs/FINAL_STATUS.md` (removed)
-- `AUDITOR_PLAYBOOK.md`
-- `PUBLIC_AUDIT_LIMITS.md`
-- `docs/README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/LEGAL_BOUNDARIES.md`
-
-
-## Repo Shape
-
-<p>
-  <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
-</p>
-| Field | Value |
-|-------|-------|
-| Proof Anchors | 3 |
-| Modality Lanes | 1 |
-| Authority Source | proofs/FINAL_STATUS.md (removed) |
-
-- `src/zpe_prosody/`: lane package
-- `scripts/`: gate and packaging scripts
-- `tests/`: unit coverage
-- `data/fixtures/`: deterministic fixtures
-- `proofs/`: proof index, final status, runbooks, adjudicated bundle
-- `docs/`: architecture, legal boundaries, release-contract notes
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE Prosody Lower Masthead" width="100%">
-</p>
-
-
-## Ecosystem
-
-<p>
-  <img src=".github/assets/readme/section-bars/family-alignment.svg" alt="ZPE ECOSYSTEM" width="100%">
-</p>
-This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
-
-See also:
-- [ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC)
-- `zpe-iot`
-- `zpe-xr`
-- `zpe-robotics`
-- `zpe-geo`
-- `zpe-finance`
-- `zpe-ink`
-- `zpe-neuro`
-- `zpe-mocap`
-- `zpe-bio`
-
-**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-prosody/view/new/panels) (public)
-
-## Who This Is For
-
-| | |
-|---|---|
-| **Ideal first buyer** | Speech-technology or voice-analytics infrastructure team needing deterministic prosodic signal encoding (future — lane not yet cleared) |
-| **Pain** | Prosody feature pipelines are non-deterministic across library versions and platforms — audit replay fails silently |
-| **Deployment** | Python package (`pip install zpe-prosody`), available on PyPI. FastAPI wrapper via `.[api]` extra |
-| **Family position** | Validates ZPE encoding applicability to speech-prosody signal domains. Lane verdict FAIL. Staged/validation tier alongside Neuro, Mocap, and Bio |
+The base wheel ships only `src/zpe_prosody`. `scripts/` remains a repo-local operator surface, not an installed CLI contract. Read [docs/LEGAL_BOUNDARIES.md](docs/LEGAL_BOUNDARIES.md) before widening any claim from this repo state.

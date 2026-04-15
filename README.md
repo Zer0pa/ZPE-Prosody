@@ -91,7 +91,7 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 | Verdict | FAIL |
 | Commit SHA | 27fecfdc506f |
 | Confidence | 67% |
-| Source | proofs/FINAL_STATUS.md |
+| Source | proofs/FINAL_STATUS.md (removed) |
 
 > **Evaluators:** Lane verdict FAIL — PRO-C006 retrieval closure below threshold. Proof artifacts preserved for reference. Contact hello@zer0pa.com.
 
@@ -159,7 +159,7 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 
 | Path | State |
 |------|-------|
-| proofs/FINAL_STATUS.md | VERIFIED |
+| proofs/FINAL_STATUS.md | REMOVED |
 | proofs/PROOF_INDEX.md | VERIFIED |
 | proofs/artifacts/2026-02-20_zpe_prosody_wave1/ | VERIFIED |
 
@@ -174,7 +174,7 @@ ZPE-Prosody targets speech-technology and voice-analytics infrastructure teams w
 Supporting docs and authority anchors (start here for verification):
 - `docs/CANONICAL_DOC_REGISTRY.md`
 - `proofs/PROOF_INDEX.md`
-- `proofs/FINAL_STATUS.md`
+- `proofs/FINAL_STATUS.md` (removed)
 - `AUDITOR_PLAYBOOK.md`
 - `PUBLIC_AUDIT_LIMITS.md`
 - `docs/README.md`
@@ -191,7 +191,7 @@ Supporting docs and authority anchors (start here for verification):
 |-------|-------|
 | Proof Anchors | 3 |
 | Modality Lanes | 1 |
-| Authority Source | proofs/FINAL_STATUS.md |
+| Authority Source | proofs/FINAL_STATUS.md (removed) |
 
 - `src/zpe_prosody/`: lane package
 - `scripts/`: gate and packaging scripts

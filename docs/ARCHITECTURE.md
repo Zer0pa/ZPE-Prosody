@@ -5,7 +5,7 @@
 <p>
   <img src="../.github/assets/readme/section-bars/architecture-and-theory.svg" alt="ARCHITECTURE AND THEORY" width="100%">
 </p>
-Prosody-only architecture overview for the private staging repo. Use this to map the package layout and boundaries. This is not a public release surface.
+Prosody-only architecture overview for the current repo surface. Use this to map the package layout, boundaries, and live verification surface.
 
 <p>
   <img src="../.github/assets/readme/section-bars/interface-contracts.svg" alt="INTERFACE CONTRACTS" width="100%">
@@ -105,8 +105,8 @@ Only Prosody truth for the release surface:
       <td>Accepted adjudicated bundle</td>
     </tr>
     <tr>
-      <td><code>proofs/runbooks/</code></td>
-      <td>Live runbooks for the repo boundary</td>
+      <td><code>proofs/artifacts/librispeech_benchmark/</code></td>
+      <td>Real-speech benchmark artifact set for the repo boundary</td>
     </tr>
   </tbody>
 </table>
@@ -137,7 +137,7 @@ Repo boundary discipline for this staging surface:
     </tr>
     <tr>
       <td>Repo contents</td>
-      <td>Private staging, inspection, and future verification only</td>
+      <td>Current inspection, verification, and continuous-improvement surface</td>
     </tr>
   </tbody>
 </table>

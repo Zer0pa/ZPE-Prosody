@@ -3,7 +3,7 @@
 Current classification: `none`
 
 Reason:
-- this repo is private staging only
+- this repo currently carries a bounded Prosody proof packet
 - no released downstream contract is being promoted from this boundary
 - current accepted lane verdict is still `FAIL`
 
@@ -11,4 +11,4 @@ Future changes that would raise impact:
 - packet format changes (`ZPRS/v1`)
 - API endpoint contract changes
 - claim-status promotion for `PRO-C005` or `PRO-C006`
-- any move from private staging into a public release workflow
+- any move from the current repo surface into a promoted release workflow

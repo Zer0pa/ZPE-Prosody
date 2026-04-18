@@ -19,7 +19,8 @@ Unsupported claims removed or downgraded:
 
 - Removed an unanchored DT-closure claim.
 - Kept the accepted lane verdict at `FAIL` and preserved the claim snapshot in
-  line with `../proofs/FINAL_STATUS.md` and `../proofs/PROOF_INDEX.md`.
+  line with `../proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json`
+  and `../proofs/artifacts/c006_retrieval_failure_analysis.md`.
 
 ---
 
@@ -32,7 +33,7 @@ Path, render, and docs-surface issues addressed:
 - Imported the missing root README GIF variants from the reference repo.
 - Removed extra footer mastheads so the docs match the reference placement rule
   more closely.
-- Fixed broken section-bar references in `docs/README.md` and `docs/FAQ.md`.
+- Fixed broken section-bar references on the active docs surface.
 
 ---
 
@@ -41,9 +42,9 @@ Path, render, and docs-surface issues addressed:
 </p>
 Remaining owner inputs:
 
-- Owner invitation remains the only access path for the private GitHub repo
-  (documented in `CANONICAL_DOC_REGISTRY.md`).
-- Escalations for legal or architectural decisions route to
-  `architects@zer0pa.ai` (documented in `SUPPORT.md`).
+- Legal and claim-boundary notes live in `LEGAL_BOUNDARIES.md` for the current
+  repo surface.
+- Evidence escalation stays tied to the accepted proof artifacts under
+  `../proofs/artifacts/`.
 - `AGENTS.md` was not found in this repo; the controlling instructions for this
   pass were provided in-thread.

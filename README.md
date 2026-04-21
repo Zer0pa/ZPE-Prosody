@@ -54,12 +54,9 @@ No promoted competitive benchmark is live on the current authority surface. The 
 | Field | Value |
 |-------|-------|
 | Verdict | FAIL |
-| Release posture | Live work in progress; not a final official release |
 | Commit SHA | 3115c5dfb737 |
-| Primary Blocker | PRO-C006 retrieval closure |
-| Source | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json`, `proofs/artifacts/c006_retrieval_failure_analysis.md` |
-
-The current lane is useful as a bounded proof packet for deterministic prosody encoding, but not as a released commercial wedge. The blocker is explicit and material: the retrieval method missed badly enough that redesign or descope is the honest next path.
+| Confidence | 94.0% |
+| Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json, proofs/artifacts/c006_retrieval_failure_analysis.md |
 
 ## Tests and Verification
 

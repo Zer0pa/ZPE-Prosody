@@ -21,6 +21,6 @@
     "No commercial-safe transfer closure"
   ],
   "family_position": "Validates ZPE encoding applicability to speech-prosody signal domains. Lane verdict FAIL. Staged/validation tier alongside Neuro, Mocap, and Bio.",
-  "license": "LicenseRef-Zer0pa-SAL-6.2",
-  "contact": "hello@zer0pa.com"
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "contact": "architects@zer0pa.ai"
 }

@@ -1,8 +1,8 @@
 {
   "sector": "ZPE Prosody",
-  "repo_stage": "private_staging",
+  "repo_stage": "public_proof_surface",
   "package_name": "zpe-prosody",
-  "package_version": "0.1.0.dev0",
+  "package_version": "0.1.0",
   "runtime_coupling_to_imc": "none",
   "release_linkage": "contract_only",
   "packet_format": "ZPRS/v1",

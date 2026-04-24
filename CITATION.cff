@@ -9,7 +9,7 @@ authors:
 repository-code: https://github.com/Zer0pa/ZPE-Prosody
 url: https://github.com/Zer0pa/ZPE-Prosody
 version: 0.1.0
-license: LicenseRef-Zer0pa-SAL-7.0
+license-url: https://github.com/Zer0pa/ZPE-Prosody/blob/main/LICENSE
 abstract: >-
   ZPE-Prosody packages deterministic prosody encoding, retrieval evaluation,
   and transfer-evaluation proof surfaces for reproducible F0 contour and rhythm

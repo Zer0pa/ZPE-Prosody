@@ -1,0 +1,27 @@
+{
+  "title": "ZPE-Prosody",
+  "description": "Deterministic prosody encoding for F0 contours and rhythm patterns where replay must stay stable across runs, platforms, and library versions. The current public authority surface preserves codec evidence and explicit retrieval-failure evidence.",
+  "creators": [
+    {
+      "name": "Zer0pa (Pty) Ltd",
+      "affiliation": "Zer0pa"
+    }
+  ],
+  "keywords": [
+    "prosody",
+    "speech",
+    "codec",
+    "f0",
+    "reproducibility",
+    "audio"
+  ],
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "upload_type": "software",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Zer0pa/ZPE-Prosody",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

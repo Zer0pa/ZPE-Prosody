@@ -8,7 +8,7 @@
 
 Deterministic prosody encoding for F0 contours and rhythm patterns where replay must stay stable across runs, platforms, and library versions. The lane remains `FAIL`: compression and fidelity are real, but retrieval closure missed badly enough that the commercial wedge is still blocked.
 
-ZPE-Prosody is aimed at speech-technology and voice-analytics infrastructure teams that care about reproducible prosodic features, not generic audio compression. The current authority packet proves a narrow, auditable codec surface. It does not prove release readiness, commercialization-safe transfer, or retrieval performance strong enough to carry the lane.
+ZPE-Prosody is aimed at speech-technology and voice-analytics infrastructure teams that care about reproducible prosodic features, not generic audio compression. The current authority packet proves a narrow, auditable codec surface. It does not prove commercialization-safe transfer or retrieval performance strong enough to carry the lane.
 
 | Field | Value |
 |-------|-------|
@@ -45,7 +45,7 @@ No promoted competitive benchmark is live on the current authority surface. The 
 
 - No claim of lane pass.
 - No claim of retrieval closure above threshold.
-- No claim of commercialization-safe transfer or public release readiness.
+- No claim of commercialization-safe transfer.
 - No claim of human MOS validation or speech-codec comparator leadership.
 - No claim that the paused external dependency path is closed.
 
@@ -54,7 +54,7 @@ No promoted competitive benchmark is live on the current authority surface. The 
 | Field | Value |
 |-------|-------|
 | Verdict | FAIL |
-| Commit SHA | 3115c5dfb737 |
+| Commit SHA | 3dd8a456b268 |
 | Confidence | 94.0% |
 | Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json, proofs/artifacts/c006_retrieval_failure_analysis.md |
 
@@ -103,12 +103,12 @@ pip install zpe-prosody
 Or install from source for the repo-local verification path:
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
-make repo-sanity
-make package-sanity
-make test
+make PYTHON=python repo-sanity
+make PYTHON=python package-sanity
+make PYTHON=python test
 ```
 
 Optional extras:

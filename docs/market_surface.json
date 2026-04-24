@@ -1,14 +1,14 @@
 {
   "repo_name": "ZPE-Prosody",
-  "repo_role": "staged_validation_lane",
-  "status": "STAGED_PROOF_SURFACE",
-  "plain_english_summary": "Deterministic speech-prosody encoding lane, currently in private-stage proof status with lane verdict FAIL.",
-  "commercial_wedge": "For speech-technology and voice-analytics teams who may eventually need deterministic, reproducible encoding of prosodic features. Business value: auditability and reproducibility in speech analysis — lane not yet cleared.",
+  "repo_role": "public_proof_lane",
+  "status": "PUBLIC_PROOF_SURFACE_FAIL",
+  "plain_english_summary": "Deterministic speech-prosody encoding lane with public proof artifacts and lane verdict FAIL.",
+  "commercial_wedge": "For speech-technology and voice-analytics teams evaluating deterministic, reproducible encoding of prosodic features. Business value is auditability and reproducibility in speech analysis; commercial readiness remains blocked by retrieval performance.",
   "technical_wedge": "Deterministic prosody compression via delta + zigzag + varint + RLE + zlib pipeline applied to speech-prosody signals. PRO-C001 through PRO-C004 PASS, PRO-C005 PAUSED_EXTERNAL, PRO-C006 FAIL. Retrieval closure below threshold.",
-  "ideal_first_buyer": "Speech-technology or voice-analytics infrastructure team needing deterministic prosodic signal encoding (future — not current).",
-  "deployment_model": "Python package (pip install -e '.[dev]'), private staged. FastAPI wrapper available via .[api] extra. Not distributed as a public package.",
+  "ideal_first_buyer": "Speech-technology or voice-analytics infrastructure team needing deterministic prosodic signal encoding while accepting the current retrieval blocker.",
+  "deployment_model": "Python package (`pip install zpe-prosody`) or source install (`pip install -e '.[dev]'`). FastAPI wrapper available via .[api] extra.",
   "proof_anchors": [
-    "proofs/artifacts/2026-02-20_zpe_prosody_wave1/ authority bundle",
+    "proofs/artifacts/2026-02-20_zpe_prosody_wave1/",
     "PRO-C001 PASS: core codec round-trip fidelity",
     "PRO-C002 PASS: deterministic encoding reproducibility",
     "PRO-C003 PASS: prosodic feature extraction fidelity",
@@ -17,10 +17,10 @@
   "not_claimed": [
     "PRO-C005 PAUSED_EXTERNAL — blocked on external dependency",
     "PRO-C006 FAIL — retrieval closure below threshold",
-    "No public release readiness",
+    "No lane pass",
     "No commercial-safe transfer closure"
   ],
-  "family_position": "Validates ZPE encoding applicability to speech-prosody signal domains. Lane verdict FAIL. Staged/validation tier alongside Neuro, Mocap, and Bio.",
+  "family_position": "Independent ZPE Prosody lane for speech-prosody signal domains. Lane verdict FAIL because retrieval closure is below threshold.",
   "license": "LicenseRef-Zer0pa-SAL-7.0",
   "contact": "architects@zer0pa.ai"
 }

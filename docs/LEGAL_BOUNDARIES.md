@@ -10,7 +10,7 @@
 <p>
   <img src="../.github/assets/readme/section-bars/scope.svg" alt="REPO SCOPE" width="100%">
 </p>
-Repo scope (Prosody truth only) for the private staging boundary:
+Repo scope (Prosody truth only) for the public repo boundary:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>

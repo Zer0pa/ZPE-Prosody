@@ -5,7 +5,7 @@
 <p>
   <img src="../.github/assets/readme/section-bars/architecture-and-theory.svg" alt="ARCHITECTURE AND THEORY" width="100%">
 </p>
-Prosody-only architecture overview for the private staging repo. Use this to map the package layout and boundaries. This is not a public release surface.
+Prosody-only architecture overview for the public repo. Use this to map the package layout and boundaries without widening the lane beyond its current `FAIL` commercial-readiness verdict.
 
 <p>
   <img src="../.github/assets/readme/section-bars/interface-contracts.svg" alt="INTERFACE CONTRACTS" width="100%">
@@ -104,17 +104,13 @@ Only Prosody truth for the release surface:
       <td><code>proofs/artifacts/2026-02-20_zpe_prosody_wave1/</code></td>
       <td>Accepted adjudicated bundle</td>
     </tr>
-    <tr>
-      <td><code>proofs/runbooks/</code></td>
-      <td>Live runbooks for the repo boundary</td>
-    </tr>
   </tbody>
 </table>
 
 <p>
   <img src="../.github/assets/readme/section-bars/scope-discipline.svg" alt="SCOPE DISCIPLINE" width="100%">
 </p>
-Repo boundary discipline for this staging surface:
+Repo boundary discipline for this public surface:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -137,7 +133,7 @@ Repo boundary discipline for this staging surface:
     </tr>
     <tr>
       <td>Repo contents</td>
-      <td>Private staging, inspection, and future verification only</td>
+      <td>Public code, docs, and small proof artifacts for the current Prosody authority surface</td>
     </tr>
   </tbody>
 </table>

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use ZPE-Prosody, cite this repository."
+title: "ZPE-Prosody"
+abstract: "Deterministic prosody encoding for F0, energy, duration, and voiced-mask contour packets, with retained proof artifacts and explicit retrieval-failure evidence."
+version: "0.1.0"
+authors:
+  - name: "Zer0pa (Pty) Ltd"
+    email: "architects@zer0pa.ai"
+repository-code: "https://github.com/Zer0pa/ZPE-Prosody"
+url: "https://github.com/Zer0pa/ZPE-Prosody"
+license-url: "https://github.com/Zer0pa/ZPE-Prosody/blob/main/LICENSE"
+keywords:
+  - prosody
+  - speech
+  - codec
+  - f0
+  - reproducibility
+  - audio

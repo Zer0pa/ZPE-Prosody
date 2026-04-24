@@ -8,9 +8,23 @@ version = "0.1.0"
 description = "Deterministic contour codec, retrieval, and transfer evaluation surfaces for ZPE Prosody."
 readme = "README.md"
 requires-python = ">=3.11"
-license = "LicenseRef-Zer0pa-SAL-7.0"
-authors = [{name = "Zer0pa"}]
+license = {text = "LicenseRef-Zer0pa-SAL-7.0"}
+authors = [{name = "Zer0pa (Pty) Ltd", email = "architects@zer0pa.ai"}]
+keywords = ["prosody", "speech", "codec", "f0", "reproducibility", "audio"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: Other/Proprietary License",
+  "Topic :: Scientific/Engineering",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Zer0pa/ZPE-Prosody"
+Documentation = "https://github.com/Zer0pa/ZPE-Prosody#readme"
+Repository = "https://github.com/Zer0pa/ZPE-Prosody"
+Issues = "https://github.com/Zer0pa/ZPE-Prosody/issues"
+Changelog = "https://github.com/Zer0pa/ZPE-Prosody/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 api = [

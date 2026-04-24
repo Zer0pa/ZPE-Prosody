@@ -11,13 +11,13 @@ Assume no local state is trustworthy except what you can reclone from GitHub or 
 - Hugging Face org: `Zer0pa`
 - Expected HF identity check: `user=Architect-Prime orgs=Zer0pa`
 
-Current Prosody recovery is GitHub-backed. No live Prosody HF dataset/model/bucket was found under `Zer0pa` on 2026-04-24:
+Current Prosody recovery is backed by GitHub plus a verified Hugging Face artifact dataset. The live Prosody HF dataset under `Zer0pa` was verified on 2026-04-24 using the stored `Zer0pa HF Storage` token with environment HF tokens unset:
 
-- `Zer0pa/ZPE-Prosody-artifacts`: not found
+- `Zer0pa/ZPE-Prosody-artifacts`: private dataset, live, 56 files, 12.9 MB
 - `Zer0pa/ZPE-Prosody-models`: not found
 - `Zer0pa/ZPE-Prosody-scratch`: not found
 
-The available token identified as `Architect-Prime` with `Zer0pa` membership, but creating `Zer0pa/ZPE-Prosody-artifacts` returned `403 Forbidden`. Do not claim HF custody exists for Prosody until live targets are verified.
+Important auth trap: an environment `HF_TOKEN` can override the stored `Zer0pa HF Storage` token and make `Zer0pa` repo creation/listing look broken. For custody work, unset `HF_TOKEN`, `HUGGINGFACE_HUB_TOKEN`, and `HF_HOME` before running `hf`.
 
 ## First Commands After Reclone
 
@@ -62,6 +62,8 @@ Relevant pushed branches:
 - `codex/prosody-branch-hygiene-2026-04-23`: CPU retrieval feasibility work exists here; it is pushed but was not part of the H1 hygiene PR.
 - `codex/prosody-lane-hygiene-2026-04-24`: duplicate hygiene branch, superseded by PR #33.
 - `docs/pypi-live`, `docs/wedge-align`, `fix/broken-links`: small local-only branches were pushed to origin during custody cleanup.
+- `codex/prosody-stash-backup-2026-04-23-readme-workstream`: backup ref for former local stash containing README/workstream material.
+- `codex/prosody-stash-backup-2026-04-14-citation-contributing`: backup ref for former local stash containing citation/contributing material.
 - `chore/true-sal-v7-restamp-2026-04-22`, `chore/sal-v7-instantiation-2026-04-19`, `reorientation/2026-04-17`: older lane branches retained on origin.
 
 Before doing new work, run:
@@ -72,6 +74,30 @@ git branch -vv
 ```
 
 Expected custody-safe result: no local-only commits.
+
+## Former Local Git Stashes
+
+Two stashes that were previously Mac-only are now backed up on GitHub:
+
+```text
+codex/prosody-stash-backup-2026-04-23-readme-workstream -> 855aca1d2857c7a1582ff2f1ac7c4104803f57fd
+codex/prosody-stash-backup-2026-04-14-citation-contributing -> 4c587f53311434c3c0705852ded8d01ad76928bd
+```
+
+Readable patch copies are in PR #34 under:
+
+```text
+docs/custody/git_stashes/
+```
+
+To inspect after reclone:
+
+```bash
+git fetch origin codex/prosody-stash-backup-2026-04-23-readme-workstream
+git fetch origin codex/prosody-stash-backup-2026-04-14-citation-contributing
+git show --stat origin/codex/prosody-stash-backup-2026-04-23-readme-workstream
+git show --stat origin/codex/prosody-stash-backup-2026-04-14-citation-contributing
+```
 
 ## Status Packet Archive
 
@@ -154,6 +180,41 @@ Clean generated bloat after validation:
 rm -rf .venv dist build src/zpe_prosody.egg-info scripts/__pycache__ src/zpe_prosody/__pycache__ tests/__pycache__
 ```
 
+## Verified Hugging Face Artifact Path
+
+The authoritative Prosody artifact dataset is:
+
+```text
+Zer0pa/ZPE-Prosody-artifacts
+```
+
+Verified live contents on 2026-04-24:
+
+```text
+data/fixtures/manifest.json
+proofs/artifacts/2026-02-20_zpe_prosody_wave1/
+proofs/artifacts/c005_replacement_analysis.md
+proofs/artifacts/c006_retrieval_failure_analysis.md
+proofs/artifacts/librispeech_benchmark/
+```
+
+Verification command:
+
+```bash
+unset HF_TOKEN
+unset HUGGINGFACE_HUB_TOKEN
+unset HF_HOME
+hf download Zer0pa/ZPE-Prosody-artifacts --type dataset --dry-run
+```
+
+Expected summary:
+
+```text
+[dry-run] Will download 56 files (out of 56) totalling 12.9M.
+```
+
+No Prosody model repo or scratch bucket was needed at this handoff because no local model/checkpoint files, no RunPod-only salvage, and no local Prosody files larger than 20 MB were found.
+
 ## HF Check Before Any HF Action
 
 ```bash
@@ -169,7 +230,7 @@ Expected ideal output:
 user=Architect-Prime orgs=Zer0pa
 ```
 
-If normalized auth fails but environment-token auth works, record that distinction. Do not print tokens. Do not run `hf auth token`.
+If normalized auth fails but environment-token auth works, record that distinction. Do not print tokens. Do not run `hf auth token`. If environment-token auth behaves differently from normalized auth, trust the normalized stored-token path for Zer0pa custody.
 
 If large Prosody artifacts are generated or discovered, intended targets are:
 
@@ -179,10 +240,10 @@ hf repos create Zer0pa/ZPE-Prosody-models --type model --private --exist-ok
 hf buckets create Zer0pa/ZPE-Prosody-scratch --private --exist-ok
 ```
 
-If these commands return `403`, block on HF org-write repair. Do not pretend HF custody is complete.
+Do not create model or scratch targets unless model/checkpoint or scratch/salvage material actually exists.
 
 ## Deletion Readiness Statement
 
-As of this prompt, the Prosody lane can be recloned from GitHub and continued without relying on the current Mac for repo code, small proof artifacts, hygiene changes, custody handoff documents, or restart instructions.
+As of this prompt, the Prosody lane can be recloned from GitHub and continued without relying on the current Mac for repo code, small proof artifacts, hygiene changes, custody handoff documents, restart instructions, or the artifact dataset/proof bundle.
 
-Deletion caveat: Prosody has no verified live HF artifacts under `Zer0pa`; this is acceptable only because no model/checkpoint files or >20 MB local Prosody artifacts were found in the repo during the custody scan and current Prosody proof/data artifacts are GitHub-sized and already pushed. Any future large retrieval corpus, RunPod salvage, checkpoint, or benchmark pack must go to HF before deletion.
+HF custody caveat: Prosody has a verified artifact dataset at `Zer0pa/ZPE-Prosody-artifacts`, but no model repo or scratch bucket exists because no corresponding local material was found. Any future large retrieval corpus, RunPod salvage, checkpoint, or benchmark pack must go to HF before deletion.

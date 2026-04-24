@@ -1,0 +1,226 @@
+diff --git a/README.md b/README.md
+index 74e8dab..312c41b 100644
+--- a/README.md
++++ b/README.md
+@@ -6,9 +6,9 @@
+ 
+ ## What This Is
+ 
+-Deterministic prosody encoding for F0 contours and rhythm patterns where replay must stay stable across runs, platforms, and library versions. The lane remains `FAIL`: compression and fidelity are real, but retrieval closure missed badly enough that the commercial wedge is still blocked.
++Deterministic prosody codec for F0 contour and rhythm feature streams where replay must stay stable across runs, platforms, and library versions. The public lane remains `FAIL`: compression and fidelity are real, but retrieval closure missed badly enough to block the commercial wedge.
+ 
+-ZPE-Prosody is aimed at speech-technology and voice-analytics infrastructure teams that care about reproducible prosodic features, not generic audio compression. The current authority packet proves a narrow, auditable codec surface. It does not prove release readiness, commercialization-safe transfer, or retrieval performance strong enough to carry the lane.
++The current authority packet is a narrow feature-encoding surface for speech infrastructure teams that need reproducible F0 and rhythm traces rather than generic audio compression. It does not prove release readiness, commercialization-safe transfer, or retrieval performance strong enough to carry the lane.
+ 
+ | Field | Value |
+ |-------|-------|
+diff --git a/WORKSTREAM_PLAN_2026-04-23.md b/WORKSTREAM_PLAN_2026-04-23.md
+new file mode 100644
+index 0000000..796e064
+--- /dev/null
++++ b/WORKSTREAM_PLAN_2026-04-23.md
+@@ -0,0 +1,204 @@
++# ZPE-Prosody Workstream Plan — 2026-04-23
++
++## Scope
++
++This is a manual workstream plan for the current `ZPE-Prosody` repo state.
++It is not a formal GPD phase plan because this repo does not contain `.gpd/ROADMAP.md` or `.gpd/STATE.md`.
++
++## Current Status
++
++- Repo: `Zer0pa/ZPE-Prosody`
++- Default branch: `main`
++- Local branch: `chore/true-sal-v7-restamp-2026-04-22`
++- Open PRs:
++  - `#27` `reorientation: execute Prosody doc pass + beta-posture + proof-anchor fixes`
++  - `#28` `chore: instantiate SAL v7.0 portfolio-wide`
++- Current local branch has no PR
++- Local working tree is not clean: `README.md` has an unstaged edit
++- Branch delta vs `main`: `LICENSE`, `pyproject.toml`, `docs/market_surface.json`
++- Tests: `make test` passes locally (`7/7`)
++- Public package surface exists: `zpe-prosody==0.1.0`
++
++## Authority Snapshot
++
++- Compression is real: `16.5952×`
++- F0 fidelity is real: `0.8925%`
++- Quality score is strong: `47/50`
++- Commercial lane remains blocked: retrieval `p@5 = 0.3067` vs `0.80` gate
++- Current wedge is therefore narrow: deterministic prosodic feature encoding, not retrieval-led speech intelligence
++
++## Immediate Risks
++
++- Branch topology is messy:
++  - the checked-out branch is a SAL v7 restamp branch
++  - the stronger doc-reorientation work is on a different open PR
++  - local unstaged README edits mean branch state is not ready for additional mixed work
++- `docs/ARCHITECTURE.md` and `docs/market_surface.json` on the current branch still carry stale posture/drift relative to the better reorientation direction
++- Further work on this branch before branch hygiene will increase merge friction
++
++## Recommended Next Work
++
++### 1. Branch Hygiene First
++
++Objective: get this lane back to one coherent branch/story before new experiments.
++
++Tasks:
++- Decide whether `#27` is the canonical doc baseline
++- Decide whether `#28` is the canonical SAL/license baseline
++- Rebase or restack the active work so the lane has one clean review path
++- Resolve the unstaged `README.md` edit intentionally instead of letting it float
++
++Success condition:
++- one clean working branch
++- no unstaged edits
++- docs and packaging surface aligned on the same branch
++
++Wall clock:
++- `0.5` to `1.0` day
++
++Resources:
++- local Mac CPU only
++
++### 2. Make the Product Decision Explicit
++
++Objective: choose whether Prosody is being advanced as:
++
++- a deterministic prosodic-feature codec with bounded utility, or
++- a retrieval-bearing product that must clear `PRO-C006`
++
++Recommendation:
++- do not blur these
++- if retrieval remains part of the wedge, it becomes the sovereign engineering objective
++- if retrieval is removed from the wedge, update repo posture accordingly and stop spending cycles on rescue theater
++
++Success condition:
++- one written lane decision
++- wedge and engineering plan match
++
++Wall clock:
++- `0.5` day
++
++Resources:
++- local Mac CPU only
++
++### 3. CPU-First Retrieval Rescue Feasibility Pass
++
++Objective: determine whether `PRO-C006` is salvageable without jumping straight to GPU-heavy learned methods.
++
++Tasks:
++- audit current 12-D handcrafted embedding failure modes
++- run a controlled CPU-only comparator sweep:
++  - normalized contour statistics variants
++  - DTW / soft-DTW style contour matching
++  - channel reweighting and voiced-mask handling variants
++  - simple classical baselines on the same evaluation set
++- preserve exact `p@5` comparisons against the current artifact
++
++Success condition:
++- either a credible CPU path to materially better retrieval
++- or a documented no-go that justifies descoping retrieval from the commercial wedge
++
++Wall clock:
++- `2` to `4` days
++
++Resources:
++- CPU pod helpful, not mandatory
++- local Mac can do code + small tests
++- CPU pod preferred for repeated benchmark sweeps and isolation
++
++### 4. GPU Phase Only If CPU Feasibility Clears
++
++Objective: use GPU only if CPU baselines show the wedge is worth rescuing.
++
++Candidate work:
++- learned speech/prosody embeddings
++- SSL/audio representation bake-off
++- transfer-learning experiments for retrieval on emotional/prosodic similarity
++
++Success condition:
++- GPU work is justified by a prior CPU result, not by hope
++
++Wall clock:
++- `3` to `7` days for first meaningful bake-off
++
++Resources:
++- GPU pod required
++
++## Resource Recommendation
++
++### Local Mac
++
++Use for:
++- branch cleanup
++- docs/package alignment
++- light code changes
++- unit tests
++- artifact inspection
++
++### CPU Pod
++
++Use if doing:
++- repeated retrieval benchmark sweeps
++- dataset preprocessing
++- multi-run comparator experiments
++
++Recommendation:
++- useful for the next meaningful Prosody work
++- not strictly required for documentation or branch cleanup
++
++### GPU Pod
++
++Use only if:
++- the decision is to actively rescue retrieval with learned methods
++
++Recommendation:
++- not needed yet
++- premature before the CPU feasibility pass
++
++## Disproportionate Grant / Commercial Advantage
++
++### Grant Advantage
++
++Moderate, if framed correctly:
++- deterministic speech-feature encoding
++- auditable replay
++- reproducible contour packets
++- bounded, honest failure evidence
++
++Weak, if framed as a retrieval product:
++- the lane currently fails on the very metric that would matter
++
++### Commercial Advantage
++
++Current state: limited
++
++Why:
++- compression + fidelity are good
++- retrieval failure blocks the broader wedge
++- no promoted head-to-head comparator story exists
++
++Best commercial angle today:
++- deterministic prosodic feature packet / auditability / reproducibility infrastructure
++
++Best commercial upside path:
++- only if retrieval can be materially improved
++
++## Decision Gate
++
++Recommended order:
++
++1. Clean branch state and restack open work
++2. Make the wedge decision explicit
++3. Run CPU-only retrieval feasibility
++4. Only then decide on GPU
++
++## Recommended Immediate Command Path
++
++- review and resolve the current unstaged `README.md` change
++- choose whether `#27` and `#28` should be merged/restacked
++- if retrieval remains in scope, start a CPU comparator plan next
++
++## Bottom Line
++
++Prosody is technically real but commercially narrow in its current state.
++The highest-value next move is not GPU work. It is branch hygiene plus a hard decision on whether retrieval is being rescued or removed from the wedge.

@@ -41,20 +41,22 @@ UPLOADS_COMPLETED:
 UPLOADS_NOT_DONE:
 - No model/checkpoint upload: no `.pt`, `.pth`, `.ckpt`, `.safetensors`, `.onnx`, or equivalent local model artifact was found in prior inventory.
 - No bucket upload: no Prosody RunPod scratch/salvage directory was found in prior targeted checks.
-- Local Git stashes were not uploaded to HF because they are code/docs/small-proof material and must be handled by a later GitHub commit/push decision.
+- Local Git stashes are code/docs/small-proof material and were preserved in GitHub custody after the original report:
+  - `codex/prosody-stash-backup-2026-04-23-readme-workstream`
+  - `codex/prosody-stash-backup-2026-04-14-citation-contributing`
+  - readable patches under `docs/custody/git_stashes/`
 
 RUNPOD_ACCESS_REQUIRED:
 No. Prior targeted RunPod checks on pod `7k3riasglemecu` found no active Prosody artifact directory at the expected paths: `/workspace/ZPE Prosody`, `/workspace/ZPE-Prosody`, `/workspace/artifacts`, `/workspace/data/ood`, `/workspace/data/ravdess`, `/workspace/artifacts/xtts_transfer`.
 
 GITHUB_REQUIRED_LATER:
-- `stash@{2026-04-23 22:42:44 +0200}`: README.md diff plus `WORKSTREAM_PLAN_2026-04-23.md`.
-- `stash@{2026-04-14 10:30:14 +0200}`: CITATION.cff plus CONTRIBUTING.md diff.
+- None for machine-loss custody. The two previously local-only stashes are preserved as GitHub refs and readable patch files.
 
 REMAINING_MACHINE_LOSS_RISK:
 - HF-class data/proof artifact risk: closed for local `data/fixtures` and `proofs/artifacts`; live Zer0pa dataset exists and expected file count matches exactly.
-- Mac-only risk: two local Git stashes remain outside GitHub by instruction.
+- Mac-only risk: closed for identified Prosody repo state; local Git stashes are backed up on GitHub.
 - RunPod-only risk: none identified for Prosody in targeted checks.
 - Unknown-location risk: raw external corpora referenced by historical RunPod manifests may not be present locally, but committed proof artifacts and benchmark packs are live in Zer0pa HF storage.
 
 NEXT_REQUIRED_ACTION:
-NEEDS GITHUB COMMIT LATER
+COMPLETE

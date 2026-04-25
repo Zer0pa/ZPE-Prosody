@@ -1,15 +1,9 @@
-<p>
-  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>
+# Architecture
 
-<p>
-  <img src="../.github/assets/readme/section-bars/architecture-and-theory.svg" alt="ARCHITECTURE AND THEORY" width="100%">
-</p>
-Prosody-only architecture overview for the private staging repo. Use this to map the package layout and boundaries. This is not a public release surface.
+Prosody-only architecture overview for the current public repo surface. Use this to map the package layout and boundaries. This page describes the committed release surface only.
 
-<p>
-  <img src="../.github/assets/readme/section-bars/interface-contracts.svg" alt="INTERFACE CONTRACTS" width="100%">
-</p>
+## Interface Contracts
+
 Core package location: <code>src/zpe_prosody/</code>. The table below describes the in-repo responsibilities only.
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
@@ -46,9 +40,8 @@ Core package location: <code>src/zpe_prosody/</code>. The table below describes 
   </tbody>
 </table>
 
-<p>
-  <img src="../.github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="TECHNICAL RELEASE SURFACE" width="100%">
-</p>
+## Technical Release Surface
+
 Only Prosody truth for the release surface:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
@@ -81,9 +74,8 @@ Only Prosody truth for the release surface:
   </tbody>
 </table>
 
-<p>
-  <img src="../.github/assets/readme/section-bars/proof-corpus.svg" alt="PROOF CORPUS" width="100%">
-</p>
+## Proof Corpus
+
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -105,16 +97,15 @@ Only Prosody truth for the release surface:
       <td>Accepted adjudicated bundle</td>
     </tr>
     <tr>
-      <td><code>proofs/runbooks/</code></td>
-      <td>Live runbooks for the repo boundary</td>
+      <td><code>data/fixtures/manifest.json</code></td>
+      <td>Committed fixture manifest for repo-local inputs</td>
     </tr>
   </tbody>
 </table>
 
-<p>
-  <img src="../.github/assets/readme/section-bars/scope-discipline.svg" alt="SCOPE DISCIPLINE" width="100%">
-</p>
-Repo boundary discipline for this staging surface:
+## Scope Discipline
+
+Repo boundary discipline for the current public surface:
 <table width="100%" border="1" bordercolor="#b8c0ca" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
@@ -137,7 +128,7 @@ Repo boundary discipline for this staging surface:
     </tr>
     <tr>
       <td>Repo contents</td>
-      <td>Private staging, inspection, and future verification only</td>
+      <td>Public codec repo with a narrow, evidence-backed proof surface</td>
     </tr>
   </tbody>
 </table>

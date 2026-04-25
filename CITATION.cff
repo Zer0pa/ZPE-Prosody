@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: >-
+  If you use ZPE-Prosody, cite this repository record.
+type: software
+title: "ZPE-Prosody: Deterministic Prosody Encoding"
+authors:
+  - name: Zer0pa (Pty) Ltd
+    email: architects@zer0pa.ai
+repository-code: https://github.com/Zer0pa/ZPE-Prosody
+url: https://github.com/Zer0pa/ZPE-Prosody
+version: 0.1.0
+license-url: https://github.com/Zer0pa/ZPE-Prosody/blob/main/LICENSE
+abstract: >-
+  ZPE-Prosody packages deterministic prosody encoding, retrieval evaluation,
+  and transfer-evaluation proof surfaces for reproducible F0 contour and rhythm
+  analysis.
+keywords:
+  - prosody
+  - speech
+  - contour codec
+  - f0 contours
+  - deterministic replay
+  - retrieval evaluation

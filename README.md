@@ -1,8 +1,4 @@
-<p align="center">
-  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE Prosody Masthead" width="100%">
-</p>
-
----
+# ZPE-Prosody
 
 ## What This Is
 
@@ -54,7 +50,7 @@ No promoted competitive benchmark is live on the current authority surface. The 
 | Field | Value |
 |-------|-------|
 | Verdict | FAIL |
-| Commit SHA | 3115c5dfb737 |
+| Commit SHA | 3dd8a456b268 |
 | Confidence | 94.0% |
 | Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json, proofs/artifacts/c006_retrieval_failure_analysis.md |
 

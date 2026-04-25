@@ -4,7 +4,7 @@ Current interlock posture is narrow.
 
 ## What Is Real
 
-- release-contract linkage to the private-first GitHub staging flow
+- release-contract linkage to the current GitHub repo surface
 - status linkage to the central truth and board surfaces
 - future inspection linkage to repo-inspector and repo-tester phases
 

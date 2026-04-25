@@ -60,12 +60,8 @@ Only Prosody truth for the release surface:
       <td><code>api</code> for FastAPI/Uvicorn</td>
     </tr>
     <tr>
-      <td>Optional extra</td>
-      <td><code>benchmarks</code> for NumPy-backed benchmark helpers</td>
-    </tr>
-    <tr>
       <td>Repo-local only</td>
-      <td><code>scripts/</code> gate harness, external-corpus tooling, operator scratch workflows</td>
+      <td><code>scripts/verify_release_surface.py</code> package surface sanity helper</td>
     </tr>
     <tr>
       <td>CLI surface</td>
@@ -86,7 +82,7 @@ Only Prosody truth for the release surface:
   <tbody>
     <tr>
       <td><code>scripts/</code></td>
-      <td>Lane gate scripts and packaging helpers</td>
+      <td>Package sanity helper</td>
     </tr>
     <tr>
       <td><code>tests/</code></td>

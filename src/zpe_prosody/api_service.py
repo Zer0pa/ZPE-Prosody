@@ -59,7 +59,10 @@ def decode_payload(packet_b64: str) -> Dict[str, object]:
     }
 
 
-def search_payload(query: Dict[str, List[float]], candidates: Dict[str, Dict[str, List[float]]]) -> Dict[str, object]:
+def search_payload(
+    query: Dict[str, List[float]],
+    candidates: Dict[str, Dict[str, List[float]]],
+) -> Dict[str, object]:
     query_bundle = ContourBundle(
         f0=query["f0"],
         energy=query["energy"],

@@ -25,4 +25,3 @@ make test
 
 - Python 3.11+ for the base `zpe-prosody` package.
 - Optional `api` extra for FastAPI and Uvicorn surfaces.
-- Optional `benchmarks` extra for NumPy-backed benchmark helpers.

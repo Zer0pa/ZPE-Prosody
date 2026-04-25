@@ -20,10 +20,10 @@ These metrics come from committed proof-artifact runs, not reasserted per CI pus
 
 **Compression** (baseline: raw float32 arrays for F0, energy, duration, voiced\_mask)
 
-| Dataset | Samples | Mean ratio | p50 ratio | p95 ratio | Artifact |
-|---------|---------|-----------|-----------|-----------|----------|
-| LibriSpeech `test-clean` (real speech, OpenSLR) | 100 utterances | **13.0×** | 13.0× | 16.6× | `proofs/artifacts/librispeech_benchmark/compression_benchmark.json` |
-| Librispeech-like fixtures | 140 | **16.6×** (brief min: 15×) | 16.6× | 20.0× | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json` |
+| Dataset | Samples | Mean ratio | p50 ratio | p95 ratio | CI threshold | Artifact |
+|---------|---------|-----------|-----------|-----------|--------------|----------|
+| LibriSpeech `test-clean` (real speech, OpenSLR) | 100 utterances | **13.0×** | 13.0× | 16.6× | — | `proofs/artifacts/librispeech_benchmark/compression_benchmark.json` |
+| Librispeech-like fixtures | 140 | **16.6×** | 16.6× | 20.0× | ≥15× | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json` |
 
 **Fidelity** (round-trip encode → decode)
 

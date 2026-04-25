@@ -30,7 +30,7 @@ import json
 import statistics
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 import numpy as np
 import zstandard
@@ -38,7 +38,7 @@ import zstandard
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from zpe_prosody.codec import encode_bundle, decode_bundle  # noqa: E402
+from zpe_prosody.codec import decode_bundle, encode_bundle  # noqa: E402
 from zpe_prosody.models import ContourBundle  # noqa: E402
 
 DATASET_KEY = "cmu_arctic_like"

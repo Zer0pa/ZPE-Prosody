@@ -29,3 +29,13 @@ relevant artifact or proof path in the entry.
 
 <!-- versions -->
 [Unreleased]: private staging
+
+---
+
+## [0.1.1] — 2026-04-25
+
+### Changed
+- Refreshed PyPI long-description: removed stale ZPE-IMC See-also link (repo went private 2026-04-21).
+- Confirmed license field aligns to SAL v7.0 (`LicenseRef-Zer0pa-SAL-7.0`).
+
+[0.1.1]: https://github.com/Zer0pa/ZPE-Prosody/releases/tag/v0.1.1

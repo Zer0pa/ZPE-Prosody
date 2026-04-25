@@ -1,8 +1,21 @@
 # ZPE-Prosody
 
-Deterministic prosody packet encoding for repo-local F0, energy, duration, and voiced-mask contour bundles. This README promotes only claims that have both a committed proof artifact and a CI test exercising the behavior, or are explicitly annotated as proof-artifact-level records not re-run per CI push.
+Deterministic prosody packet encoding for speech F0, energy, duration, and voiced-mask contour bundles. The `ZPRS/v1` codec compresses prosodic feature arrays to **13.0× on real LibriSpeech speech** with **0.64% voiced-F0 RMSE** and **2.67 ms mean encode latency** — byte-stable, round-trip lossless within CI thresholds, no GPU required.
 
-No investor/commercial pass claim is made here. Historical proof artifacts record prior compression, fidelity, transfer, and retrieval adjudication. Retrieval (PRO-C006) remains FAIL; transfer closure (PRO-C005) remains PAUSED_EXTERNAL. Neither gate result is promoted here.
+ZPE-Prosody is one of seventeen independent encoding products in the Zer0pa portfolio; it targets speech-technology and voice-analytics teams that need deterministic, reproducible prosodic feature encoding.
+
+Licensed under the [Zer0pa Source-Available License v7.0](LICENSE).
+
+## Commercial Readiness
+
+| Gate | Verdict | Notes |
+|------|---------|-------|
+| Core codec (PRO-C001 – PRO-C004) | PASS | Round-trip fidelity, determinism, extraction, and integration contract — all four pass. |
+| Transfer closure (PRO-C005) | BLOCKED | Blocked on external dependency; a commercial-safe transfer substitute was not proven in-lane. |
+| Retrieval closure (PRO-C006) | FAIL | p@5 = 0.31 vs threshold 0.80 on accepted evidence. |
+| **Lane overall** | **FAIL** | Retrieval and transfer gates are not resolved. Codec primitives are sound. |
+
+No lane pass is claimed. No public release tag has been issued. The codec is useful as a deterministic encoding primitive; end-to-end commercial deployment requires resolving the gates above.
 
 ## CI-Anchored Claims
 
@@ -54,7 +67,7 @@ The following proof artifacts remain in the repository for audit lineage, but th
 
 - `proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json`
 - `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_retrieval_eval.json` (PRO-C006: FAIL — p@5=0.31 vs threshold 0.80)
-- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` (overall gate FAIL; PRO-C005 PAUSED_EXTERNAL, PRO-C006 FAIL)
+- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` (overall gate FAIL; PRO-C005 blocked on external dependency, PRO-C006 FAIL)
 - `proofs/artifacts/c006_retrieval_failure_analysis.md`
 - `proofs/artifacts/c005_replacement_analysis.md`
 

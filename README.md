@@ -12,6 +12,7 @@ Licensed under the [Zer0pa Source-Available License v7.0](LICENSE).
 |------|---------|-------|
 | Core codec (PRO-C001 – PRO-C004) | PASS | Round-trip fidelity, determinism, extraction, and integration contract — all four pass. |
 | Transfer closure (PRO-C005) | BLOCKED | Blocked on external dependency; a commercial-safe transfer substitute was not proven in-lane. |
+| Posture (PRO-C005) | `PAUSED_EXTERNAL` | Specific posture: `PAUSED_EXTERNAL` — paused on external dependency, not generic-BLOCKED. |
 | Retrieval closure (PRO-C006) | FAIL | p@5 = 0.31 vs threshold 0.80 on accepted evidence. |
 | **Lane overall** | **FAIL** | Retrieval and transfer gates are not resolved. Codec primitives are sound. |
 
@@ -67,7 +68,7 @@ The following proof artifacts remain in the repository for audit lineage, but th
 
 - `proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json`
 - `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_retrieval_eval.json` (PRO-C006: FAIL — p@5=0.31 vs threshold 0.80)
-- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` (overall gate FAIL; PRO-C005 blocked on external dependency, PRO-C006 FAIL)
+- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` (overall gate FAIL; PRO-C005 `PAUSED_EXTERNAL` (blocked on external dependency), PRO-C006 FAIL)
 - `proofs/artifacts/c006_retrieval_failure_analysis.md`
 - `proofs/artifacts/c005_replacement_analysis.md`
 

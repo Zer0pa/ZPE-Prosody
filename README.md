@@ -72,6 +72,48 @@ The following proof artifacts remain in the repository for audit lineage, but th
 - `proofs/artifacts/c006_retrieval_failure_analysis.md`
 - `proofs/artifacts/c005_replacement_analysis.md`
 
+## Comp Benchmarks
+
+Lossless byte codecs (gzip, zstd) on the float32 contour buffer are the
+apples-to-apples baseline for the published compression-ratio claim.
+Audio waveform codecs (Opus, FLAC, Vorbis, AAC) are explicitly out of
+scope — they operate at a different abstraction level. See the
+subsection below.
+
+### Lossless float32 contour comparison
+
+Source: 80 CMU-Arctic-like samples from
+`proofs/artifacts/2026-02-20_zpe_prosody_wave1/`. Per-sample raw input
+is the float32 concatenation of `[F0 | energy | duration | voiced_mask]`,
+matching `raw_baseline_definition` in `prosody_compression_benchmark.json`.
+Identical input bytes are fed to every comparator.
+
+| Codec        | Mean CR | Median CR | Voiced-F0 RMSE (Hz) |
+|--------------|--------:|----------:|--------------------:|
+| ZPE-Prosody  | 13.65x  | 13.85x    | 1.44                |
+| gzip (L6)    |  2.21x  |  2.22x    | 0 (lossless)        |
+| zstd (L3)    |  2.22x  |  2.22x    | 0 (lossless)        |
+
+Proof artifact: [`proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json`](proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json) (companion: [`summary.md`](proofs/artifacts/comp_benchmarks/summary.md)). Reproduce: `python scripts/comp_benchmark/run_prosody_comparison.py`.
+
+ZPE-Prosody is bounded-lossy (quantized contours); gzip and zstd are
+lossless by construction. The voiced-F0 RMSE of ~1.44 Hz lies inside
+the lane's 5% threshold (mean 0.89% in the existing
+`prosody_f0_fidelity.json` proof), so the additional ~6x compression
+over the lossless baselines is paid for by a fidelity cost the lane
+already classifies as PASS by its own gate.
+
+### Why audio codecs (Opus/FLAC) don't apply
+
+ZPE-Prosody encodes prosody contour metadata — per-frame F0, energy,
+duration, and voiced-mask sequences. Audio codecs such as Opus, FLAC,
+Vorbis, and AAC encode time-domain PCM waveform samples (typically
+16-48 kHz). They operate at a different abstraction level from contour
+metadata, so a head-to-head comparison would be apples to oranges.
+General-purpose lossless byte codecs (gzip, zstd) are the correct
+baseline for the published "compression ratio against float32 contour
+buffer" claim, which is what this section reports.
+
 ## What Is Not Claimed
 
 - No lane pass.

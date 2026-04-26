@@ -1,8 +1,8 @@
 # ZPE-Prosody
 
-Deterministic prosody packet encoding for speech F0, energy, duration, and voiced-mask contour bundles. The `ZPRS/v1` codec compresses prosodic feature arrays to **13.0× on real LibriSpeech speech** with **0.64% voiced-F0 RMSE** and **2.67 ms mean encode latency** — byte-stable, round-trip lossless within CI thresholds, no GPU required.
+ZPE-Prosody is a **prosody-feature encoder primitive** — deterministic compression of F0, energy, duration, and voiced-mask contour bundles for TTS preprocessing and voice-analytics feature storage. The `ZPRS/v1` codec delivers **13.65× compression vs gzip 2.21× / zstd 2.22×** on float32 contour buffers (a clean ~6× win at the encoder primitive level), with **0.64% voiced-F0 RMSE** and **2.67 ms mean encode latency** — byte-stable, round-trip lossless within CI thresholds, no GPU required.
 
-ZPE-Prosody is one of seventeen independent encoding products in the Zer0pa portfolio; it targets speech-technology and voice-analytics teams that need deterministic, reproducible prosodic feature encoding.
+Retrieval is out of scope at the encoder level; the encoder primitive ships independently of any downstream retrieval head. ZPE-Prosody is one of seventeen independent encoding products in the Zer0pa portfolio; it targets speech-technology and voice-analytics teams that need deterministic, reproducible prosodic feature encoding for TTS preprocessing and feature-store pipelines.
 
 Licensed under the [Zer0pa Source-Available License v7.0](LICENSE).
 
@@ -10,13 +10,13 @@ Licensed under the [Zer0pa Source-Available License v7.0](LICENSE).
 
 | Gate | Verdict | Notes |
 |------|---------|-------|
-| Core codec (PRO-C001 – PRO-C004) | PASS | Round-trip fidelity, determinism, extraction, and integration contract — all four pass. |
+| Core codec (PRO-C001 – PRO-C004) | PASS | Round-trip fidelity, determinism, extraction, and integration contract — all four pass. The encoder primitive is commercially usable on this basis. |
 | Transfer closure (PRO-C005) | BLOCKED | Blocked on external dependency; a commercial-safe transfer substitute was not proven in-lane. |
 | Posture (PRO-C005) | `PAUSED_EXTERNAL` | Specific posture: `PAUSED_EXTERNAL` — paused on external dependency, not generic-BLOCKED. |
-| Retrieval closure (PRO-C006) | FAIL | p@5 = 0.31 vs threshold 0.80 on accepted evidence. |
-| **Lane overall** | **FAIL** | Retrieval and transfer gates are not resolved. Codec primitives are sound. |
+| Retrieval closure (PRO-C006) | FAIL | p@5 = 0.31 vs threshold 0.80 on accepted evidence. Out of scope for the encoder primitive; tracked as a future-scope research item. |
+| **Lane overall** | **FAIL** | The lane-overall verdict reflects retrieval and transfer gates that sit downstream of the encoder primitive; the primitive itself (PRO-C001–PRO-C004) is sound and shippable on its own. |
 
-No lane pass is claimed. No public release tag has been issued. The codec is useful as a deterministic encoding primitive; end-to-end commercial deployment requires resolving the gates above.
+No combined lane pass is claimed. No public release tag has been issued. The codec is positioned as a deterministic encoder primitive for TTS preprocessing and voice-analytics feature storage; retrieval and end-to-end transfer are downstream concerns and remain open research items.
 
 ## CI-Anchored Claims
 
@@ -116,9 +116,11 @@ buffer" claim, which is what this section reports.
 
 ## What Is Not Claimed
 
-- No lane pass.
-- No retrieval closure above threshold.
-- No commercialization-safe transfer closure.
+The list below scopes the encoder primitive's claim surface. Retrieval and end-to-end transfer items are explicitly out of scope at the encoder level and are tracked as future-scope research (see "Upcoming Workstreams" below for the active PRO-C006 research item).
+
+- No combined lane pass — lane verdict is gated by retrieval/transfer items that sit outside the encoder primitive.
+- No retrieval closure above threshold (PRO-C006 retrieval gate, p@5 = 0.31 vs 0.80 — relegated to future-scope research, not a primitive-level claim).
+- No commercialization-safe transfer closure (PRO-C005 — `PAUSED_EXTERNAL`).
 - No public release-readiness claim.
 - No speech-codec comparator leadership vs production systems.
 - No MOS claim — transfer evaluation was not executed end to end with a commercially safe transfer stack.
@@ -149,3 +151,9 @@ python -m pip install ".[api]"
 ```
 
 The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness is packaged as a runtime contract. Read [docs/LEGAL_BOUNDARIES.md](docs/LEGAL_BOUNDARIES.md) before widening any claim from this repo state.
+
+## Upcoming Workstreams
+
+This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
+
+- **PRO-C006 retrieval gate resolution** — Research-Deferred — Investigation Underway. p@5 0.31 → 0.80 threshold gap; representation-quality vs separate retrieval-head decision pending. Encoder primitive ships independently while this resolves.

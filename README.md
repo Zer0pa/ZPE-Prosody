@@ -127,13 +127,19 @@ The list below scopes the encoder primitive's claim surface. Retrieval and end-t
 
 ## Commercial Readiness
 
+| Field | Value |
+|-------|-------|
+| Verdict | FAIL |
+| Commit SHA | 748e3a75ed6b |
+| Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
+
+### Gate Status
+
 | Gate | Verdict | Notes |
 |------|---------|-------|
 | Core codec (PRO-C001 – PRO-C004) | PASS | Round-trip fidelity, determinism, extraction, and integration contract — all four pass. The encoder primitive is commercially usable on this basis. |
-| Transfer closure (PRO-C005) | BLOCKED | Blocked on external dependency; a commercial-safe transfer substitute was not proven in-lane. |
-| Posture (PRO-C005) | `PAUSED_EXTERNAL` | Specific posture: `PAUSED_EXTERNAL` — paused on external dependency, not generic-BLOCKED. |
+| Transfer closure (PRO-C005) | BLOCKED | Blocked on external dependency; a commercial-safe transfer substitute was not proven in-lane. The specific posture for this gate is paused on an external dependency (not a generic BLOCKED); this distinction is tracked in the scorecard but does not change the gate verdict. |
 | Retrieval closure (PRO-C006) | FAIL | p@5 = 0.31 vs threshold 0.80 on accepted evidence. Out of scope for the encoder primitive; tracked as a future-scope research item. |
-| **Lane overall** | **FAIL** | The lane-overall verdict reflects retrieval and transfer gates that sit downstream of the encoder primitive; the primitive itself (PRO-C001–PRO-C004) is sound and shippable on its own. |
 
 No combined lane pass is claimed. No public release tag has been issued. The codec is positioned as a deterministic encoder primitive for TTS preprocessing and voice-analytics feature storage; retrieval and end-to-end transfer are downstream concerns and remain open research items.
 

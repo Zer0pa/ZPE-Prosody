@@ -8,19 +8,121 @@ Licensed under the [Zer0pa Source-Available License v7.0](LICENSE).
 
 ## What This Is
 
-ZPE-Prosody is a **deterministic prosody-feature codec** (PROSODY_STREAM) for lossless-within-threshold compression of per-frame F0, energy, duration, and voiced-mask contour bundles. It is designed as a standalone encoder primitive for TTS preprocessing and voice-analytics feature-store pipelines — no GPU, no retrieval head, no end-to-end transfer stack required.
+Deterministic prosody-feature codec. F0, energy, duration, and voiced-mask bundles compress losslessly within thresholds. Install from PyPI: `pip install zpe-prosody`
 
 **Headline metric (CI-anchored, real data):** 0.64% voiced-F0 RMSE mean on 100 real LibriSpeech `test-clean` utterances (`proofs/artifacts/librispeech_benchmark/f0_fidelity.json`).
 
-**Active blockers:**
-- PRO-C005: `PAUSED_EXTERNAL` — transfer closure blocked on external dependency; no commercialization-safe transfer substitute proven in-lane.
-- PRO-C006: FAIL — retrieval gate p@5 = 0.31 vs threshold 0.80; retrieval is out of scope for the encoder primitive and tracked as future-scope research.
+**Active blockers:** - PRO-C005: `PAUSED_EXTERNAL` — transfer closure blocked on external dependency; no commercialization-safe transfer substitute proven in-lane. - PRO-C006: FAIL — retrieval gate p@5 = 0.31 vs threshold 0.80; retrieval is out of scope for the encoder primitive and tracked as future-scope research.
 
+## Codec Mechanics
+
+<p>
+  <img src=".github/assets/readme/lane-mechanics/PROSODY.gif" alt="ZPE-Prosody Codec Mechanics animation" width="100%">
+</p>
+
+| Field | Value |
+| ------- | ------- |
 | Architecture | PROSODY_STREAM |
-|---|---|
 | Encoding | PROSODY_ZPRS_V1 |
+| Mechanics Asset | `.github/assets/readme/lane-mechanics/PROSODY.gif` |
 
 ## Key Metrics
+
+| Metric | Value | Baseline |
+| -------- | ------- | ---------- |
+| COMPRESSION | 13.65x | vs gzip 2.21x / zstd 2.22x |
+| F0_RMSE | 0.64% | LibriSpeech test-clean |
+| ENCODE_LATENCY | 2.67 ms | mean, single-threaded |
+| DETERMINISM | 5/5 | hash-identical runs |
+
+> Source: `proofs/artifacts/librispeech_benchmark/f0_fidelity.json`, `proofs/artifacts/librispeech_benchmark/latency_benchmark.json`, `proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json`, `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json`
+
+## Repo Identity
+
+| Field | Value |
+| ------- | ------- |
+| Identifier | ZPE-Prosody |
+| Repository | https://github.com/Zer0pa/ZPE-Prosody |
+| Section | encoding |
+| Visibility | PUBLIC |
+| Architecture | PROSODY_STREAM |
+| Encoding | PROSODY_ZPRS_V1 |
+| Commit SHA | 748e3a75ed6b |
+| License | SAL-7.0 |
+| Authority Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
+
+## Readiness
+
+| Field | Value |
+| ------- | ------- |
+| Verdict | FAIL |
+| Checks | 5/5 |
+| Anchors | 6 display anchors |
+| Commit | 748e3a75ed6b |
+| Authority | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
+
+### Honest Blocker
+
+No claim of lane pass.; No claim of retrieval closure above threshold.; No claim of commercialization-safe transfer or public release readiness.
+
+## What We Prove
+
+- ZPRS/v1 packets encode and decode contour bundles without changing frame shape or voiced-mask length.
+- Malformed packet magic is rejected through a structured decode error.
+- Round-trip F0 and energy reconstruction stay below the current CI thresholds on generated contour fixtures.
+- Encoding the same contour bundle with the same metadata is byte-stable.
+- The in-process API contract supports encode, decode, transfer, and advertised endpoint capability checks.
+
+## What We Don't Claim
+
+- No combined lane pass — lane verdict is gated by retrieval/transfer items that sit outside the encoder primitive.
+- No retrieval closure above threshold (PRO-C006 retrieval gate, p@5 = 0.31 vs 0.80 — relegated to future-scope research, not a primitive-level claim).
+- No commercialization-safe transfer closure (PRO-C005 — PAUSED_EXTERNAL).
+- No public release-readiness claim.
+- No speech-codec comparator leadership vs production systems.
+- No MOS claim — transfer evaluation was not executed end to end with a commercially safe transfer stack.
+
+## Verification Status
+
+| Code | Check | Verdict |
+| ------ | ------- | --------- |
+| T_01 | tests/test_packet_format.py::PacketFormatTests::test_encode_decode_shape — Encode/decode preserves frame shape and voiced-mask length | PASS |
+| T_02 | tests/test_packet_format.py::PacketFormatTests::test_bad_magic_raises — Malformed magic bytes raise structured decode error | PASS |
+| T_03 | tests/test_roundtrip.py::RoundTripTests::test_roundtrip_fidelity — F0 RMSE ≤5%, Energy RMSE ≤3% on fixture set | PASS |
+| T_04 | tests/test_roundtrip.py::RoundTripTests::test_deterministic_bytes — Same input → byte-identical output across 5 runs | PASS |
+| T_05 | tests/test_api_contract.py — encode/decode/transfer/capability API contract fulfilled | PASS |
+
+## Proof Anchors
+
+| Path | State |
+| ------ | ------- |
+| `proofs/artifacts/librispeech_benchmark/f0_fidelity.json` | VERIFIED |
+| `proofs/artifacts/librispeech_benchmark/compression_benchmark.json` | VERIFIED |
+| `proofs/artifacts/librispeech_benchmark/latency_benchmark.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_b_roundtrip.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_d_falsification_summary.json` | VERIFIED |
+| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json` | VERIFIED |
+
+## Repo Shape
+
+| Field | Value |
+| ------- | ------- |
+| Proof Anchors | 6 display anchors |
+| Modality Lanes | 1 |
+| Architecture | PROSODY_STREAM |
+| Encoding | PROSODY_ZPRS_V1 |
+| Verification | 5/5 checks |
+| Authority Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
+
+- `src/zpe_prosody/`: installable codec package.
+- `tests/`: CI-backed package, packet, API, and round-trip checks.
+- `scripts/verify_release_surface.py`: package surface sanity helper used by `make package-sanity`.
+- `proofs/`: historical adjudication artifacts and audit lineage.
+- `docs/`: architecture, legal-boundary, market-surface, and family notes.
+
+## Extended Metrics
+
+Detailed metric tables retained from the previous `## Key Metrics` section. The public product page uses the four-row summary above.
 
 These metrics come from committed proof-artifact runs, not reasserted per CI push. Each number is anchored to a specific artifact file; the artifact commit is the evidence. CI thresholds are broader than these measured values by design — the proof runs set the floor, CI guards against regression.
 
@@ -103,78 +205,6 @@ metadata, so a head-to-head comparison would be apples to oranges.
 General-purpose lossless byte codecs (gzip, zstd) are the correct
 baseline for the published "compression ratio against float32 contour
 buffer" claim, which is what this section reports.
-
-## What We Prove
-
-| Claim | Proof Artifact | CI Test |
-|-------|----------------|---------|
-| `ZPRS/v1` packets encode and decode contour bundles without changing frame shape or voiced-mask length. | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_b_roundtrip.json` | `tests/test_packet_format.py::PacketFormatTests::test_encode_decode_shape` |
-| Malformed packet magic is rejected through a structured decode error. | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_d_falsification_summary.json` | `tests/test_packet_format.py::PacketFormatTests::test_bad_magic_raises` |
-| Round-trip F0 and energy reconstruction stay below the current CI thresholds on generated contour fixtures. | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_f0_fidelity.json`, `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_energy_fidelity.json` | `tests/test_roundtrip.py::RoundTripTests::test_roundtrip_fidelity` |
-| Encoding the same contour bundle with the same metadata is byte-stable. | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json` | `tests/test_roundtrip.py::RoundTripTests::test_deterministic_bytes` |
-| The in-process API contract supports encode, decode, transfer, and advertised endpoint capability checks. | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/integration_readiness_contract.json` | `tests/test_api_contract.py` |
-
-## What We Don't Claim
-
-The list below scopes the encoder primitive's claim surface. Retrieval and end-to-end transfer items are explicitly out of scope at the encoder level and are tracked as future-scope research (see "Upcoming Workstreams" below for the active PRO-C006 research item).
-
-- No combined lane pass — lane verdict is gated by retrieval/transfer items that sit outside the encoder primitive.
-- No retrieval closure above threshold (PRO-C006 retrieval gate, p@5 = 0.31 vs 0.80 — relegated to future-scope research, not a primitive-level claim).
-- No commercialization-safe transfer closure (PRO-C005 — `PAUSED_EXTERNAL`).
-- No public release-readiness claim.
-- No speech-codec comparator leadership vs production systems.
-- No MOS claim — transfer evaluation was not executed end to end with a commercially safe transfer stack.
-
-## Commercial Readiness
-
-| Field | Value |
-|-------|-------|
-| Verdict | FAIL |
-| Commit SHA | 748e3a75ed6b |
-| Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
-
-### Gate Status
-
-| Gate | Verdict | Notes |
-|------|---------|-------|
-| Core codec (PRO-C001 – PRO-C004) | PASS | Round-trip fidelity, determinism, extraction, and integration contract — all four pass. The encoder primitive is commercially usable on this basis. |
-| Transfer closure (PRO-C005) | BLOCKED | Blocked on external dependency; a commercial-safe transfer substitute was not proven in-lane. The specific posture for this gate is paused on an external dependency (not a generic BLOCKED); this distinction is tracked in the scorecard but does not change the gate verdict. |
-| Retrieval closure (PRO-C006) | FAIL | p@5 = 0.31 vs threshold 0.80 on accepted evidence. Out of scope for the encoder primitive; tracked as a future-scope research item. |
-
-No combined lane pass is claimed. No public release tag has been issued. The codec is positioned as a deterministic encoder primitive for TTS preprocessing and voice-analytics feature storage; retrieval and end-to-end transfer are downstream concerns and remain open research items.
-
-## Tests and Verification
-
-| Code | Check | Verdict |
-|------|-------|---------|
-| `tests/test_packet_format.py::PacketFormatTests::test_encode_decode_shape` | Encode/decode preserves frame shape and voiced-mask length | PASS |
-| `tests/test_packet_format.py::PacketFormatTests::test_bad_magic_raises` | Malformed magic bytes raise structured decode error | PASS |
-| `tests/test_roundtrip.py::RoundTripTests::test_roundtrip_fidelity` | F0 RMSE ≤5%, Energy RMSE ≤3% on fixture set | PASS |
-| `tests/test_roundtrip.py::RoundTripTests::test_deterministic_bytes` | Same input → byte-identical output across 5 runs | PASS |
-| `tests/test_api_contract.py` | encode/decode/transfer/capability API contract fulfilled | PASS |
-
-Run locally: `make test`
-
-## Proof Anchors
-
-| Path | State |
-|------|-------|
-| `proofs/artifacts/librispeech_benchmark/f0_fidelity.json` | COMMITTED — 0.64% voiced-F0 RMSE, 100 real utterances |
-| `proofs/artifacts/librispeech_benchmark/compression_benchmark.json` | COMMITTED — 13.0× mean CR on real LibriSpeech |
-| `proofs/artifacts/librispeech_benchmark/latency_benchmark.json` | COMMITTED — 2.67 ms mean encode latency |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_b_roundtrip.json` | COMMITTED — wave-1 round-trip gate |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_d_falsification_summary.json` | COMMITTED — 4/4 malformed-packet cases caught |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json` | COMMITTED — 5/5 hash-identical replay runs |
-| `proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json` | COMMITTED — gzip/zstd baseline comparison |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` | COMMITTED — overall FAIL (PRO-C005 PAUSED_EXTERNAL, PRO-C006 FAIL) |
-
-## Repo Shape
-
-- `src/zpe_prosody/`: installable codec package.
-- `tests/`: CI-backed package, packet, API, and round-trip checks.
-- `scripts/verify_release_surface.py`: package surface sanity helper used by `make package-sanity`.
-- `proofs/`: historical adjudication artifacts and audit lineage.
-- `docs/`: architecture, legal-boundary, market-surface, and family notes.
 
 ## Quick Start
 

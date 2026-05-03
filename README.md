@@ -4,7 +4,7 @@ ZPE-Prosody is a **prosody-feature encoder primitive** — deterministic compres
 
 ZPE-Prosody is one of seventeen independent encoding products in the Zer0pa portfolio; it targets speech-technology and voice-analytics teams that need deterministic, reproducible prosodic feature encoding for TTS preprocessing and feature-store pipelines.
 
-Licensed under the [Zer0pa Source-Available License v7.0](LICENSE).
+Licensed under the [Zer0pa Source-Available License v7.1](LICENSE).
 
 ## What This Is
 

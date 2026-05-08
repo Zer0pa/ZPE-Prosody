@@ -1,6 +1,6 @@
 # ZPE-Prosody
 
-ZPE-Prosody is a **prosody-feature encoder primitive** — deterministic compression of F0, energy, duration, and voiced-mask contour bundles for TTS preprocessing and voice-analytics feature storage. The `ZPRS/v1` codec delivers **13.65× compression vs gzip 2.21× / zstd 2.22×** on float32 contour buffers (a clean ~6× win at the encoder primitive level), with **0.64% voiced-F0 RMSE** and **2.67 ms mean encode latency** — byte-stable, bounded-lossy round-trip within CI thresholds, no GPU required.
+ZPE-Prosody is a **partial falsification**: the deterministic encoder primitive passes on its bounded scope, but the **retrieval gate (PRO-C006) FAILS** at p@5 0.31 against the 0.80 threshold, and **transfer closure (PRO-C005) is paused-external**. The encoder itself — `ZPRS/v1` — delivers **13.65× compression vs gzip 2.21× / zstd 2.22×** on float32 contour buffers, with **0.64% voiced-F0 RMSE** and **2.67 ms mean encode latency**, byte-stable and bounded-lossy round-trip within CI thresholds, no GPU required. The lane ships as a feature-store primitive — not a retrieval product or TTS-ready system.
 
 ZPE-Prosody is one of seventeen independent encoding products in the Zer0pa portfolio; it targets speech-technology and voice-analytics teams that need deterministic, reproducible prosodic feature encoding for TTS preprocessing and feature-store pipelines.
 

@@ -22,6 +22,9 @@ python -m pip install ".[api]"
 The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness is packaged as a runtime contract. Read [docs/LEGAL_BOUNDARIES.md](docs/LEGAL_BOUNDARIES.md) before widening any claim from this repo state.
 
 <table width="100%">
+<colgroup>
+<col width="100%">
+</colgroup>
 <tr>
 <td width="100%" valign="top">
 <p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
@@ -35,6 +38,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="100%">
+</colgroup>
 <tr>
 <td width="100%" valign="top" align="center">
 <figure>
@@ -46,6 +52,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="62%">
+<col width="38%">
+</colgroup>
 <tr>
 <td width="62%" valign="top">
 <h2><code>02</code> MARKETS</h2>
@@ -70,6 +80,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="100%">
+</colgroup>
 <tr>
 <td width="100%" valign="top">
 <p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
@@ -80,6 +93,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
 <tr>
 <td width="50%" valign="top">
 <h4><code>05.1</code> CURRENT TECH</h4>
@@ -95,6 +112,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="100%">
+</colgroup>
 <tr>
 <td width="100%" valign="top">
 <p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
@@ -119,6 +139,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="34%">
+<col width="66%">
+</colgroup>
 <tr>
 <td width="34%" valign="top">
 <h2><code>06</code> MEASUREMENT</h2>
@@ -141,6 +165,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="100%">
+</colgroup>
 <tr>
 <td width="100%" valign="top">
 <p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
@@ -151,6 +178,13 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+</colgroup>
 <tr>
 <td width="20%" valign="top">
 <p><strong><code>07.1</code><br><small>F0 RMSE</small></strong></p>
@@ -181,6 +215,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="40%">
+<col width="60%">
+</colgroup>
 <tr>
 <td width="40%" valign="top">
 <h2><code>08</code> ENCODER BOUNDS</h2>
@@ -196,6 +234,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="100%">
+</colgroup>
 <tr>
 <td width="100%" valign="top">
 <p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
@@ -207,6 +248,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="66%">
+<col width="34%">
+</colgroup>
 <tr>
 <td width="66%" valign="top">
 <h2><code>09</code></h2>
@@ -220,6 +265,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
 <tr>
 <td width="50%" valign="top">
 <h4><code>09.2</code> WHAT WORKS NOW</h4>
@@ -233,34 +282,35 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </table>
 
 <table width="100%">
+<colgroup>
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+</colgroup>
 <tr>
-<td width="25%" valign="top">
+<td width="20%" valign="top">
 <p><strong><code>09.4</code><br><small>FEATURE STORES</small></strong></p>
 <p><strong>NEAR-TERM (12–24 MO)</strong></p>
       <div>TTS teams stop drowning in contour bytes</div><div>A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</div>
 </td>
-<td width="25%" valign="top">
+<td width="20%" valign="top">
 <p><strong><code>09.5</code><br><small>FIDELITY</small></strong></p>
 <p><strong>NEAR-TERM (12–24 MO)</strong></p>
       <div>Voice pipelines inherit a pitch receipt</div><div>A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance &mdash; 0.64% on LibriSpeech &mdash; before the model ever ingests the contour. Pitch drift becomes a number on a dashboard, not a complaint from a listener.</div>
 </td>
-<td width="25%" valign="top">
+<td width="20%" valign="top">
 <p><strong><code>09.6</code><br><small>CALL CENTRES</small></strong></p>
 <p><strong>MID-TERM (24–48 MO)</strong></p>
       <div>Analytics vendors archive prosody, not just transcripts</div><div>A call-centre analytics platform that already stores transcripts can store the prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</div>
 </td>
-<td width="25%" valign="top">
+<td width="20%" valign="top">
 <p><strong><code>09.7</code><br><small>LINGUISTICS</small></strong></p>
 <p><strong>MID-TERM (24–48 MO)</strong></p>
       <div>Prosody corpora become comparable</div><div>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer at another institution can reproduce the analysis on the same bytes, not on a re-derived contour.</div>
 </td>
-</tr>
-</table>
-
-<table width="100%">
-<tr>
-<td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
+<td width="20%" valign="top">
 <p><strong><code>09.8</code><br><small>DISCLOSURE</small></strong></p>
 <p><strong>PARADIGM (48 MO+)</strong></p>
       <div>Speech feature codecs get fidelity terms</div><div>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor talks to a regulator and a customer with the same numbers, in the same units, against the same corpus.</div>

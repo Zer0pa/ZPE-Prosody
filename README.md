@@ -1,6 +1,6 @@
 # ZPE-Prosody
 
-## 0. Install / Developer Commands
+## Install / Developer Commands
 
 #### Quick Start
 
@@ -21,17 +21,17 @@ python -m pip install ".[api]"
 
 The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness is packaged as a runtime contract. Read [docs/LEGAL_BOUNDARIES.md](docs/LEGAL_BOUNDARIES.md) before widening any claim from this repo state.
 
-<table>
+<table width="100%">
 <tr>
-<td colspan="7" valign="top">
-<sub>01 · Bento cell · b-cell b-hero cell-7 row-2</sub>
-<div><span><b>00 · ZPE-PROSODY</b> · CONTOUR CODEC</span><span>PR #50 DRAFT · BRANCH-PUBLIC</span></div>
+<td colspan="12" width="100.0%" valign="top">
+<div><span><b>00 · ZPE-PROSODY</b> · CONTOUR CODEC</span> <span>PR #50 DRAFT · BRANCH-PUBLIC</span></div>
       <h1>Speech's Shape and <span>Feeling Encoded</span></h1>
       <p>Prosodic feature-store codec &mdash; pitch, energy, duration, voiced mask &middot; ZPE-Prosody &middot; PyPI <em>zpe-prosody</em> v0.1.1 &middot; github.com/Zer0pa/ZPE-Prosody</p>
       <p>A voice carries more than words. Pitch rises into a question, stress lands hard on a single syllable, rhythm tells a listener whether the speaker is calm or in a hurry. ZPE-Prosody captures that shape as a deterministic <em>ZPRS/v1</em> stream &mdash; F0, energy, duration, and the voiced/unvoiced mask &mdash; at <strong>13.0&times;</strong> mean compression and <strong>0.64% voiced-F0 RMSE</strong> on 100 LibriSpeech test-clean utterances. The encoder is the product. Retrieval misses target; transfer is paused. Both limits are named, not buried.</p>
 </td>
-<td colspan="5" valign="top">
-<sub>02 · ZPE Prosody animated mechanics diagram · b-cell b-codec-mechanics cell-5 row-2</sub>
+</tr>
+<tr>
+<td colspan="12" width="100.0%" align="center" valign="top">
 <figure>
         <div><img src="docs/assets/product-page-mechanics.gif" alt="ZPE-Prosody approved scientific square mechanics diagram showing ZPRS prosody stream mechanics."></div>
         <figcaption><b>Scope:</b> encoder stream for F0, energy, duration, and voiced mask. Retrieval misses target; transfer remains paused.</figcaption>
@@ -39,50 +39,44 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 </td>
 </tr>
 <tr>
-<td colspan="5" valign="top">
-<sub>03 · Bento cell · b-cell b-fig cell-5</sub>
-<div><b>02 · MARKETS</b><span>ADJACENT FORECASTS</span></div>
+<td colspan="12" width="100.0%" valign="top">
+<div><b>02 · MARKETS</b> <span>ADJACENT FORECASTS</span></div>
       <div>
         <div>
-          <div><span>Speech and language processing '30</span><span></span><span>$26.8B</span></div>
-          <div><span>Text-to-speech market '31</span><span></span><span>$7.9B</span></div>
-          <div><span>Text-to-speech software '30</span><span></span><span>$7.3B</span></div>
-          <div><span>Voice analytics '30</span><span></span><span>est. $3.1B</span></div>
-          <div><span>Speech AI / feature-store tooling '30</span><span></span><span>est. $1.8B</span></div>
+          <div><span>Speech and language processing '30</span>  <span>$26.8B</span></div>
+          <div><span>Text-to-speech market '31</span>  <span>$7.9B</span></div>
+          <div><span>Text-to-speech software '30</span>  <span>$7.3B</span></div>
+          <div><span>Voice analytics '30</span>  <span>est. $3.1B</span></div>
+          <div><span>Speech AI / feature-store tooling '30</span>  <span>est. $1.8B</span></div>
         </div>
       </div>
       <div>Adjacent forecasts only &middot; ZPE-Prosody is a bounded prosodic encoder; retrieval and transfer are not claimed.</div>
 </td>
-<td colspan="3" valign="top">
-<sub>04 · Bento cell · b-cell b-stat cell-3</sub>
+</tr>
+<tr>
+<td colspan="6" width="50.0%" valign="top">
 <div><b>03 · VALUE</b></div>
       <div>$7.3<span>B</span></div>
       <div>TTS market by 2030; the prosodic feature store beneath it, with the retrieval gap stated.</div>
 </td>
-<td colspan="3" valign="top">
-<sub>05 · Bento cell · b-cell b-title is-centered cell-3</sub>
+<td colspan="6" width="50.0%" valign="top">
 <div><b>04 · INSIGHT</b></div>
       <h2>Speech carries feeling. Its shape <span>can now be held.</span></h2>
 </td>
 </tr>
 <tr>
-<td colspan="12" valign="top">
-<sub>06 · Bento cell · b-cell b-prose is-technical b-tech-panel</sub>
-<div><b>05.1 · CURRENT TECH</b><span>COMPUTED AND DISCARDED</span></div>
+<td colspan="6" width="50.0%" valign="top">
+<div><b>05.1 · CURRENT TECH</b> <span>COMPUTED AND DISCARDED</span></div>
         <p>Mainstream TTS and voice-analytics stacks compute pitch, energy and timing every time they need them, then throw the contours away or stash them as undocumented bytes. No published fidelity figure, no public limit, no shared archive format.</p>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>07 · Bento cell · b-cell b-prose is-technical b-tech-panel</sub>
-<div><b>05.2 · OUR TECH</b><span>THE SHAPE, HELD</span></div>
+<td colspan="6" width="50.0%" valign="top">
+<div><b>05.2 · OUR TECH</b> <span>THE SHAPE, HELD</span></div>
         <p>ZPE-Prosody encodes the four prosodic primitives &mdash; F0, energy, duration, voiced mask &mdash; as a deterministic <em>ZPRS/v1</em> stream at <strong>13.0&times;</strong> mean compression and <strong>0.64% voiced-F0 RMSE</strong> on real LibriSpeech utterances, with mean encode latency of <strong>2.67 ms</strong>. Four primitive checks pass. Retrieval and transfer are excluded from the product on purpose, with the numbers.</p>
 </td>
 </tr>
 <tr>
-<td colspan="3" valign="top">
-<sub>08 · Bento cell · b-cell b-fig b-benchmark-mini cell-3</sub>
-<div><b>05.3 · BENCHMARKS</b><span>LIBRISPEECH TEST-CLEAN</span></div>
+<td colspan="12" width="100.0%" valign="top">
+<div><b>05.3 · BENCHMARKS</b> <span>LIBRISPEECH TEST-CLEAN</span></div>
       <div>
         <div>
           <div><span>Compression</span><b>13.0</b><small>&times;</small></div>
@@ -91,155 +85,119 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
           <div><span>Retrieval</span><b>MISS</b><small>p@5 0.31</small></div>
         </div>
         <div>
-          <div><span>Encoder 13.0&times;</span><span></span><span>PASS</span></div>
-          <div><span>Fidelity 0.64%</span><span></span><span>PASS</span></div>
-          <div><span>Retrieval 0.31</span><span></span><span>MISS</span></div>
+          <div><span>Encoder 13.0&times;</span>  <span>PASS</span></div>
+          <div><span>Fidelity 0.64%</span>  <span>PASS</span></div>
+          <div><span>Retrieval 0.31</span>  <span>MISS</span></div>
         </div>
       </div>
       <div><b>Scope:</b> 100 LibriSpeech test-clean utterances. PRO-C006 retrieval MISS; PRO-C005 transfer PAUSED_EXTERNAL.</div>
 </td>
-<td colspan="4" valign="top">
-<sub>09 · Bento cell · b-cell b-title cell-4</sub>
-<div><b>06 · MEASUREMENT</b><span>PRO CHECK SUITE</span></div>
+</tr>
+<tr>
+<td colspan="12" width="100.0%" valign="top">
+<div><b>06 · MEASUREMENT</b> <span>PRO CHECK SUITE</span></div>
       <h2>The encoder passes four checks. Retrieval and transfer <span>do not.</span></h2>
 </td>
 </tr>
 <tr>
-<td colspan="8" valign="top">
-<sub>10 · Bento cell · b-cell b-fig cell-8</sub>
+<td colspan="12" width="100.0%" valign="top">
 <div><b>06.1 · COMPARATIVE PERFORMANCE · LIBRISPEECH CONTOUR COMPRESSION</b></div>
       <div>
         <div>
-          <div><span>ZPE-Prosody</span><span></span><span>13.0&times; compression</span></div>
-          <div><span>gzip</span><span></span><span>~2.2&times; raw</span></div>
-          <div><span>PRO-C006 p@5</span><span></span><span>0.31 MISS</span></div>
-          <div><span>PRO-C004</span><span></span><span>PASS</span></div>
+          <div><span>ZPE-Prosody</span>  <span>13.0&times; compression</span></div>
+          <div><span>gzip</span>  <span>~2.2&times; raw</span></div>
+          <div><span>PRO-C006 p@5</span>  <span>0.31 MISS</span></div>
+          <div><span>PRO-C004</span>  <span>PASS</span></div>
         </div>
       </div>
       <div>100 LibriSpeech <em>test-clean</em> utterances. The four primitive encoder checks pass. Retrieval misses at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer is paused; no commercial-safe substitute proven in-lane.</div>
 </td>
 </tr>
 <tr>
-<td colspan="12" valign="top">
-<sub>11 · Bento cell · b-cell b-row-label cell-12</sub>
-<div><b>07 · KEY METRICS</b><span>LIBRISPEECH TEST-CLEAN</span></div>
+<td colspan="12" width="100.0%" valign="top">
+<div><b>07 · KEY METRICS</b> <span>LIBRISPEECH TEST-CLEAN</span></div>
 </td>
 </tr>
 <tr>
-<td colspan="12" valign="top">
-<sub>12 · Bento cell · b-cell b-stat</sub>
+<td width="20%" valign="top">
 <div><b>07.1 · F0 RMSE</b></div>
       <div>0.64<span>%</span></div>
       <div>Voiced frames &middot; <b>LibriSpeech 100 utterances</b></div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>13 · Bento cell · b-cell b-stat</sub>
+<td width="20%" valign="top">
 <div><b>07.2 · COMPRESSION</b></div>
       <div>13.0<span>×</span></div>
       <div>Mean vs raw float32 · <b>ZPRS/v1 stream</b></div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>14 · Bento cell · b-cell b-stat</sub>
+<td width="20%" valign="top">
 <div><b>07.3 · PRIMITIVE CHECKS</b></div>
       <div>4 / 4<span>PASS</span></div>
       <div>PRO-C001..C004 only · <b>retrieval open</b></div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>15 · Bento cell · b-cell b-stat</sub>
+<td width="20%" valign="top">
 <div><b>07.4 · CORPUS</b></div>
       <div>100<span>utt</span></div>
       <div>LibriSpeech test-clean · <b>OpenSLR</b></div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>16 · Bento cell · b-cell b-stat</sub>
+<td width="20%" valign="top">
 <div><b>07.5 · RETRIEVAL TARGET</b></div>
       <div>0.31<span>p@5</span></div>
       <div>PRO-C006 MISS · <b>vs 0.80 threshold</b></div>
 </td>
 </tr>
 <tr>
-<td colspan="4" valign="top">
-<sub>17 · Bento cell · b-cell b-title is-centered cell-4</sub>
-<div><b>08 · ENCODER BOUNDS</b><span>WHAT HOLDS, WHAT MISSES</span></div>
+<td colspan="4" width="33.33%" valign="top">
+<div><b>08 · ENCODER BOUNDS</b> <span>WHAT HOLDS, WHAT MISSES</span></div>
       <h2>The encoder holds speech's shape. Retrieval does <span>not yet follow.</span></h2>
 </td>
-<td colspan="5" valign="top">
-<sub>18 · Bento cell · b-cell b-prose is-technical cell-5</sub>
-<div><b>08.1 · WHAT ROUND-TRIPS EXACTLY</b><span>ZPRS/V1 PRIMITIVE</span></div>
+<td colspan="5" width="41.67%" valign="top">
+<div><b>08.1 · WHAT ROUND-TRIPS EXACTLY</b> <span>ZPRS/V1 PRIMITIVE</span></div>
       <p>On 100 LibriSpeech <em>test-clean</em> utterances the encoder records <strong>13.0&times;</strong> mean compression at <strong>0.64% voiced-F0 RMSE</strong> with duration RMSE of 0.000 ms, across <strong>5/5 hash-identical encoder runs</strong>. The same input bytes produce the same ZPRS/v1 stream every time, on every host. PRO-C001..C004 PASS on primitive encoder checks; they do not override the retrieval and transfer gates. Retrieval (PRO-C006) misses target at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer (PRO-C005) is PAUSED_EXTERNAL. The page reports both, not one.</p>
 </td>
-<td colspan="3" valign="top">
-<sub>19 · Bento cell · b-cell b-blocker cell-3</sub>
+<td colspan="3" width="25.0%" valign="top">
 <div><b>08.2 · HONEST BLOCKER</b></div>
       <span>Honest Blocker ·</span>
       <p><strong>MISS on PRO-C006 retrieval</strong>, <em>p@5 0.31</em> vs 0.80; OOD p@5 0.1707. <strong>PRO-C005 transfer</strong> PAUSED_EXTERNAL; no commercial-safe substitute proven in-lane. Status packet on <strong>PR #50 branch-public</strong>; PyPI stale at v0.1.1. <em>No transfer learning, retrieval product, or TTS-ready system is claimed.</em></p>
 </td>
 </tr>
 <tr>
-<td colspan="4" valign="top">
-<sub>20 · Bento cell · b-cell b-title cell-4</sub>
-<div><b>09</b></div>
+<td colspan="6" width="50.0%" valign="top">
+<div><b>09</b> </div>
       <h2>A VOICE WITH A <span>FIDELITY RECEIPT.</span></h2>
 </td>
-<td colspan="4" valign="top">
-<sub>21 · Bento cell · b-cell b-prose cell-4</sub>
+<td colspan="6" width="50.0%" valign="top">
 <div><b>09.1 · THE AMBITION</b></div>
       <p>The product is a bounded <em>ZPRS/v1</em> feature store for the shape of speech &mdash; F0, energy, duration, voiced mask &mdash; that a TTS team, a call-centre analytics owner or a linguistics lab can store, ship and re-read with a stated fidelity per recording. Retrieval and transfer arrive later, on their own terms.</p>
 </td>
 </tr>
 <tr>
-<td colspan="12" valign="top">
-<sub>22 · Bento cell · b-cell b-title b-statement-card</sub>
+<td colspan="6" width="50.0%" valign="top">
 <div><b>09.2 · WHAT WORKS NOW</b></div>
         <h2>The prosodic encoder ships with a fidelity number per frame and a public compression figure.</h2>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>23 · Bento cell · b-cell b-title b-statement-card</sub>
+<td colspan="6" width="50.0%" valign="top">
 <div><b>09.3 · WHAT'S STILL OPEN</b></div>
         <h2>Retrieval misses target at p@5 0.31 vs 0.80. Transfer is paused on an external dependency.</h2>
 </td>
 </tr>
 <tr>
-<td colspan="12" valign="top">
-<sub>24 · Bento cell · b-cell b-unlock</sub>
+<td width="20%" valign="top">
 <div><b>09.4</b> &middot; FEATURE STORES · NEAR-TERM (12&ndash;24 MO)</div>
       <div>TTS teams stop drowning in contour bytes</div><div>A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>25 · Bento cell · b-cell b-unlock</sub>
+<td width="20%" valign="top">
 <div><b>09.5</b> &middot; FIDELITY · NEAR-TERM (12&ndash;24 MO)</div>
       <div>Voice pipelines inherit a pitch receipt</div><div>A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance &mdash; 0.64% on LibriSpeech &mdash; before the model ever ingests the contour. Pitch drift becomes a number on a dashboard, not a complaint from a listener.</div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>26 · Bento cell · b-cell b-unlock</sub>
+<td width="20%" valign="top">
 <div><b>09.6</b> &middot; CALL CENTRES · MID-TERM (24&ndash;48 MO)</div>
       <div>Analytics vendors archive prosody, not just transcripts</div><div>A call-centre analytics platform that already stores transcripts can store the prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>27 · Bento cell · b-cell b-unlock</sub>
+<td width="20%" valign="top">
 <div><b>09.7</b> &middot; LINGUISTICS · MID-TERM (24&ndash;48 MO)</div>
       <div>Prosody corpora become comparable</div><div>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer at another institution can reproduce the analysis on the same bytes, not on a re-derived contour.</div>
 </td>
-</tr>
-<tr>
-<td colspan="12" valign="top">
-<sub>28 · Bento cell · b-cell b-unlock</sub>
+<td width="20%" valign="top">
 <div><b>09.8</b> &middot; DISCLOSURE · PARADIGM (48 MO+)</div>
       <div>Speech feature codecs get fidelity terms</div><div>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor talks to a regulator and a customer with the same numbers, in the same units, against the same corpus.</div>
 </td>

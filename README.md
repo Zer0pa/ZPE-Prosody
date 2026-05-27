@@ -29,7 +29,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 
 # Speech's Shape and Feeling Encoded
 
-> Prosodic feature-store codec &middot; pitch, energy, duration, voiced mask &middot; PyPI `zpe-prosody` v0.1.1 &middot; github.com/Zer0pa/ZPE-Prosody
+> Prosodic feature-store codec &middot; pitch, energy, duration, voiced mask &middot; PyPI `zpe-prosody` v0.1.1 is stale &middot; github.com/Zer0pa/ZPE-Prosody
 
 A voice carries more than words. Pitch rises into a question, stress lands on a syllable, and rhythm tells a listener whether the speaker is calm or in a hurry. ZPE-Prosody captures that shape as a deterministic `ZPRS/v1` stream at **13.0&times; mean compression** and **0.64% voiced-F0 RMSE** on 100 LibriSpeech `test-clean` utterances.
 
@@ -77,7 +77,7 @@ ZPE-Prosody is a bounded prosodic encoder. Retrieval and transfer are not claime
 <td width="50%" valign="top">
 <h3><code>05.2</code> Our Tech</h3>
 <p><strong>The shape, held</strong></p>
-<p>ZPE-Prosody stores F0, energy, duration, and voiced mask as a deterministic <code>ZPRS/v1</code> stream. The public receipt is <strong>13.0&times;</strong> mean compression, <strong>0.64%</strong> voiced-F0 RMSE, <strong>2.67 ms</strong> mean encode latency, and four primitive checks passing.</p>
+<p>ZPE-Prosody stores F0, energy, duration, and voiced mask as a deterministic <code>ZPRS/v1</code> stream. The public receipt is <strong>13.0&times;</strong> mean compression, <strong>0.64%</strong> voiced-F0 RMSE, <strong>2.67 ms</strong> mean encode latency, and four primitive checks passing. Retrieval and transfer are excluded from the product on purpose, with the numbers.</p>
 </td>
 </tr>
 </table>
@@ -163,11 +163,11 @@ ZPE-Prosody is a bounded prosodic encoder. Retrieval and transfer are not claime
 <td width="66%" valign="top">
 <h3><code>08.1</code> What Round-Trips Exactly</h3>
 <p>On 100 LibriSpeech <code>test-clean</code> utterances, the encoder records <strong>13.0&times;</strong> mean compression at <strong>0.64% voiced-F0 RMSE</strong>, with duration RMSE of 0.000 ms across <strong>5/5 hash-identical encoder runs</strong>. The same input bytes produce the same <code>ZPRS/v1</code> stream every time, on every host.</p>
-<p><code>PRO-C001</code>..<code>PRO-C004</code> pass on primitive encoder checks. They do not override the retrieval and transfer gates.</p>
+<p><code>PRO-C001</code>..<code>PRO-C004</code> pass on primitive encoder checks. They do not override the retrieval and transfer gates. The page reports both, not one.</p>
 </td>
 <td width="34%" valign="top">
 <h3><code>08.2</code> Honest Blocker</h3>
-<p><strong>MISS on <code>PRO-C006</code> retrieval</strong>, p@5 <strong>0.31</strong> vs <strong>0.80</strong>; OOD p@5 <strong>0.1707</strong>. <strong><code>PRO-C005</code> transfer</strong> is <strong>PAUSED_EXTERNAL</strong>. No transfer-learning product, retrieval product, or TTS-ready system is claimed.</p>
+<p><strong>MISS on <code>PRO-C006</code> retrieval</strong>, p@5 <strong>0.31</strong> vs <strong>0.80</strong>; OOD p@5 <strong>0.1707</strong>. <strong><code>PRO-C005</code> transfer</strong> is <strong>PAUSED_EXTERNAL</strong>; no commercial-safe substitute is proven in-lane. Status packet on <strong>PR #50 branch-public</strong>; PyPI stale at v0.1.1. No transfer-learning product, retrieval product, or TTS-ready system is claimed.</p>
 </td>
 </tr>
 </table>

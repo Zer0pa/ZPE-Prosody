@@ -90,9 +90,7 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 **LibriSpeech `test-clean`, 100 utterances**
 
-| Compression | F0 RMSE | Primitive checks | Retrieval | Transfer |
-| ---: | ---: | :---: | :---: | :---: |
-| **13.0&times;** | **0.64%** | **4/4 PASS** | **MISS, p@5 0.31** | **PAUSED_EXTERNAL** |
+> **Compression** &middot; **13.0&times;** &nbsp;&nbsp; **F0 RMSE** &middot; **0.64%** &nbsp;&nbsp; **Primitive checks** &middot; **4/4 PASS** &nbsp;&nbsp; **Retrieval** &middot; **MISS, p@5 0.31** &nbsp;&nbsp; **Transfer** &middot; **PAUSED_EXTERNAL**
 
 `PRO-C006` misses target at p@5 **0.31 vs 0.80**. `PRO-C005` transfer is paused; no commercial-safe substitute is proven in-lane.
 
@@ -125,40 +123,13 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 **LibriSpeech `test-clean`**
 
-<table width="100%">
-<tr>
-<td width="33%" align="center" valign="top">
-<p><code>07.1</code> <strong>F0 RMSE</strong></p>
-<h2>0.64%</h2>
-<p>voiced frames on LibriSpeech</p>
-</td>
-<td width="34%" align="center" valign="top">
-<p><code>07.2</code> <strong>Compression</strong></p>
-<h2>13.0&times;</h2>
-<p>mean vs raw float32 contours</p>
-</td>
-<td width="33%" align="center" valign="top">
-<p><code>07.3</code> <strong>Primitive Checks</strong></p>
-<h2>4/4</h2>
-<p><code>PRO-C001</code>..<code>PRO-C004</code> PASS</p>
-</td>
-</tr>
-</table>
-
-<table width="100%">
-<tr>
-<td width="50%" align="center" valign="top">
-<p><code>07.4</code> <strong>Corpus</strong></p>
-<h2>100</h2>
-<p>LibriSpeech <code>test-clean</code> utterances</p>
-</td>
-<td width="50%" align="center" valign="top">
-<p><code>07.5</code> <strong>Retrieval Target</strong></p>
-<h2>0.31</h2>
-<p>p@5 MISS vs 0.80 threshold</p>
-</td>
-</tr>
-</table>
+<blockquote>
+<p><code>07.1</code> <strong>F0 RMSE</strong> &middot; <strong>0.64%</strong> &middot; voiced frames on LibriSpeech<br>
+<code>07.2</code> <strong>Compression</strong> &middot; <strong>13.0&times;</strong> &middot; mean vs raw float32 contours<br>
+<code>07.3</code> <strong>Primitive Checks</strong> &middot; <strong>4/4 PASS</strong> &middot; <code>PRO-C001</code>..<code>PRO-C004</code> only<br>
+<code>07.4</code> <strong>Corpus</strong> &middot; <strong>100 utterances</strong> &middot; LibriSpeech <code>test-clean</code><br>
+<code>07.5</code> <strong>Retrieval Target</strong> &middot; <strong>0.31 p@5 MISS</strong> &middot; vs 0.80 threshold</p>
+</blockquote>
 
 ---
 

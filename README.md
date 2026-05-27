@@ -103,7 +103,7 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 <td width="34%" valign="top">
 <h2><code>06</code> Measurement</h2>
 <p><strong>PRO check suite</strong></p>
-<h1>Four checks pass. Retrieval and transfer do not.</h1>
+<h2>Four checks pass. Retrieval and transfer do not.</h2>
 </td>
 <td width="66%" valign="top">
 <h3><code>06.1</code> Comparative Performance</h3>
@@ -127,30 +127,35 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 <table width="100%">
 <tr>
-<td width="20%" align="center" valign="top">
-<p><code>07.1</code> <strong>F0</strong></p>
+<td width="33%" align="center" valign="top">
+<p><code>07.1</code> <strong>F0 RMSE</strong></p>
 <h2>0.64%</h2>
-<p>voiced frames</p>
+<p>voiced frames on LibriSpeech</p>
 </td>
-<td width="20%" align="center" valign="top">
+<td width="34%" align="center" valign="top">
 <p><code>07.2</code> <strong>Compression</strong></p>
 <h2>13.0&times;</h2>
-<p>mean vs raw</p>
+<p>mean vs raw float32 contours</p>
 </td>
-<td width="20%" align="center" valign="top">
-<p><code>07.3</code> <strong>Primitive</strong></p>
+<td width="33%" align="center" valign="top">
+<p><code>07.3</code> <strong>Primitive Checks</strong></p>
 <h2>4/4</h2>
-<p>PASS</p>
+<p><code>PRO-C001</code>..<code>PRO-C004</code> PASS</p>
 </td>
-<td width="20%" align="center" valign="top">
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="50%" align="center" valign="top">
 <p><code>07.4</code> <strong>Corpus</strong></p>
 <h2>100</h2>
-<p>utterances</p>
+<p>LibriSpeech <code>test-clean</code> utterances</p>
 </td>
-<td width="20%" align="center" valign="top">
-<p><code>07.5</code> <strong>Retrieval</strong></p>
+<td width="50%" align="center" valign="top">
+<p><code>07.5</code> <strong>Retrieval Target</strong></p>
 <h2>0.31</h2>
-<p>p@5 MISS</p>
+<p>p@5 MISS vs 0.80 threshold</p>
 </td>
 </tr>
 </table>
@@ -182,11 +187,11 @@ The product is a bounded `ZPRS/v1` feature store for the shape of speech: F0, en
 <tr>
 <td width="48%" valign="top">
 <h3><code>09.2</code> What Works Now</h3>
-<h1>The prosodic encoder ships with a fidelity number per frame and a public compression figure.</h1>
+<h2>The prosodic encoder ships with a fidelity number per frame and a public compression figure.</h2>
 </td>
 <td width="52%" valign="top">
 <h3><code>09.3</code> What's Still Open</h3>
-<h1>Retrieval misses target at p@5 0.31 vs 0.80. Transfer is paused on an external dependency.</h1>
+<h2>Retrieval misses target at p@5 0.31 vs 0.80. Transfer is paused on an external dependency.</h2>
 </td>
 </tr>
 </table>

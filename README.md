@@ -155,25 +155,25 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <td width="20%" valign="top">
 <p><strong><code>07.1</code><br><small>F0 RMSE</small></strong></p>
       <div><strong>0.64</strong><br><small>%</small></div>
-      <div>Voiced frames &middot;<br><b>Libri<br>Speech 100 utt.</b></div>
+      <div>Voiced frames &middot;<br><b>Libri&shy;Speech 100 utt.</b></div>
 </td>
 <td width="20%" valign="top">
-<p><strong><code>07.2</code><br><small>COMPRES<br>SION</small></strong></p>
+<p><strong><code>07.2</code><br><small>COMPRES&shy;SION</small></strong></p>
       <div><strong>13.0</strong><br><small>×</small></div>
       <div>Mean vs raw<br>float32 · <b>ZPRS/v1</b></div>
 </td>
 <td width="20%" valign="top">
-<p><strong><code>07.3</code><br><small>PRIMIT<br>IVE<br>CHECKS</small></strong></p>
+<p><strong><code>07.3</code><br><small>PRIMIT&shy;IVE<br>CHECKS</small></strong></p>
       <div><strong>4 / 4</strong><br><small>PASS</small></div>
       <div>PRO-C001..<br>C004 only ·<br><b>retrieval open</b></div>
 </td>
 <td width="20%" valign="top">
 <p><strong><code>07.4</code><br><small>CORPUS</small></strong></p>
       <div><strong>100</strong><br><small>utt</small></div>
-      <div>Libri<br>Speech test-clean ·<br><b>OpenSLR</b></div>
+      <div>Libri&shy;Speech test-clean ·<br><b>OpenSLR</b></div>
 </td>
 <td width="20%" valign="top">
-<p><strong><code>07.5</code><br><small>RETRIE<br>VAL<br>TARGET</small></strong></p>
+<p><strong><code>07.5</code><br><small>RETRIE&shy;VAL<br>TARGET</small></strong></p>
       <div><strong>0.31</strong><br><small>p@5</small></div>
       <div>PRO-C006<br>MISS ·<br><b>vs 0.80 threshold</b></div>
 </td>

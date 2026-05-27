@@ -2,6 +2,32 @@
 
 ## Install / Developer Commands
 
+<!-- INSTALL-DX:START -->
+#### Package Install
+
+Installable package: `python3.11 -m pip install zpe-prosody`.
+Current release: `0.1.1` on [PyPI](https://pypi.org/project/zpe-prosody/).
+Source: [Zer0pa/ZPE-Prosody](https://github.com/Zer0pa/ZPE-Prosody/).
+
+```bash
+python3.11 -m pip install zpe-prosody
+```
+
+Import smoke:
+
+```bash
+python3.11 - <<'PY'
+import importlib.metadata as md
+import zpe_prosody
+
+print("zpe-prosody", md.version("zpe-prosody"))
+PY
+```
+
+Install success only proves package acquisition/import. Product scope, stale PyPI state, platform limits, and blockers remain in the front-door sections below.
+- PyPI copy is stale; retrieval and transfer blockers below are not altered by install success.
+<!-- INSTALL-DX:END -->
+
 #### Quick Start
 
 ```bash

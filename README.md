@@ -153,28 +153,28 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="20%" valign="top">
-<h4><code>07.1</code> F0 RMSE</h4>
-      <div>0.64<span>%</span></div>
+<p><strong><code>07.1</code><br><small>F0 RMSE</small></strong></p>
+      <div><strong>0.64</strong><br><small>%</small></div>
       <div>Voiced frames &middot; <b>LibriSpeech 100 utterances</b></div>
 </td>
 <td width="20%" valign="top">
-<h4><code>07.2</code> COMPRESSION</h4>
-      <div>13.0<span>×</span></div>
+<p><strong><code>07.2</code><br><small>COMPRESSION</small></strong></p>
+      <div><strong>13.0</strong><br><small>×</small></div>
       <div>Mean vs raw float32 · <b>ZPRS/v1 stream</b></div>
 </td>
 <td width="20%" valign="top">
-<h4><code>07.3</code> PRIMITIVE CHECKS</h4>
-      <div>4 / 4<span>PASS</span></div>
+<p><strong><code>07.3</code><br><small>PRIMITIVE<br>CHECKS</small></strong></p>
+      <div><strong>4 / 4</strong><br><small>PASS</small></div>
       <div>PRO-C001..C004 only · <b>retrieval open</b></div>
 </td>
 <td width="20%" valign="top">
-<h4><code>07.4</code> CORPUS</h4>
-      <div>100<span>utt</span></div>
+<p><strong><code>07.4</code><br><small>CORPUS</small></strong></p>
+      <div><strong>100</strong><br><small>utt</small></div>
       <div>LibriSpeech test-clean · <b>OpenSLR</b></div>
 </td>
 <td width="20%" valign="top">
-<h4><code>07.5</code> RETRIEVAL TARGET</h4>
-      <div>0.31<span>p@5</span></div>
+<p><strong><code>07.5</code><br><small>RETRIEVAL<br>TARGET</small></strong></p>
+      <div><strong>0.31</strong><br><small>p@5</small></div>
       <div>PRO-C006 MISS · <b>vs 0.80 threshold</b></div>
 </td>
 </tr>
@@ -182,12 +182,12 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 
 <table width="100%">
 <tr>
-<td width="35%" valign="top">
+<td width="40%" valign="top">
 <h2><code>08</code> ENCODER BOUNDS</h2>
 <p><strong>WHAT HOLDS, WHAT MISSES</strong></p>
       <h2>The encoder holds speech's shape. Retrieval does <span>not yet follow.</span></h2>
 </td>
-<td width="65%" valign="top">
+<td width="60%" valign="top">
 <h4><code>08.1</code> WHAT ROUND-TRIPS EXACTLY</h4>
 <p><strong>ZPRS/V1 PRIMITIVE</strong></p>
       <p>On 100 LibriSpeech <em>test-clean</em> utterances the encoder records <strong>13.0&times;</strong> mean compression at <strong>0.64% voiced-F0 RMSE</strong> with duration RMSE of 0.000 ms, across <strong>5/5 hash-identical encoder runs</strong>. The same input bytes produce the same ZPRS/v1 stream every time, on every host. PRO-C001..C004 PASS on primitive encoder checks; they do not override the retrieval and transfer gates. Retrieval (PRO-C006) misses target at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer (PRO-C005) is PAUSED_EXTERNAL. The page reports both, not one.</p>
@@ -235,22 +235,22 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="25%" valign="top">
-<h4><code>09.4</code> FEATURE STORES</h4>
+<p><strong><code>09.4</code><br><small>FEATURE STORES</small></strong></p>
 <p><strong>NEAR-TERM (12–24 MO)</strong></p>
       <div>TTS teams stop drowning in contour bytes</div><div>A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</div>
 </td>
 <td width="25%" valign="top">
-<h4><code>09.5</code> FIDELITY</h4>
+<p><strong><code>09.5</code><br><small>FIDELITY</small></strong></p>
 <p><strong>NEAR-TERM (12–24 MO)</strong></p>
       <div>Voice pipelines inherit a pitch receipt</div><div>A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance &mdash; 0.64% on LibriSpeech &mdash; before the model ever ingests the contour. Pitch drift becomes a number on a dashboard, not a complaint from a listener.</div>
 </td>
 <td width="25%" valign="top">
-<h4><code>09.6</code> CALL CENTRES</h4>
+<p><strong><code>09.6</code><br><small>CALL CENTRES</small></strong></p>
 <p><strong>MID-TERM (24–48 MO)</strong></p>
       <div>Analytics vendors archive prosody, not just transcripts</div><div>A call-centre analytics platform that already stores transcripts can store the prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</div>
 </td>
 <td width="25%" valign="top">
-<h4><code>09.7</code> LINGUISTICS</h4>
+<p><strong><code>09.7</code><br><small>LINGUISTICS</small></strong></p>
 <p><strong>MID-TERM (24–48 MO)</strong></p>
       <div>Prosody corpora become comparable</div><div>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer at another institution can reproduce the analysis on the same bytes, not on a re-derived contour.</div>
 </td>
@@ -261,7 +261,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <tr>
 <td width="100%" valign="top">
 <p><img src="docs/assets/readme-spacer-wide.png" alt=""></p>
-<h4><code>09.8</code> DISCLOSURE</h4>
+<p><strong><code>09.8</code><br><small>DISCLOSURE</small></strong></p>
 <p><strong>PARADIGM (48 MO+)</strong></p>
       <div>Speech feature codecs get fidelity terms</div><div>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor talks to a regulator and a customer with the same numbers, in the same units, against the same corpus.</div>
 </td>

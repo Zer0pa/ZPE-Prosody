@@ -99,10 +99,10 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <p><strong>LIBRISPEECH TEST-CLEAN</strong></p>
       <div>
         <div>
-          <div><span>Compression</span><b>13.0</b><small>&times;</small></div>
-          <div><span>F0 RMSE</span><b>0.64</b><small>%</small></div>
-          <div><span>Primitive</span><b>4/4</b><small>PASS</small></div>
-          <div><span>Retrieval</span><b>MISS</b><small>p@5 0.31</small></div>
+          <div><span>Compression</span> <b>13.0</b> <small>&times;</small> </div>
+          <div><span>F0 RMSE</span> <b>0.64</b> <small>%</small> </div>
+          <div><span>Primitive</span> <b>4/4</b> <small>PASS</small> </div>
+          <div><span>Retrieval</span> <b>MISS</b> <small>p@5 0.31</small> </div>
         </div>
         <div>
           <div><span>Encoder 13.0&times;</span> <span></span> <span>PASS</span></div>
@@ -230,19 +230,23 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="25%" valign="top">
-<div><b>09.4</b> &middot; FEATURE STORES · NEAR-TERM (12&ndash;24 MO)</div>
+<h4><code>09.4</code> FEATURE STORES</h4>
+<p><strong>NEAR-TERM (12–24 MO)</strong></p>
       <div>TTS teams stop drowning in contour bytes</div><div>A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</div>
 </td>
 <td width="25%" valign="top">
-<div><b>09.5</b> &middot; FIDELITY · NEAR-TERM (12&ndash;24 MO)</div>
+<h4><code>09.5</code> FIDELITY</h4>
+<p><strong>NEAR-TERM (12–24 MO)</strong></p>
       <div>Voice pipelines inherit a pitch receipt</div><div>A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance &mdash; 0.64% on LibriSpeech &mdash; before the model ever ingests the contour. Pitch drift becomes a number on a dashboard, not a complaint from a listener.</div>
 </td>
 <td width="25%" valign="top">
-<div><b>09.6</b> &middot; CALL CENTRES · MID-TERM (24&ndash;48 MO)</div>
+<h4><code>09.6</code> CALL CENTRES</h4>
+<p><strong>MID-TERM (24–48 MO)</strong></p>
       <div>Analytics vendors archive prosody, not just transcripts</div><div>A call-centre analytics platform that already stores transcripts can store the prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</div>
 </td>
 <td width="25%" valign="top">
-<div><b>09.7</b> &middot; LINGUISTICS · MID-TERM (24&ndash;48 MO)</div>
+<h4><code>09.7</code> LINGUISTICS</h4>
+<p><strong>MID-TERM (24–48 MO)</strong></p>
       <div>Prosody corpora become comparable</div><div>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer at another institution can reproduce the analysis on the same bytes, not on a re-derived contour.</div>
 </td>
 </tr>
@@ -251,7 +255,8 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<div><b>09.8</b> &middot; DISCLOSURE · PARADIGM (48 MO+)</div>
+<h4><code>09.8</code> DISCLOSURE</h4>
+<p><strong>PARADIGM (48 MO+)</strong></p>
       <div>Speech feature codecs get fidelity terms</div><div>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor talks to a regulator and a customer with the same numbers, in the same units, against the same corpus.</div>
 </td>
 </tr>

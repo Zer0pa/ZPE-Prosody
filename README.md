@@ -31,6 +31,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <p>A voice carries more than words. Pitch rises into a question, stress lands hard on a single syllable, rhythm tells a listener whether the speaker is calm or in a hurry. ZPE-Prosody captures that shape as a deterministic <em>ZPRS/v1</em> stream &mdash; F0, energy, duration, and the voiced/unvoiced mask &mdash; at <strong>13.0&times;</strong> mean compression and <strong>0.64% voiced-F0 RMSE</strong> on 100 LibriSpeech test-clean utterances. The encoder is the product. Retrieval misses target; transfer is paused. Both limits are named, not buried.</p>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="100%" valign="top" align="center">
 <figure>
@@ -39,6 +42,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       </figure>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="62%" valign="top">
 <h2><code>02</code> MARKETS</h2>
@@ -60,12 +66,18 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <div>TTS market by 2030; the prosodic feature store beneath it, with the retrieval gap stated.</div>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="100%" valign="top">
 <h2><code>04</code> INSIGHT</h2>
       <h2>Speech carries feeling. Its shape <span>can now be held.</span></h2>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="50%" valign="top">
 <h4><code>05.1</code> CURRENT TECH</h4>
@@ -78,6 +90,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
         <p>ZPE-Prosody encodes the four prosodic primitives &mdash; F0, energy, duration, voiced mask &mdash; as a deterministic <em>ZPRS/v1</em> stream at <strong>13.0&times;</strong> mean compression and <strong>0.64% voiced-F0 RMSE</strong> on real LibriSpeech utterances, with mean encode latency of <strong>2.67 ms</strong>. Four primitive checks pass. Retrieval and transfer are excluded from the product on purpose, with the numbers.</p>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="100%" valign="top">
 <h3><code>05.3</code> BENCHMARKS</h3>
@@ -98,6 +113,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <div><b>Scope:</b> 100 LibriSpeech test-clean utterances. PRO-C006 retrieval MISS; PRO-C005 transfer PAUSED_EXTERNAL.</div>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="34%" valign="top">
 <h2><code>06</code> MEASUREMENT</h2>
@@ -117,12 +135,18 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <div>100 LibriSpeech <em>test-clean</em> utterances. The four primitive encoder checks pass. Retrieval misses at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer is paused; no commercial-safe substitute proven in-lane.</div>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="100%" valign="top">
 <h2><code>07</code> KEY METRICS</h2>
 <p><strong>LIBRISPEECH TEST-CLEAN</strong></p>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="20%" valign="top">
 <h4><code>07.1</code> F0 RMSE</h4>
@@ -150,6 +174,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <div>PRO-C006 MISS · <b>vs 0.80 threshold</b></div>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="35%" valign="top">
 <h2><code>08</code> ENCODER BOUNDS</h2>
@@ -162,6 +189,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <p>On 100 LibriSpeech <em>test-clean</em> utterances the encoder records <strong>13.0&times;</strong> mean compression at <strong>0.64% voiced-F0 RMSE</strong> with duration RMSE of 0.000 ms, across <strong>5/5 hash-identical encoder runs</strong>. The same input bytes produce the same ZPRS/v1 stream every time, on every host. PRO-C001..C004 PASS on primitive encoder checks; they do not override the retrieval and transfer gates. Retrieval (PRO-C006) misses target at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer (PRO-C005) is PAUSED_EXTERNAL. The page reports both, not one.</p>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="100%" valign="top">
 <h3><code>08.2</code> HONEST BLOCKER</h3>
@@ -169,6 +199,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <p><strong>MISS on PRO-C006 retrieval</strong>, <em>p@5 0.31</em> vs 0.80; OOD p@5 0.1707. <strong>PRO-C005 transfer</strong> PAUSED_EXTERNAL; no commercial-safe substitute proven in-lane. Status packet on <strong>PR #50 branch-public</strong>; PyPI stale at v0.1.1. <em>No transfer learning, retrieval product, or TTS-ready system is claimed.</em></p>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="66%" valign="top">
 <h2><code>09</code></h2>
@@ -179,6 +212,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <p>The product is a bounded <em>ZPRS/v1</em> feature store for the shape of speech &mdash; F0, energy, duration, voiced mask &mdash; that a TTS team, a call-centre analytics owner or a linguistics lab can store, ship and re-read with a stated fidelity per recording. Retrieval and transfer arrive later, on their own terms.</p>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="50%" valign="top">
 <h4><code>09.2</code> WHAT WORKS NOW</h4>
@@ -189,6 +225,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
         <h2>Retrieval misses target at p@5 0.31 vs 0.80. Transfer is paused on an external dependency.</h2>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="25%" valign="top">
 <div><b>09.4</b> &middot; FEATURE STORES · NEAR-TERM (12&ndash;24 MO)</div>
@@ -207,6 +246,9 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
       <div>Prosody corpora become comparable</div><div>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer at another institution can reproduce the analysis on the same bytes, not on a re-derived contour.</div>
 </td>
 </tr>
+</table>
+
+<table width="100%">
 <tr>
 <td width="100%" valign="top">
 <div><b>09.8</b> &middot; DISCLOSURE · PARADIGM (48 MO+)</div>

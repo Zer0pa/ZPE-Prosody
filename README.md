@@ -45,7 +45,7 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 <table width="100%">
 <tr>
-<td width="64%" valign="top">
+<td width="100%" valign="top">
 <h2><code>02</code> Markets</h2>
 <p><strong>Adjacent forecasts, not product claims</strong></p>
 <p>
@@ -57,28 +57,33 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 </p>
 <p>ZPE-Prosody is a bounded prosodic encoder. Retrieval and transfer are not claimed.</p>
 </td>
-<td width="36%" valign="top">
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
 <h2><code>03</code> Value</h2>
 <h1>$7.3B</h1>
 <p>TTS market by 2030; the prosodic feature store beneath it, with the retrieval gap stated.</p>
+</td>
+<td width="50%" valign="top">
+<h2><code>04</code> Insight</h2>
+<h1>Speech carries feeling. Its shape can now be held.</h1>
 </td>
 </tr>
 </table>
 
 ---
 
-## `04` Insight
-
-# Speech carries feeling. Its shape can now be held.
-
 <table width="100%">
 <tr>
-<td width="46%" valign="top">
+<td width="50%" valign="top">
 <h3><code>05.1</code> Current Tech</h3>
 <p><strong>Computed and discarded</strong></p>
 <p>Mainstream TTS and voice-analytics stacks repeatedly compute pitch, energy, and timing, then discard the contours or store them as undocumented bytes. Buyers get no shared archive format, no published fidelity number, and no explicit retrieval limit.</p>
 </td>
-<td width="54%" valign="top">
+<td width="50%" valign="top">
 <h3><code>05.2</code> Our Tech</h3>
 <p><strong>The shape, held</strong></p>
 <p>ZPE-Prosody stores F0, energy, duration, and voiced mask as a deterministic <code>ZPRS/v1</code> stream. The public receipt is <strong>13.0&times;</strong> mean compression, <strong>0.64%</strong> voiced-F0 RMSE, <strong>2.67 ms</strong> mean encode latency, and four primitive checks passing.</p>
@@ -123,13 +128,38 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 **LibriSpeech `test-clean`**
 
-<blockquote>
-<p><code>07.1</code> <strong>F0 RMSE</strong> &middot; <strong>0.64%</strong> &middot; voiced frames on LibriSpeech<br>
-<code>07.2</code> <strong>Compression</strong> &middot; <strong>13.0&times;</strong> &middot; mean vs raw float32 contours<br>
-<code>07.3</code> <strong>Primitive Checks</strong> &middot; <strong>4/4 PASS</strong> &middot; <code>PRO-C001</code>..<code>PRO-C004</code> only<br>
-<code>07.4</code> <strong>Corpus</strong> &middot; <strong>100 utterances</strong> &middot; LibriSpeech <code>test-clean</code><br>
-<code>07.5</code> <strong>Retrieval Target</strong> &middot; <strong>0.31 p@5 MISS</strong> &middot; vs 0.80 threshold</p>
-</blockquote>
+<table width="100%">
+<tr>
+<td width="100%" valign="top">
+<h3><code>07.1</code> F0 RMSE &middot; <strong>0.64%</strong></h3>
+<p>Voiced-frame error on the 100-utterance LibriSpeech <code>test-clean</code> receipt.</p>
+</td>
+</tr>
+<tr>
+<td width="100%" valign="top">
+<h3><code>07.2</code> Compression &middot; <strong>13.0&times;</strong></h3>
+<p>Mean compression against raw float32 prosody contours in the deterministic <code>ZPRS/v1</code> stream.</p>
+</td>
+</tr>
+<tr>
+<td width="100%" valign="top">
+<h3><code>07.3</code> Primitive Checks &middot; <strong>4/4 PASS</strong></h3>
+<p><code>PRO-C001</code> through <code>PRO-C004</code> pass for the primitive encoder only; this does not override retrieval or transfer gates.</p>
+</td>
+</tr>
+<tr>
+<td width="100%" valign="top">
+<h3><code>07.4</code> Corpus &middot; <strong>100 utterances</strong></h3>
+<p>LibriSpeech <code>test-clean</code>, OpenSLR source, fixed as the public benchmark receipt for this README surface.</p>
+</td>
+</tr>
+<tr>
+<td width="100%" valign="top">
+<h3><code>07.5</code> Retrieval Target &middot; <strong>0.31 p@5 MISS</strong></h3>
+<p>The retrieval gate misses against the 0.80 threshold and stays named as a blocker, not stretched into a hidden product claim.</p>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -137,30 +167,41 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 # The encoder holds speech's shape. Retrieval does not yet follow.
 
-### `08.1` What Round-Trips Exactly
-
-On 100 LibriSpeech `test-clean` utterances, the encoder records **13.0&times;** mean compression at **0.64% voiced-F0 RMSE**, with duration RMSE of 0.000 ms across **5/5 hash-identical encoder runs**. The same input bytes produce the same `ZPRS/v1` stream every time, on every host.
-
-`PRO-C001`..`PRO-C004` pass on primitive encoder checks. They do not override the retrieval and transfer gates.
-
-> **`08.2` Honest Blocker**
-> **MISS on `PRO-C006` retrieval**, p@5 **0.31** vs **0.80**; OOD p@5 **0.1707**. **`PRO-C005` transfer** is **PAUSED_EXTERNAL**. Status packet is PR #50 branch-public; PyPI is stale at v0.1.1. No transfer-learning product, retrieval product, or TTS-ready system is claimed.
+<table width="100%">
+<tr>
+<td width="66%" valign="top">
+<h3><code>08.1</code> What Round-Trips Exactly</h3>
+<p>On 100 LibriSpeech <code>test-clean</code> utterances, the encoder records <strong>13.0&times;</strong> mean compression at <strong>0.64% voiced-F0 RMSE</strong>, with duration RMSE of 0.000 ms across <strong>5/5 hash-identical encoder runs</strong>. The same input bytes produce the same <code>ZPRS/v1</code> stream every time, on every host.</p>
+<p><code>PRO-C001</code>..<code>PRO-C004</code> pass on primitive encoder checks. They do not override the retrieval and transfer gates.</p>
+</td>
+<td width="34%" valign="top">
+<h3><code>08.2</code> Honest Blocker</h3>
+<p><strong>MISS on <code>PRO-C006</code> retrieval</strong>, p@5 <strong>0.31</strong> vs <strong>0.80</strong>; OOD p@5 <strong>0.1707</strong>. <strong><code>PRO-C005</code> transfer</strong> is <strong>PAUSED_EXTERNAL</strong>. No transfer-learning product, retrieval product, or TTS-ready system is claimed.</p>
+</td>
+</tr>
+</table>
 
 ---
 
-## `09` A Voice with a Fidelity Receipt
-
-### `09.1` The Ambition
-
-The product is a bounded `ZPRS/v1` feature store for the shape of speech: F0, energy, duration, and voiced mask. TTS teams, call-centre analytics owners, and linguistics labs can store, ship, and re-read prosody with a stated fidelity per recording. Retrieval and transfer arrive later, on their own terms.
+<table width="100%">
+<tr>
+<td width="33%" valign="top">
+<h2><code>09</code> A Voice with a Fidelity Receipt</h2>
+</td>
+<td width="67%" valign="top">
+<h3><code>09.1</code> The Ambition</h3>
+<p>The product is a bounded <code>ZPRS/v1</code> feature store for the shape of speech: F0, energy, duration, and voiced mask. TTS teams, call-centre analytics owners, and linguistics labs can store, ship, and re-read prosody with a stated fidelity per recording. Retrieval and transfer arrive later, on their own terms.</p>
+</td>
+</tr>
+</table>
 
 <table width="100%">
 <tr>
-<td width="48%" valign="top">
+<td width="33%" valign="top">
 <h3><code>09.2</code> What Works Now</h3>
 <h2>The prosodic encoder ships with a fidelity number per frame and a public compression figure.</h2>
 </td>
-<td width="52%" valign="top">
+<td width="67%" valign="top">
 <h3><code>09.3</code> What's Still Open</h3>
 <h2>Retrieval misses target at p@5 0.31 vs 0.80. Transfer is paused on an external dependency.</h2>
 </td>
@@ -169,65 +210,33 @@ The product is a bounded `ZPRS/v1` feature store for the shape of speech: F0, en
 
 <table width="100%">
 <tr>
-<td width="24%" valign="top">
-<h3><code>09.4</code></h3>
-<p><strong>Feature Stores</strong><br>Near-term, 12-24 mo</p>
-</td>
-<td width="76%" valign="top">
-<h3>TTS teams stop drowning in contour bytes</h3>
-<p>A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</p>
+<td width="100%" valign="top">
+<h3><code>09.4</code> Feature Stores &middot; Near-term, 12-24 mo</h3>
+<p><strong>TTS teams stop drowning in contour bytes.</strong> A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</p>
 </td>
 </tr>
-</table>
-
-<table width="100%">
 <tr>
-<td width="22%" valign="top">
-<h3><code>09.5</code></h3>
-<p><strong>Fidelity</strong><br>Near-term, 12-24 mo</p>
-</td>
-<td width="78%" valign="top">
-<h3>Voice pipelines inherit a pitch receipt</h3>
-<p>A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance, <strong>0.64% on LibriSpeech</strong>, before the model ingests the contour. Pitch drift becomes a dashboard number, not a listener complaint.</p>
+<td width="100%" valign="top">
+<h3><code>09.5</code> Fidelity &middot; Near-term, 12-24 mo</h3>
+<p><strong>Voice pipelines inherit a pitch receipt.</strong> A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance, <strong>0.64% on LibriSpeech</strong>, before the model ingests the contour. Pitch drift becomes a dashboard number, not a listener complaint.</p>
 </td>
 </tr>
-</table>
-
-<table width="100%">
 <tr>
-<td width="25%" valign="top">
-<h3><code>09.6</code></h3>
-<p><strong>Call Centres</strong><br>Mid-term, 24-48 mo</p>
-</td>
-<td width="75%" valign="top">
-<h3>Analytics vendors archive prosody, not just transcripts</h3>
-<p>A call-centre analytics platform that already stores transcripts can store prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</p>
+<td width="100%" valign="top">
+<h3><code>09.6</code> Call Centres &middot; Mid-term, 24-48 mo</h3>
+<p><strong>Analytics vendors archive prosody, not just transcripts.</strong> A call-centre analytics platform that already stores transcripts can store prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</p>
 </td>
 </tr>
-</table>
-
-<table width="100%">
 <tr>
-<td width="23%" valign="top">
-<h3><code>09.7</code></h3>
-<p><strong>Linguistics</strong><br>Mid-term, 24-48 mo</p>
-</td>
-<td width="77%" valign="top">
-<h3>Prosody corpora become comparable</h3>
-<p>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer can reproduce the analysis on the same bytes, not on a re-derived contour.</p>
+<td width="100%" valign="top">
+<h3><code>09.7</code> Linguistics &middot; Mid-term, 24-48 mo</h3>
+<p><strong>Prosody corpora become comparable.</strong> A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer can reproduce the analysis on the same bytes, not on a re-derived contour.</p>
 </td>
 </tr>
-</table>
-
-<table width="100%">
 <tr>
-<td width="22%" valign="top">
-<h3><code>09.8</code></h3>
-<p><strong>Disclosure</strong><br>Paradigm, 48 mo+</p>
-</td>
-<td width="78%" valign="top">
-<h3>Speech feature codecs get fidelity terms</h3>
-<p>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor can talk to a regulator and a customer with the same numbers, units, and corpus.</p>
+<td width="100%" valign="top">
+<h3><code>09.8</code> Disclosure &middot; Paradigm, 48 mo+</h3>
+<p><strong>Speech feature codecs get fidelity terms.</strong> A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor can talk to a regulator and a customer with the same numbers, units, and corpus.</p>
 </td>
 </tr>
 </table>

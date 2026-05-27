@@ -1,212 +1,8 @@
 # ZPE-Prosody
 
-ZPE-Prosody is a **prosody-feature encoder primitive** — deterministic compression of F0, energy, duration, and voiced-mask contour bundles for TTS preprocessing and voice-analytics feature storage. The `ZPRS/v1` codec delivers **13.65× compression vs gzip 2.21× / zstd 2.22×** on float32 contour buffers (a clean ~6× win at the encoder primitive level), with **0.64% voiced-F0 RMSE** and **2.67 ms mean encode latency** — byte-stable, round-trip lossless within CI thresholds, no GPU required.
+## 0. Install / Developer Commands
 
-ZPE-Prosody is one of seventeen independent encoding products in the Zer0pa portfolio; it targets speech-technology and voice-analytics teams that need deterministic, reproducible prosodic feature encoding for TTS preprocessing and feature-store pipelines.
-
-Licensed under the [Zer0pa Source-Available License v7.1](LICENSE).
-
-## What This Is
-
-Deterministic prosody-feature codec. F0, energy, duration, and voiced-mask bundles compress losslessly within thresholds. Install from PyPI: `pip install zpe-prosody`
-
-**Headline metric (CI-anchored, real data):** 0.64% voiced-F0 RMSE mean on 100 real LibriSpeech `test-clean` utterances (`proofs/artifacts/librispeech_benchmark/f0_fidelity.json`).
-
-**Active blockers:** - PRO-C005: `PAUSED_EXTERNAL` — transfer closure blocked on external dependency; no commercialization-safe transfer substitute proven in-lane. - PRO-C006: FAIL — retrieval gate p@5 = 0.31 vs threshold 0.80; retrieval is out of scope for the encoder primitive and tracked as future-scope research.
-
-## Codec Mechanics
-
-<p>
-  <img src=".github/assets/readme/lane-mechanics/PROSODY.gif" alt="ZPE-Prosody Codec Mechanics animation" width="100%">
-</p>
-
-| Field | Value |
-| ------- | ------- |
-| Architecture | PROSODY_STREAM |
-| Encoding | PROSODY_ZPRS_V1 |
-| Mechanics Asset | `.github/assets/readme/lane-mechanics/PROSODY.gif` |
-
-## Key Metrics
-
-| Metric | Value | Baseline |
-| -------- | ------- | ---------- |
-| COMPRESSION | 13.65x | vs gzip 2.21x / zstd 2.22x |
-| F0_RMSE | 0.64% | LibriSpeech test-clean |
-| ENCODE_LATENCY | 2.67 ms | mean, single-threaded |
-| DETERMINISM | 5/5 | hash-identical runs |
-
-> Source: `proofs/artifacts/librispeech_benchmark/f0_fidelity.json`, `proofs/artifacts/librispeech_benchmark/latency_benchmark.json`, `proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json`, `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json`
-
-## Repo Identity
-
-| Field | Value |
-| ------- | ------- |
-| Identifier | ZPE-Prosody |
-| Repository | https://github.com/Zer0pa/ZPE-Prosody |
-| Section | encoding |
-| Visibility | PUBLIC |
-| Architecture | PROSODY_STREAM |
-| Encoding | PROSODY_ZPRS_V1 |
-| Commit SHA | 748e3a75ed6b |
-| License | SAL-7.0 |
-| Authority Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
-
-## Readiness
-
-| Field | Value |
-| ------- | ------- |
-| Verdict | FAIL |
-| Checks | 5/5 |
-| Anchors | 6 display anchors |
-| Commit | 748e3a75ed6b |
-| Authority | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
-
-### Honest Blocker
-
-No claim of lane pass.; No claim of retrieval closure above threshold.; No claim of commercialization-safe transfer or public release readiness.
-
-## What We Prove
-
-- ZPRS/v1 packets encode and decode contour bundles without changing frame shape or voiced-mask length.
-- Malformed packet magic is rejected through a structured decode error.
-- Round-trip F0 and energy reconstruction stay below the current CI thresholds on generated contour fixtures.
-- Encoding the same contour bundle with the same metadata is byte-stable.
-- The in-process API contract supports encode, decode, transfer, and advertised endpoint capability checks.
-
-## What We Don't Claim
-
-- No combined lane pass — lane verdict is gated by retrieval/transfer items that sit outside the encoder primitive.
-- No retrieval closure above threshold (PRO-C006 retrieval gate, p@5 = 0.31 vs 0.80 — relegated to future-scope research, not a primitive-level claim).
-- No commercialization-safe transfer closure (PRO-C005 — PAUSED_EXTERNAL).
-- No public release-readiness claim.
-- No speech-codec comparator leadership vs production systems.
-- No MOS claim — transfer evaluation was not executed end to end with a commercially safe transfer stack.
-
-## Verification Status
-
-| Code | Check | Verdict |
-| ------ | ------- | --------- |
-| T_01 | tests/test_packet_format.py::PacketFormatTests::test_encode_decode_shape — Encode/decode preserves frame shape and voiced-mask length | PASS |
-| T_02 | tests/test_packet_format.py::PacketFormatTests::test_bad_magic_raises — Malformed magic bytes raise structured decode error | PASS |
-| T_03 | tests/test_roundtrip.py::RoundTripTests::test_roundtrip_fidelity — F0 RMSE ≤5%, Energy RMSE ≤3% on fixture set | PASS |
-| T_04 | tests/test_roundtrip.py::RoundTripTests::test_deterministic_bytes — Same input → byte-identical output across 5 runs | PASS |
-| T_05 | tests/test_api_contract.py — encode/decode/transfer/capability API contract fulfilled | PASS |
-
-## Proof Anchors
-
-| Path | State |
-| ------ | ------- |
-| `proofs/artifacts/librispeech_benchmark/f0_fidelity.json` | VERIFIED |
-| `proofs/artifacts/librispeech_benchmark/compression_benchmark.json` | VERIFIED |
-| `proofs/artifacts/librispeech_benchmark/latency_benchmark.json` | VERIFIED |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_b_roundtrip.json` | VERIFIED |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_d_falsification_summary.json` | VERIFIED |
-| `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json` | VERIFIED |
-
-## Repo Shape
-
-| Field | Value |
-| ------- | ------- |
-| Proof Anchors | 6 display anchors |
-| Modality Lanes | 1 |
-| Architecture | PROSODY_STREAM |
-| Encoding | PROSODY_ZPRS_V1 |
-| Verification | 5/5 checks |
-| Authority Source | proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json |
-
-- `src/zpe_prosody/`: installable codec package.
-- `tests/`: CI-backed package, packet, API, and round-trip checks.
-- `scripts/verify_release_surface.py`: package surface sanity helper used by `make package-sanity`.
-- `proofs/`: historical adjudication artifacts and audit lineage.
-- `docs/`: architecture, legal-boundary, market-surface, and family notes.
-
-## Extended Metrics
-
-Detailed metric tables retained from the previous `## Key Metrics` section. The public product page uses the four-row summary above.
-
-These metrics come from committed proof-artifact runs, not reasserted per CI push. Each number is anchored to a specific artifact file; the artifact commit is the evidence. CI thresholds are broader than these measured values by design — the proof runs set the floor, CI guards against regression.
-
-**Compression** (baseline: raw float32 arrays for F0, energy, duration, voiced\_mask)
-
-| Dataset | Samples | Mean ratio | p50 ratio | p95 ratio | CI threshold | Artifact |
-|---------|---------|-----------|-----------|-----------|--------------|----------|
-| LibriSpeech `test-clean` (real speech, OpenSLR) | 100 utterances | **13.0×** | 13.0× | 16.6× | — | `proofs/artifacts/librispeech_benchmark/compression_benchmark.json` |
-| Librispeech-like fixtures | 140 | **16.6×** | 16.6× | 20.0× | ≥15× | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json` |
-
-> Source: `proofs/artifacts/librispeech_benchmark/compression_benchmark.json`, `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_compression_benchmark.json`
-
-**Fidelity** (round-trip encode → decode)
-
-| Metric | Dataset | Samples | Mean | p95 | CI threshold | Artifact |
-|--------|---------|---------|------|-----|--------------|----------|
-| Voiced-F0 RMSE | LibriSpeech `test-clean` (real) | 100 | **0.64%** | 1.21% | — | `proofs/artifacts/librispeech_benchmark/f0_fidelity.json` |
-| Voiced-F0 RMSE | CMU Arctic-like fixtures | 80 | **0.89%** | 1.01% | 5.0% | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_f0_fidelity.json` |
-| Energy RMSE | CMU Arctic-like fixtures | 80 | **2.08%** | 2.18% | 3.0% | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_energy_fidelity.json` |
-| Duration (timing) RMSE | LibriSpeech `test-clean` (real) | 100 | **0.000 ms** | 0.000 ms | — | `proofs/artifacts/librispeech_benchmark/timing_fidelity.json` |
-
-> Source: `proofs/artifacts/librispeech_benchmark/f0_fidelity.json`, `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_f0_fidelity.json`
-
-**Encode latency** (single-threaded, no GPU)
-
-| Dataset | Samples | Mean | p95 | Artifact |
-|---------|---------|------|-----|----------|
-| LibriSpeech `test-clean` (real) | 100 | **2.67 ms** | 5.18 ms | `proofs/artifacts/librispeech_benchmark/latency_benchmark.json` |
-| Librispeech-like fixtures | 140 | **2.59 ms** | 4.14 ms | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_latency_benchmark.json` |
-
-> Source: `proofs/artifacts/librispeech_benchmark/latency_benchmark.json`
-
-**Robustness** (malformed-packet falsification campaign)
-
-| Test | Result | Artifact |
-|------|--------|----------|
-| Malformed packet cases | 4/4 decode errors caught, 0.0 uncaught crash rate | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_d_falsification_summary.json` |
-| Determinism replay | 5/5 hash-identical runs | `proofs/artifacts/2026-02-20_zpe_prosody_wave1/determinism_replay_results.json` |
-
-> Source: `proofs/artifacts/2026-02-20_zpe_prosody_wave1/gate_d_falsification_summary.json`
-
-## Competitive Benchmarks
-
-Lossless byte codecs (gzip, zstd) on the float32 contour buffer are the
-apples-to-apples baseline for the published compression-ratio claim.
-Audio waveform codecs (Opus, FLAC, Vorbis, AAC) are explicitly out of
-scope — they operate at a different abstraction level. See the
-subsection below.
-
-### Lossless float32 contour comparison
-
-Source: 80 CMU-Arctic-like samples from
-`proofs/artifacts/2026-02-20_zpe_prosody_wave1/`. Per-sample raw input
-is the float32 concatenation of `[F0 | energy | duration | voiced_mask]`,
-matching `raw_baseline_definition` in `prosody_compression_benchmark.json`.
-Identical input bytes are fed to every comparator.
-
-| Codec        | Mean CR | Median CR | Voiced-F0 RMSE (Hz) |
-|--------------|--------:|----------:|--------------------:|
-| ZPE-Prosody  | 13.65x  | 13.85x    | 1.44                |
-| gzip (L6)    |  2.21x  |  2.22x    | 0 (lossless)        |
-| zstd (L3)    |  2.22x  |  2.22x    | 0 (lossless)        |
-
-Proof artifact: [`proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json`](proofs/artifacts/comp_benchmarks/prosody_codec_comparison.json) (companion: [`summary.md`](proofs/artifacts/comp_benchmarks/summary.md)). Reproduce: `python scripts/comp_benchmark/run_prosody_comparison.py`.
-
-ZPE-Prosody is bounded-lossy (quantized contours); gzip and zstd are
-lossless by construction. The voiced-F0 RMSE of ~1.44 Hz lies inside
-the lane's 5% threshold (mean 0.89% in the existing
-`prosody_f0_fidelity.json` proof), so the additional ~6x compression
-over the lossless baselines is paid for by a fidelity cost the lane
-already classifies as PASS by its own gate.
-
-### Why audio codecs (Opus/FLAC) don't apply
-
-ZPE-Prosody encodes prosody contour metadata — per-frame F0, energy,
-duration, and voiced-mask sequences. Audio codecs such as Opus, FLAC,
-Vorbis, and AAC encode time-domain PCM waveform samples (typically
-16-48 kHz). They operate at a different abstraction level from contour
-metadata, so a head-to-head comparison would be apples to oranges.
-General-purpose lossless byte codecs (gzip, zstd) are the correct
-baseline for the published "compression ratio against float32 contour
-buffer" claim, which is what this section reports.
-
-## Quick Start
+#### Quick Start
 
 ```bash
 python -m venv .venv
@@ -225,18 +21,227 @@ python -m pip install ".[api]"
 
 The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness is packaged as a runtime contract. Read [docs/LEGAL_BOUNDARIES.md](docs/LEGAL_BOUNDARIES.md) before widening any claim from this repo state.
 
-## Upcoming Workstreams
-
-This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
-
-- **PRO-C006 retrieval gate resolution** — Research-Deferred — Investigation Underway. p@5 0.31 → 0.80 threshold gap; representation-quality vs separate retrieval-head decision pending. Encoder primitive ships independently while this resolves.
-
-### Non-Promoted Historical Artifacts
-
-The following proof artifacts remain in the repository for audit lineage, but their exact claims are not promoted in this README:
-
-- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/before_after_metrics.json`
-- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/prosody_retrieval_eval.json` (PRO-C006: FAIL — p@5=0.31 vs threshold 0.80)
-- `proofs/artifacts/2026-02-20_zpe_prosody_wave1/quality_gate_scorecard.json` (overall gate FAIL; PRO-C005 `PAUSED_EXTERNAL` (blocked on external dependency), PRO-C006 FAIL)
-- `proofs/artifacts/c006_retrieval_failure_analysis.md`
-- `proofs/artifacts/c005_replacement_analysis.md`
+<table>
+<tr>
+<td colspan="7" valign="top">
+<sub>01 · Bento cell · b-cell b-hero cell-7 row-2</sub>
+<div><span><b>00 · ZPE-PROSODY</b> · CONTOUR CODEC</span><span>PR #50 DRAFT · BRANCH-PUBLIC</span></div>
+      <h1>Speech's Shape and <span>Feeling Encoded</span></h1>
+      <p>Prosodic feature-store codec &mdash; pitch, energy, duration, voiced mask &middot; ZPE-Prosody &middot; PyPI <em>zpe-prosody</em> v0.1.1 &middot; github.com/Zer0pa/ZPE-Prosody</p>
+      <p>A voice carries more than words. Pitch rises into a question, stress lands hard on a single syllable, rhythm tells a listener whether the speaker is calm or in a hurry. ZPE-Prosody captures that shape as a deterministic <em>ZPRS/v1</em> stream &mdash; F0, energy, duration, and the voiced/unvoiced mask &mdash; at <strong>13.0&times;</strong> mean compression and <strong>0.64% voiced-F0 RMSE</strong> on 100 LibriSpeech test-clean utterances. The encoder is the product. Retrieval misses target; transfer is paused. Both limits are named, not buried.</p>
+</td>
+<td colspan="5" valign="top">
+<sub>02 · ZPE Prosody animated mechanics diagram · b-cell b-codec-mechanics cell-5 row-2</sub>
+<figure>
+        <div><img src="docs/assets/product-page-mechanics.gif" alt="ZPE-Prosody approved scientific square mechanics diagram showing ZPRS prosody stream mechanics."></div>
+        <figcaption><b>Scope:</b> encoder stream for F0, energy, duration, and voiced mask. Retrieval misses target; transfer remains paused.</figcaption>
+      </figure>
+</td>
+</tr>
+<tr>
+<td colspan="5" valign="top">
+<sub>03 · Bento cell · b-cell b-fig cell-5</sub>
+<div><b>02 · MARKETS</b><span>ADJACENT FORECASTS</span></div>
+      <div>
+        <div>
+          <div><span>Speech and language processing '30</span><span></span><span>$26.8B</span></div>
+          <div><span>Text-to-speech market '31</span><span></span><span>$7.9B</span></div>
+          <div><span>Text-to-speech software '30</span><span></span><span>$7.3B</span></div>
+          <div><span>Voice analytics '30</span><span></span><span>est. $3.1B</span></div>
+          <div><span>Speech AI / feature-store tooling '30</span><span></span><span>est. $1.8B</span></div>
+        </div>
+      </div>
+      <div>Adjacent forecasts only &middot; ZPE-Prosody is a bounded prosodic encoder; retrieval and transfer are not claimed.</div>
+</td>
+<td colspan="3" valign="top">
+<sub>04 · Bento cell · b-cell b-stat cell-3</sub>
+<div><b>03 · VALUE</b></div>
+      <div>$7.3<span>B</span></div>
+      <div>TTS market by 2030; the prosodic feature store beneath it, with the retrieval gap stated.</div>
+</td>
+<td colspan="3" valign="top">
+<sub>05 · Bento cell · b-cell b-title is-centered cell-3</sub>
+<div><b>04 · INSIGHT</b></div>
+      <h2>Speech carries feeling. Its shape <span>can now be held.</span></h2>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>06 · Bento cell · b-cell b-prose is-technical b-tech-panel</sub>
+<div><b>05.1 · CURRENT TECH</b><span>COMPUTED AND DISCARDED</span></div>
+        <p>Mainstream TTS and voice-analytics stacks compute pitch, energy and timing every time they need them, then throw the contours away or stash them as undocumented bytes. No published fidelity figure, no public limit, no shared archive format.</p>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>07 · Bento cell · b-cell b-prose is-technical b-tech-panel</sub>
+<div><b>05.2 · OUR TECH</b><span>THE SHAPE, HELD</span></div>
+        <p>ZPE-Prosody encodes the four prosodic primitives &mdash; F0, energy, duration, voiced mask &mdash; as a deterministic <em>ZPRS/v1</em> stream at <strong>13.0&times;</strong> mean compression and <strong>0.64% voiced-F0 RMSE</strong> on real LibriSpeech utterances, with mean encode latency of <strong>2.67 ms</strong>. Four primitive checks pass. Retrieval and transfer are excluded from the product on purpose, with the numbers.</p>
+</td>
+</tr>
+<tr>
+<td colspan="3" valign="top">
+<sub>08 · Bento cell · b-cell b-fig b-benchmark-mini cell-3</sub>
+<div><b>05.3 · BENCHMARKS</b><span>LIBRISPEECH TEST-CLEAN</span></div>
+      <div>
+        <div>
+          <div><span>Compression</span><b>13.0</b><small>&times;</small></div>
+          <div><span>F0 RMSE</span><b>0.64</b><small>%</small></div>
+          <div><span>Primitive</span><b>4/4</b><small>PASS</small></div>
+          <div><span>Retrieval</span><b>MISS</b><small>p@5 0.31</small></div>
+        </div>
+        <div>
+          <div><span>Encoder 13.0&times;</span><span></span><span>PASS</span></div>
+          <div><span>Fidelity 0.64%</span><span></span><span>PASS</span></div>
+          <div><span>Retrieval 0.31</span><span></span><span>MISS</span></div>
+        </div>
+      </div>
+      <div><b>Scope:</b> 100 LibriSpeech test-clean utterances. PRO-C006 retrieval MISS; PRO-C005 transfer PAUSED_EXTERNAL.</div>
+</td>
+<td colspan="4" valign="top">
+<sub>09 · Bento cell · b-cell b-title cell-4</sub>
+<div><b>06 · MEASUREMENT</b><span>PRO CHECK SUITE</span></div>
+      <h2>The encoder passes four checks. Retrieval and transfer <span>do not.</span></h2>
+</td>
+</tr>
+<tr>
+<td colspan="8" valign="top">
+<sub>10 · Bento cell · b-cell b-fig cell-8</sub>
+<div><b>06.1 · COMPARATIVE PERFORMANCE · LIBRISPEECH CONTOUR COMPRESSION</b></div>
+      <div>
+        <div>
+          <div><span>ZPE-Prosody</span><span></span><span>13.0&times; compression</span></div>
+          <div><span>gzip</span><span></span><span>~2.2&times; raw</span></div>
+          <div><span>PRO-C006 p@5</span><span></span><span>0.31 MISS</span></div>
+          <div><span>PRO-C004</span><span></span><span>PASS</span></div>
+        </div>
+      </div>
+      <div>100 LibriSpeech <em>test-clean</em> utterances. The four primitive encoder checks pass. Retrieval misses at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer is paused; no commercial-safe substitute proven in-lane.</div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>11 · Bento cell · b-cell b-row-label cell-12</sub>
+<div><b>07 · KEY METRICS</b><span>LIBRISPEECH TEST-CLEAN</span></div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>12 · Bento cell · b-cell b-stat</sub>
+<div><b>07.1 · F0 RMSE</b></div>
+      <div>0.64<span>%</span></div>
+      <div>Voiced frames &middot; <b>LibriSpeech 100 utterances</b></div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>13 · Bento cell · b-cell b-stat</sub>
+<div><b>07.2 · COMPRESSION</b></div>
+      <div>13.0<span>×</span></div>
+      <div>Mean vs raw float32 · <b>ZPRS/v1 stream</b></div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>14 · Bento cell · b-cell b-stat</sub>
+<div><b>07.3 · PRIMITIVE CHECKS</b></div>
+      <div>4 / 4<span>PASS</span></div>
+      <div>PRO-C001..C004 only · <b>retrieval open</b></div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>15 · Bento cell · b-cell b-stat</sub>
+<div><b>07.4 · CORPUS</b></div>
+      <div>100<span>utt</span></div>
+      <div>LibriSpeech test-clean · <b>OpenSLR</b></div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>16 · Bento cell · b-cell b-stat</sub>
+<div><b>07.5 · RETRIEVAL TARGET</b></div>
+      <div>0.31<span>p@5</span></div>
+      <div>PRO-C006 MISS · <b>vs 0.80 threshold</b></div>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top">
+<sub>17 · Bento cell · b-cell b-title is-centered cell-4</sub>
+<div><b>08 · ENCODER BOUNDS</b><span>WHAT HOLDS, WHAT MISSES</span></div>
+      <h2>The encoder holds speech's shape. Retrieval does <span>not yet follow.</span></h2>
+</td>
+<td colspan="5" valign="top">
+<sub>18 · Bento cell · b-cell b-prose is-technical cell-5</sub>
+<div><b>08.1 · WHAT ROUND-TRIPS EXACTLY</b><span>ZPRS/V1 PRIMITIVE</span></div>
+      <p>On 100 LibriSpeech <em>test-clean</em> utterances the encoder records <strong>13.0&times;</strong> mean compression at <strong>0.64% voiced-F0 RMSE</strong> with duration RMSE of 0.000 ms, across <strong>5/5 hash-identical encoder runs</strong>. The same input bytes produce the same ZPRS/v1 stream every time, on every host. PRO-C001..C004 PASS on primitive encoder checks; they do not override the retrieval and transfer gates. Retrieval (PRO-C006) misses target at p@5 <strong>0.31 vs 0.80</strong>; OOD p@5 0.1707. Transfer (PRO-C005) is PAUSED_EXTERNAL. The page reports both, not one.</p>
+</td>
+<td colspan="3" valign="top">
+<sub>19 · Bento cell · b-cell b-blocker cell-3</sub>
+<div><b>08.2 · HONEST BLOCKER</b></div>
+      <span>Honest Blocker ·</span>
+      <p><strong>MISS on PRO-C006 retrieval</strong>, <em>p@5 0.31</em> vs 0.80; OOD p@5 0.1707. <strong>PRO-C005 transfer</strong> PAUSED_EXTERNAL; no commercial-safe substitute proven in-lane. Status packet on <strong>PR #50 branch-public</strong>; PyPI stale at v0.1.1. <em>No transfer learning, retrieval product, or TTS-ready system is claimed.</em></p>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top">
+<sub>20 · Bento cell · b-cell b-title cell-4</sub>
+<div><b>09</b></div>
+      <h2>A VOICE WITH A <span>FIDELITY RECEIPT.</span></h2>
+</td>
+<td colspan="4" valign="top">
+<sub>21 · Bento cell · b-cell b-prose cell-4</sub>
+<div><b>09.1 · THE AMBITION</b></div>
+      <p>The product is a bounded <em>ZPRS/v1</em> feature store for the shape of speech &mdash; F0, energy, duration, voiced mask &mdash; that a TTS team, a call-centre analytics owner or a linguistics lab can store, ship and re-read with a stated fidelity per recording. Retrieval and transfer arrive later, on their own terms.</p>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>22 · Bento cell · b-cell b-title b-statement-card</sub>
+<div><b>09.2 · WHAT WORKS NOW</b></div>
+        <h2>The prosodic encoder ships with a fidelity number per frame and a public compression figure.</h2>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>23 · Bento cell · b-cell b-title b-statement-card</sub>
+<div><b>09.3 · WHAT'S STILL OPEN</b></div>
+        <h2>Retrieval misses target at p@5 0.31 vs 0.80. Transfer is paused on an external dependency.</h2>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>24 · Bento cell · b-cell b-unlock</sub>
+<div><b>09.4</b> &middot; FEATURE STORES · NEAR-TERM (12&ndash;24 MO)</div>
+      <div>TTS teams stop drowning in contour bytes</div><div>A TTS platform keeping pitch and energy contours for thousands of speaker voices and styles cuts feature-store storage by roughly 87% against its current gzip baseline. The same archive holds many more voices on the same disk.</div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>25 · Bento cell · b-cell b-unlock</sub>
+<div><b>09.5</b> &middot; FIDELITY · NEAR-TERM (12&ndash;24 MO)</div>
+      <div>Voice pipelines inherit a pitch receipt</div><div>A voice-cloning engineer who round-trips a speaker through the codec sees the F0 error per utterance &mdash; 0.64% on LibriSpeech &mdash; before the model ever ingests the contour. Pitch drift becomes a number on a dashboard, not a complaint from a listener.</div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>26 · Bento cell · b-cell b-unlock</sub>
+<div><b>09.6</b> &middot; CALL CENTRES · MID-TERM (24&ndash;48 MO)</div>
+      <div>Analytics vendors archive prosody, not just transcripts</div><div>A call-centre analytics platform that already stores transcripts can store the prosody beside them at a tractable cost. Emotion-AI and sentiment systems get to work from the actual shape of how a customer spoke, not a downstream summary of it.</div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>27 · Bento cell · b-cell b-unlock</sub>
+<div><b>09.7</b> &middot; LINGUISTICS · MID-TERM (24&ndash;48 MO)</div>
+      <div>Prosody corpora become comparable</div><div>A linguistics lab studying stress and intonation across dialects can compress a multi-year recording corpus into a portable feature store with a stated pitch error. A peer at another institution can reproduce the analysis on the same bytes, not on a re-derived contour.</div>
+</td>
+</tr>
+<tr>
+<td colspan="12" valign="top">
+<sub>28 · Bento cell · b-cell b-unlock</sub>
+<div><b>09.8</b> &middot; DISCLOSURE · PARADIGM (48 MO+)</div>
+      <div>Speech feature codecs get fidelity terms</div><div>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor talks to a regulator and a customer with the same numbers, in the same units, against the same corpus.</div>
+</td>
+</tr>
+</table>

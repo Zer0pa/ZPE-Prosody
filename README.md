@@ -24,7 +24,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer.png" alt="" width="100%" height="1"></p>
+<p><img src="docs/assets/readme-spacer.png" alt=""></p>
 <h2><code>00</code> ZPE-PROSODY · CONTOUR CODEC</h2>
 <p><strong>PR #50 DRAFT · BRANCH-PUBLIC</strong></p>
       <h1>Speech's Shape and <span>Feeling Encoded</span></h1>
@@ -72,7 +72,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer.png" alt="" width="100%" height="1"></p>
+<p><img src="docs/assets/readme-spacer.png" alt=""></p>
 <h2><code>04</code> INSIGHT</h2>
       <h2>Speech carries feeling. Its shape <span>can now be held.</span></h2>
 </td>
@@ -97,7 +97,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer.png" alt="" width="100%" height="1"></p>
+<p><img src="docs/assets/readme-spacer.png" alt=""></p>
 <h3><code>05.3</code> BENCHMARKS</h3>
 <p><strong>LIBRISPEECH TEST-CLEAN</strong></p>
       <div>
@@ -143,7 +143,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer.png" alt="" width="100%" height="1"></p>
+<p><img src="docs/assets/readme-spacer.png" alt=""></p>
 <h2><code>07</code> KEY METRICS</h2>
 <p><strong>LIBRISPEECH TEST-CLEAN</strong></p>
 </td>
@@ -198,7 +198,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer.png" alt="" width="100%" height="1"></p>
+<p><img src="docs/assets/readme-spacer.png" alt=""></p>
 <h3><code>08.2</code> HONEST BLOCKER</h3>
       <span>Honest Blocker ·</span>
       <p><strong>MISS on PRO-C006 retrieval</strong>, <em>p@5 0.31</em> vs 0.80; OOD p@5 0.1707. <strong>PRO-C005 transfer</strong> PAUSED_EXTERNAL; no commercial-safe substitute proven in-lane. Status packet on <strong>PR #50 branch-public</strong>; PyPI stale at v0.1.1. <em>No transfer learning, retrieval product, or TTS-ready system is claimed.</em></p>
@@ -260,7 +260,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 <table width="100%">
 <tr>
 <td width="100%" valign="top">
-<p><img src="docs/assets/readme-spacer.png" alt="" width="100%" height="1"></p>
+<p><img src="docs/assets/readme-spacer.png" alt=""></p>
 <h4><code>09.8</code> DISCLOSURE</h4>
 <p><strong>PARADIGM (48 MO+)</strong></p>
       <div>Speech feature codecs get fidelity terms</div><div>A market in which prosodic codecs publish compression, F0 RMSE, and the retrieval limit side by side changes how buyers procure speech tooling. A TTS vendor talks to a regulator and a customer with the same numbers, in the same units, against the same corpus.</div>

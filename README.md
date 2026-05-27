@@ -54,7 +54,7 @@ ZPE-Prosody is a bounded prosodic encoder. Retrieval and transfer are not claime
 <table width="100%">
 <tr>
 <td width="50%" valign="top">
-<h2><code>03</code> Value</h2>
+<h2><code>03</code> Value of Market</h2>
 <h1>$7.3B</h1>
 <p>TTS market by 2030; the prosodic feature store beneath it, with the retrieval gap stated.</p>
 </td>

@@ -43,22 +43,13 @@ A voice carries more than words. Pitch rises into a question, stress lands on a 
 
 ---
 
-<table width="100%">
-<tr>
-<td width="100%" valign="top">
-<h2><code>02</code> Markets</h2>
-<p><strong>Adjacent forecasts, not product claims</strong></p>
-<p>
-<strong>Speech and language processing '30</strong> &mdash; $26.8B<br>
-<strong>Text-to-speech market '31</strong> &mdash; $7.9B<br>
-<strong>Text-to-speech software '30</strong> &mdash; $7.3B<br>
-<strong>Voice analytics '30</strong> &mdash; est. $3.1B<br>
-<strong>Speech AI / feature-store tooling '30</strong> &mdash; est. $1.8B
-</p>
-<p>ZPE-Prosody is a bounded prosodic encoder. Retrieval and transfer are not claimed.</p>
-</td>
-</tr>
-</table>
+## `02` Markets
+
+**Adjacent forecasts, not product claims**
+
+> **Speech and language processing '30** &middot; $26.8B &nbsp;&nbsp; **Text-to-speech market '31** &middot; $7.9B &nbsp;&nbsp; **Text-to-speech software '30** &middot; $7.3B &nbsp;&nbsp; **Voice analytics '30** &middot; est. $3.1B &nbsp;&nbsp; **Speech AI / feature-store tooling '30** &middot; est. $1.8B
+
+ZPE-Prosody is a bounded prosodic encoder. Retrieval and transfer are not claimed.
 
 <table width="100%">
 <tr>

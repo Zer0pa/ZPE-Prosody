@@ -51,7 +51,7 @@ The base wheel ships only `src/zpe_prosody`. No CLI or historical gate harness i
 
 ## `00` ZPE-PROSODY &middot; CONTOUR CODEC
 
-**PR #50 DRAFT &middot; BRANCH-PUBLIC**
+**RESEARCH-READY &middot; RETRIEVAL OPEN**
 
 # Speech's Shape and Feeling Encoded
 

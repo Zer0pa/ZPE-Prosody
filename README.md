@@ -24,6 +24,8 @@ For full install, smoke, source, and developer commands, [click here](#install-d
 
 A voice carries more than words. Pitch rises into a question, stress lands on a syllable, and rhythm tells a listener whether the speaker is calm or in a hurry. ZPE-Prosody captures that shape as a deterministic `ZPRS/v1` stream at **13.0&times; mean compression** and **0.64% voiced-F0 RMSE** on 100 LibriSpeech `test-clean` utterances.
 
+It stores acoustic prosody cues, not emotion, intent, semantic meaning, or a speaker-state diagnosis.
+
 **The encoder is the product.** Retrieval misses target. Transfer is paused. Both limits are named here instead of hidden behind the compression win.
 
 <p align="center">

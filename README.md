@@ -18,7 +18,7 @@ For full install, smoke, source, and developer commands, [click here](#install-d
 
 **RESEARCH-READY &middot; RETRIEVAL OPEN**
 
-# Speech's Shape and Feeling Encoded
+# Encoding Speech's Shape And Feeling
 
 > Prosodic feature-store codec &middot; pitch, energy, duration, voiced mask &middot; PyPI `zpe-prosody` v0.1.1 is stale &middot; github.com/Zer0pa/ZPE-Prosody
 
